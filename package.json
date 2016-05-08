@@ -1,7 +1,7 @@
 {
-  "name": "react-paginator",
-  "version": "1.0.0",
-  "description": "React Paginator",
+  "name": "react-pagination",
+  "version": "1.0.1",
+  "description": "React Pagination",
   "main": "./index.js",
   "author": {
     "name": "Jonathan Perry from Sequence Media Limited",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/sequencemedia/React.Routes.Renderer.git"
+    "url": "git://github.com/sequencemedia/React.Pagination.git"
   },
   "license": "MIT",
   "dependencies": {
