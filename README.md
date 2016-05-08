@@ -1,4 +1,4 @@
-# React.Pagination
-React Pagination
+# React.Pagifier
+React Pagifier
 
-A pagination React component.
+A React pagination component.
