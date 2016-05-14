@@ -33,4 +33,4 @@ The value for ```spread``` should be an integer. It's the maximum number of page
 
 For example, if ```totalPages``` is 12, ```pageNumber``` is 4, and ```spread``` is 5, then links to pages 1, 2, 3, 4 and 5 will be displayed (as well as a "forward" link to page 6 and a link to the last page, 12).
 
-Pass the ```format``` prop a value of "center" and a different calculation is used for the page links. You might prefer to try that one out.
+Pass the ```format``` prop a value of "center" and a different calculation is used for the page links. You might prefer to try that one out than read about it. But it give it some good, solid numbers: lots of pages, with a spread of 5.
