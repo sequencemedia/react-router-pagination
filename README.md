@@ -3,7 +3,7 @@ React Router Pagination
 
 A React Router pagination component.
 
-An implementation is hosted at [Modulus](http://reactrouterpaginationio-63979.onmodulus.net/).
+[An example implementation is hosted at Modulus.](http://reactrouterpaginationio-63979.onmodulus.net/)
 
 The component has two optional props:
 
