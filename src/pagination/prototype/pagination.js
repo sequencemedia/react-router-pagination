@@ -173,9 +173,9 @@ export default class Pagination extends React.Component {
 }
 
 Pagination.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   pageNumber: PropTypes.number.isRequired,
-  path: PropTypes.string.isRequired,
+  path: PropTypes.string,
   totalPages: PropTypes.number.isRequired
 }
 

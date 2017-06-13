@@ -3,7 +3,7 @@ React Router Pagination
 
 A React Router pagination component.
 
-[An example implementation is hosted at Modulus.](http://reactrouterpaginationio-63979.onmodulus.net/)
+[Example implementations are available on GitHub.](https://github.com/sequencemedia/React.Router.Pagination.IO)
 
 The component has two optional props:
 
