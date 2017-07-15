@@ -2,24 +2,30 @@
 import React from 'react'
 
 import {
+  calculateTotalPages,
+  calculatePageNumber
+} from '~/src/pagination/prototype'
+
+import {
   Standard
-} from './pagination/standard/standard'
+} from '~/src/pagination/standard'
 
 import {
   Centered
-} from './pagination/centered/centered'
-
-export {
-  pagination
-} from './pagination/prototype/pagination'
+} from '~/src/pagination/centered'
 
 export {
   Standard,
   Centered
 }
 
-export default ({ format, ...props }) => (
+const Pagination = ({ format, ...props }) => (
   format !== 'center'
     ? <Standard {...props} />
     : <Centered {...props} />
 )
+
+Pagination.calculateTotalPages = calculateTotalPages
+Pagination.calculatePageNumber = calculatePageNumber
+
+export default Pagination

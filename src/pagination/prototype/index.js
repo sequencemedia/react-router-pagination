@@ -1,7 +1,7 @@
 /**
  * Pagination component
  */
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import {
   Link
@@ -13,10 +13,10 @@ function currentPageClassName (pageNumber, currentPageNumber) {
   if (pageNumber === currentPageNumber) return 'currentPage'
 }
 
-const pageKey = (pageNumber) => `pagination-${pageNumber}`
+const pageKey = (currentPageKey) => `pagination-${currentPageKey}`
 const pageLinkPath = (path, currentPageNumber) => `${path}/${currentPageNumber}`
 
-function calculateTotalPages (totalItemsInCollection, itemsPerPage) {
+export function calculateTotalPages (totalItemsInCollection, itemsPerPage) {
   const e = toInteger(totalItemsInCollection)
   const p = toInteger(itemsPerPage)
   const r = !!(e % p)
@@ -24,36 +24,30 @@ function calculateTotalPages (totalItemsInCollection, itemsPerPage) {
   return (r) ? l + 1 : l
 }
 
-function calculatePageNumber (pageNumber, totalPages) {
+export function calculatePageNumber (pageNumber, totalPages) {
   const p = toInteger(pageNumber)
   const t = toInteger(totalPages)
   return Math.max(1, Math.min(p, t))
 }
 
-const pagination = {
-  calculateTotalPages,
-  calculatePageNumber
-}
+export default class Pagination extends Component {
+  static calculateTotalPages = calculateTotalPages
+  static calculatePageNumber = calculatePageNumber
 
-export {
-  pagination
-}
+  x () { return 0 }
+  y () { return 0 }
+  z () { return 0 }
 
-export default class Pagination extends React.Component {
-  x = () => 0
-  y = () => 0
-  z = () => 0
+  zeroIndex () { return 0 }
+  lastIndex () { return 0 }
 
-  zeroIndex = () => 0
-  lastIndex = () => 0
+  hasReversePageLink (pageNumber, totalPages) { return (this.zeroIndex(pageNumber, totalPages) - 1) > 0 }
+  hasForwardPageLink (pageNumber, totalPages) { return (this.lastIndex(pageNumber, totalPages) + 1) < totalPages }
 
-  hasReversePageLink = (pageNumber, totalPages) => ((this.zeroIndex(pageNumber, totalPages) - 1) > 0)
-  hasForwardPageLink = (pageNumber, totalPages) => ((this.lastIndex(pageNumber, totalPages) + 1) < totalPages)
+  hasZeroPageLink (pageNumber, totalPages) { return this.zeroIndex(pageNumber, totalPages) > 0 }
+  hasLastPageLink (pageNumber, totalPages) { return this.lastIndex(pageNumber, totalPages) < totalPages }
 
-  hasZeroPageLink = (pageNumber, totalPages) => (this.zeroIndex(pageNumber, totalPages) > 0)
-  hasLastPageLink = (pageNumber, totalPages) => (this.lastIndex(pageNumber, totalPages) < totalPages)
-
-  reversePageLinkItem = (path, pageNumber, totalPages) => {
+  reversePageLinkItem (path, pageNumber, totalPages) {
     if (this.hasReversePageLink(pageNumber, totalPages)) {
       const n = this.zeroIndex(pageNumber, totalPages)
       return (
@@ -69,7 +63,7 @@ export default class Pagination extends React.Component {
     return null
   }
 
-  forwardPageLinkItem = (path, pageNumber, totalPages) => {
+  forwardPageLinkItem (path, pageNumber, totalPages) {
     if (this.hasForwardPageLink(pageNumber, totalPages)) {
       const n = this.lastIndex(pageNumber, totalPages) + 1
       return (
@@ -85,7 +79,7 @@ export default class Pagination extends React.Component {
     return null
   }
 
-  zeroPageLinkItem = (path, pageNumber, totalPages) => {
+  zeroPageLinkItem (path, pageNumber, totalPages) {
     if (this.hasZeroPageLink(pageNumber, totalPages)) {
       const n = 1
       return (
@@ -101,7 +95,7 @@ export default class Pagination extends React.Component {
     return null
   }
 
-  lastPageLinkItem = (path, pageNumber, totalPages) => {
+  lastPageLinkItem (path, pageNumber, totalPages) {
     if (this.hasLastPageLink(pageNumber, totalPages)) {
       const n = totalPages
       return (
@@ -117,7 +111,7 @@ export default class Pagination extends React.Component {
     return null
   }
 
-  pageLinkItems = (path, pageNumber, totalPages) => {
+  pageLinkItems (path, pageNumber, totalPages) {
     let i = this.zeroIndex(pageNumber, totalPages)
     const j = this.lastIndex(pageNumber, totalPages)
     const a = []
@@ -180,7 +174,7 @@ Pagination.propTypes = {
 }
 
 Pagination.defaultProps = {
-  onClick: () => {}, /* no op */
+  onClick: () => {},
   pageNumber: 0,
   path: '',
   totalPages: 0
