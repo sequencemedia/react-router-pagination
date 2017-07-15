@@ -10,12 +10,9 @@ export class Standard extends Pagination {
   static calculateTotalPages = calculateTotalPages
   static calculatePageNumber = calculatePageNumber
 
-  constructor (props) {
-    super(props)
-    this.state = {
-      ...this.state,
-      spread: toInteger(this.props.spread)
-    }
+  state = {
+    ...this.state,
+    spread: toInteger(this.props.spread)
   }
 
   z = () => {
