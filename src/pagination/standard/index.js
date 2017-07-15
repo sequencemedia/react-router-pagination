@@ -37,9 +37,8 @@ export class Standard extends Pagination {
     return Math.min((p - (p % z)) + z, totalPages)
   }
 
-  componentWillReceiveProps (props) {
+  componentWillReceiveProps ({ spread, ...props }) {
     super.componentWillReceiveProps(props)
-    const { spread } = props
     this.setState({ spread: toInteger(spread) })
   }
 

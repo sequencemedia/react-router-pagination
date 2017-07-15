@@ -1,10 +1,5 @@
-/* eslint react/prop-types: 0 */
 import React from 'react'
-
-import {
-  calculateTotalPages,
-  calculatePageNumber
-} from '~/src/pagination/prototype'
+import PropTypes from 'prop-types'
 
 import {
   Standard
@@ -13,6 +8,11 @@ import {
 import {
   Centered
 } from '~/src/pagination/centered'
+
+import {
+  calculateTotalPages,
+  calculatePageNumber
+} from '~/src/pagination/prototype'
 
 export {
   Standard,
@@ -27,5 +27,9 @@ const Pagination = ({ format, ...props }) => (
 
 Pagination.calculateTotalPages = calculateTotalPages
 Pagination.calculatePageNumber = calculatePageNumber
+
+Pagination.propTypes = {
+  format: PropTypes.string
+}
 
 export default Pagination

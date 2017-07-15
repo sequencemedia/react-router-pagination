@@ -51,9 +51,8 @@ export class Centered extends Pagination {
     return (pageNumber > x) ? (totalPages > z) ? ((pageNumber + y) > totalPages) ? totalPages : pageNumber + y : totalPages : (totalPages > z) ? z : totalPages
   }
 
-  componentWillReceiveProps (props) {
+  componentWillReceiveProps ({ spread, ...props }) {
     super.componentWillReceiveProps(props)
-    const { spread } = props
     this.setState({ spread: toInteger(spread) })
   }
 
