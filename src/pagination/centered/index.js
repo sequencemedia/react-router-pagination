@@ -1,6 +1,7 @@
 import React from 'react' // eslint-disable-line no-unused-vars
 import PropTypes from 'prop-types'
 import Pagination, {
+  toInteger,
   calculateTotalPages,
   calculatePageNumber
 } from '~/src/pagination/prototype'
@@ -8,6 +9,14 @@ import Pagination, {
 export class Centered extends Pagination {
   static calculateTotalPages = calculateTotalPages
   static calculatePageNumber = calculatePageNumber
+
+  constructor (props) {
+    super(props)
+    this.state = {
+      ...this.state,
+      spread: toInteger(this.props.spread)
+    }
+  }
 
   x = () => (
     Math.ceil(
@@ -24,7 +33,7 @@ export class Centered extends Pagination {
   z = () => {
     const {
       spread: z
-    } = this.props
+    } = this.state
     return z % 2 ? z : z - 1
   }
 
@@ -42,6 +51,12 @@ export class Centered extends Pagination {
     return (pageNumber > x) ? (totalPages > z) ? ((pageNumber + y) > totalPages) ? totalPages : pageNumber + y : totalPages : (totalPages > z) ? z : totalPages
   }
 
+  componentWillReceiveProps (props) {
+    super.componentWillReceiveProps(props)
+    const { spread } = props
+    this.setState({ spread: toInteger(spread) })
+  }
+
   shouldComponentUpdate (props) {
     return super.shouldComponentUpdate(props) || (props.spread !== this.props.spread)
   }
@@ -49,7 +64,10 @@ export class Centered extends Pagination {
 
 Centered.propTypes = {
   ...Pagination.propTypes,
-  spread: PropTypes.number.isRequired
+  spread: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]).isRequired
 }
 
 Centered.defaultProps = {

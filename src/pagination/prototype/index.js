@@ -34,6 +34,11 @@ export default class Pagination extends Component {
   static calculateTotalPages = calculateTotalPages
   static calculatePageNumber = calculatePageNumber
 
+  state = {
+    pageNumber: toInteger(this.props.pageNumber),
+    totalPages: toInteger(this.props.totalPages)
+  }
+
   x () {
     return 0
   }
@@ -153,6 +158,13 @@ export default class Pagination extends Component {
     return a
   }
 
+  componentWillReceiveProps ({ pageNumber, totalPages }) {
+    this.setState({
+      pageNumber: toInteger(pageNumber),
+      totalPages: toInteger(totalPages)
+    })
+  }
+
   shouldComponentUpdate (props) {
     return (
       (props.pageNumber !== this.props.pageNumber) ||
@@ -163,24 +175,25 @@ export default class Pagination extends Component {
   handleClick = (pageNumber) => this.props.onClick(pageNumber)
 
   render () {
-    const totalPages = toInteger(this.props.totalPages)
+    const { totalPages } = this.state
     if (totalPages > 1) {
-      const path = this.props.path
-      const pageNumber = calculatePageNumber(this.props.pageNumber, totalPages)
+      const { path } = this.props
+      const { pageNumber } = this.state
+      const page = calculatePageNumber(pageNumber, totalPages)
       if (totalPages > this.z()) {
         return (
           <ul className='pagination'>
-            {this.zeroPageLinkItem(path, pageNumber, totalPages)}
-            {this.reversePageLinkItem(path, pageNumber, totalPages)}
-            {this.pageLinkItems(path, pageNumber, totalPages)}
-            {this.forwardPageLinkItem(path, pageNumber, totalPages)}
-            {this.lastPageLinkItem(path, pageNumber, totalPages)}
+            {this.zeroPageLinkItem(path, page, totalPages)}
+            {this.reversePageLinkItem(path, page, totalPages)}
+            {this.pageLinkItems(path, page, totalPages)}
+            {this.forwardPageLinkItem(path, page, totalPages)}
+            {this.lastPageLinkItem(path, page, totalPages)}
           </ul>
         )
       } else {
         return (
           <ul className='pagination'>
-            {this.pageLinkItems(path, pageNumber, totalPages)}
+            {this.pageLinkItems(path, page, totalPages)}
           </ul>
         )
       }
@@ -191,9 +204,15 @@ export default class Pagination extends Component {
 
 Pagination.propTypes = {
   onClick: PropTypes.func,
-  pageNumber: PropTypes.number.isRequired,
+  pageNumber: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]).isRequired,
   path: PropTypes.string,
-  totalPages: PropTypes.number.isRequired
+  totalPages: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]).isRequired
 }
 
 Pagination.defaultProps = {
