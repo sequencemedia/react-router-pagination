@@ -15,16 +15,19 @@ The component has two required props:
 1. A `totalPages` integer.
 1. A `pageNumber` integer.
 
-The component converts strings to numbers using `parseInt()` but does not check for errors. Instead, there's utility object exported by the class with methods for making the calculations and producing those numbers for you:
+The component converts string values to numbers using `parseInt()` but does not check for errors. There are static methods on the class to make the calculations and produce those numbers for you:
 
 ```
-const totalPages = pagination.calculateTotalPages(120, 10)
-const pageNumber = pagination.calculatePageNumber(4, totalPages)
+const totalPages = Pagination.calculateTotalPages(120, 10)
+const pageNumber = Pagination.calculatePageNumber(4, totalPages)
 ```
 
 The method `calculateTotalPages()` ensures that a collection with 120 total items at 10 items per page has 12 page links, but 121 items at the same page size has 13.
 
-The method `calculatePageNumber()` constrains the return value. If you pass 4 but `totalPages` is 3 then it will return 3. Alternatively, if you pass a string it will return 1.
+The method `calculatePageNumber()` constrains the return value: 
+
+1. If you pass 4 but `totalPages` is 3 then it will return 3.
+2. If you pass a string and it cannot be parsed to a number it will return 1.
 
 In addition, there are two configuration props:
 
