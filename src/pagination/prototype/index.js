@@ -7,7 +7,7 @@ import {
   Link
 } from 'react-router'
 
-const toInteger = (v) => isNaN(v) ? 0 : parseInt(v, 10)
+export const toInteger = (v) => isNaN(v) ? 0 : parseInt(v, 10)
 
 function currentPageClassName (pageNumber, currentPageNumber) {
   if (pageNumber === currentPageNumber) return 'currentPage'
@@ -34,18 +34,41 @@ export default class Pagination extends Component {
   static calculateTotalPages = calculateTotalPages
   static calculatePageNumber = calculatePageNumber
 
-  x () { return 0 }
-  y () { return 0 }
-  z () { return 0 }
+  x () {
+    return 0
+  }
 
-  zeroIndex () { return 0 }
-  lastIndex () { return 0 }
+  y () {
+    return 0
+  }
 
-  hasReversePageLink (pageNumber, totalPages) { return (this.zeroIndex(pageNumber, totalPages) - 1) > 0 }
-  hasForwardPageLink (pageNumber, totalPages) { return (this.lastIndex(pageNumber, totalPages) + 1) < totalPages }
+  z () {
+    return 0
+  }
 
-  hasZeroPageLink (pageNumber, totalPages) { return this.zeroIndex(pageNumber, totalPages) > 0 }
-  hasLastPageLink (pageNumber, totalPages) { return this.lastIndex(pageNumber, totalPages) < totalPages }
+  zeroIndex () {
+    return 0
+  }
+
+  lastIndex () {
+    return 0
+  }
+
+  hasReversePageLink (pageNumber, totalPages) {
+    return (this.zeroIndex(pageNumber, totalPages) - 1) > 0
+  }
+
+  hasForwardPageLink (pageNumber, totalPages) {
+    return (this.lastIndex(pageNumber, totalPages) + 1) < totalPages
+  }
+
+  hasZeroPageLink (pageNumber, totalPages) {
+    return this.zeroIndex(pageNumber, totalPages) > 0
+  }
+
+  hasLastPageLink (pageNumber, totalPages) {
+    return this.lastIndex(pageNumber, totalPages) < totalPages
+  }
 
   reversePageLinkItem (path, pageNumber, totalPages) {
     if (this.hasReversePageLink(pageNumber, totalPages)) {

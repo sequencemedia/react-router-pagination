@@ -14,11 +14,13 @@ export class Centered extends Pagination {
       this.z() / 2
     )
   )
+
   y = () => (
     Math.floor(
       this.z() / 2
     )
   )
+
   z = () => {
     const {
       spread: z
