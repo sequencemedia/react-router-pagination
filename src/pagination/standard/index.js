@@ -4,7 +4,7 @@ import Pagination, {
   toInteger,
   calculateTotalPages,
   calculatePageNumber
-} from '~/src/pagination/prototype'
+} from 'react-router-pagination/pagination/prototype'
 
 export class Standard extends Pagination {
   static calculateTotalPages = calculateTotalPages

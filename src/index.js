@@ -3,16 +3,16 @@ import PropTypes from 'prop-types'
 
 import {
   Standard
-} from '~/src/pagination/standard'
+} from 'react-router-pagination/pagination/standard'
 
 import {
   Centered
-} from '~/src/pagination/centered'
+} from 'react-router-pagination/pagination/centered'
 
 import {
   calculateTotalPages,
   calculatePageNumber
-} from '~/src/pagination/prototype'
+} from 'react-router-pagination/pagination/prototype'
 
 export {
   Standard,
