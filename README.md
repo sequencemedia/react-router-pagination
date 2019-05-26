@@ -1,9 +1,10 @@
-# React.Router.Pagination
-React Router Pagination
+# react-router-pagination
+
+## React Router Pagination
 
 A React Router pagination component.
 
-[Example implementations are available on GitHub.](https://github.com/sequencemedia/React.Router.Pagination.IO)
+[Example implementations are available on GitHub.](https://github.com/sequencemedia/react-router-pagination-io)
 
 The component has two optional props:
 
@@ -24,7 +25,7 @@ const pageNumber = Pagination.calculatePageNumber(4, totalPages)
 
 The method `calculateTotalPages()` ensures that a collection with 120 total items at 10 items per page has 12 page links, but 121 items at the same page size has 13.
 
-The method `calculatePageNumber()` constrains the return value: 
+The method `calculatePageNumber()` constrains the return value:
 
 1. If you pass 4 but `totalPages` is 3 then it will return 3.
 2. If you pass a string and it cannot be parsed to a number it will return 1.
