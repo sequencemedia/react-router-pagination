@@ -1,10 +1,17 @@
-import React from 'react' // eslint-disable-line no-unused-vars
+import React from 'react'
 import PropTypes from 'prop-types'
+
 import Pagination, {
   toInteger,
   calculateTotalPages,
   calculatePageNumber
-} from 'react-router-pagination/pagination/prototype'
+} from 'react-router-pagination/pagination/component'
+
+export {
+  toInteger,
+  calculateTotalPages,
+  calculatePageNumber
+}
 
 export class Centered extends Pagination {
   static calculateTotalPages = calculateTotalPages

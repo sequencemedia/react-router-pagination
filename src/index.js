@@ -12,7 +12,7 @@ import {
 import {
   calculateTotalPages,
   calculatePageNumber
-} from 'react-router-pagination/pagination/prototype'
+} from 'react-router-pagination/pagination'
 
 export {
   Standard,

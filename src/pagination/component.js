@@ -3,11 +3,16 @@
  */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+
 import {
   Link
 } from 'react-router'
 
-export const toInteger = (v) => isNaN(v) ? 0 : parseInt(v, 10)
+import {
+  toInteger,
+  calculateTotalPages,
+  calculatePageNumber
+} from 'react-router-pagination/pagination'
 
 function currentPageClassName (pageNumber, currentPageNumber) {
   if (pageNumber === currentPageNumber) return 'currentPage'
@@ -16,18 +21,10 @@ function currentPageClassName (pageNumber, currentPageNumber) {
 const pageKey = (currentPageKey) => `pagination-${currentPageKey}`
 const pageLinkPath = (path, currentPageNumber) => `${path}/${currentPageNumber}`
 
-export function calculateTotalPages (totalItemsInCollection, itemsPerPage) {
-  const e = toInteger(totalItemsInCollection)
-  const p = toInteger(itemsPerPage)
-  const r = !!(e % p)
-  const l = Math.floor(e / p)
-  return (r) ? l + 1 : l
-}
-
-export function calculatePageNumber (pageNumber, totalPages) {
-  const p = toInteger(pageNumber)
-  const t = toInteger(totalPages)
-  return Math.max(1, Math.min(p, t))
+export {
+  toInteger,
+  calculateTotalPages,
+  calculatePageNumber
 }
 
 export default class Pagination extends Component {
