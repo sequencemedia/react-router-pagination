@@ -27,14 +27,14 @@ Optional props:
 1. A `match` object, for generating the `to` prop of each `<Link />` component.
 2. An `onClick` handler, for when the user clicks a `<Link />`.
 
-[Additional props](#additional-props):
+Additional props:
 
 1. `spread`
 2. `format`
 
 ### Example
 
-The component with props:
+A component with props:
 
 ```javascript
 <Pagination
@@ -84,7 +84,7 @@ Generates:
 </ul>
 ```
 
-(The default `match` object creates default routes. [You probably don't want that.](#match-prop))
+(The default `match` object creates default routes. You probably don't want that.)
 
 ### About `totalPages`
 
@@ -212,7 +212,7 @@ const pageNumber = Pagination.calculatePageNumber(13, 12)
 
 Again, you can use this function anywhere in your application to ensure that the same value is being presented in different components.
 
-### Creating page routes with the `match` prop {#match-prop}
+### Creating page routes with the `match` prop
 
 The `match` prop has the same structure as *React Router* `match` prop. 
 
@@ -302,7 +302,7 @@ Given a `totalPages` of 12 and a `spread` of 5 then *React Router Pagination* wi
 
 What's `spread`?
 
-### Additional props, etc {#additional-props}
+### Additional props, etc
 
 1. `spread`
 2. `format`
