@@ -2,46 +2,320 @@
 
 ## React Router Pagination
 
-A React Router pagination component.
+A *React Router 5* pagination component.
 
-[Example implementations are available on GitHub.](https://github.com/sequencemedia/react-router-pagination-io)
+- You have lots of data?
+- You want users to page through that data?
+- You want the page to be reflected in the route, and you're using React Router?
 
-The component has two optional props:
+Given some simple props, *React Router Pagination* will create a list of links to those pages.
 
-1. An `onClick` handler, for when a user clicks the link to a page.
-2. A `path` parameter, for generating that link. Presently it is used to prefix the page number and defaults to "/".
+[Example implementations are available on GitHub.](https://github.com/sequencemedia/react-router-pagination-io) You can also [clone this repository](https://github.com/sequencemedia/react-router-pagination) and run Storybook.
 
-The component has two required props:
+### Using the component
 
-1. A `totalPages` integer.
-1. A `pageNumber` integer.
+Required props:
 
-The component converts string values to numbers using `parseInt()` but does not check for errors. There are static methods on the class to make the calculations and produce those numbers for you:
+- A `totalPages` integer.
 
+Not quite required but not quite optional props:
+
+- A `pageNumber` integer.
+
+Optional props:
+
+1. A `match` object, for generating the `to` prop of each `<Link />` component.
+2. An `onClick` handler, for when the user clicks a `<Link />`.
+
+[Additional props](#additional-props):
+
+1. `spread`
+2. `format`
+
+### Example
+
+The component with props:
+
+```javascript
+<Pagination
+  totalPages={12}
+  pageNumber={1}
+/>
 ```
+Generates:
+
+```html
+<ul class="pagination">
+    <li class="currentPage">
+        <a href="/1">
+            <span class="pageNumber">1</span>
+        </a>
+    </li>
+    <li>
+        <a href="/2">
+            <span class="pageNumber">2</span>
+        </a>
+    </li>
+    <li>
+       <a href="/3">
+           <span class="pageNumber">3</span>
+       </a>
+    </li>
+    <li>
+        <a href="/4">
+            <span class="pageNumber">4</span>
+        </a>
+    </li>
+    <li>
+        <a href="/5">
+           <span class="pageNumber">5</span>
+        </a>
+    </li>
+    <li class="forwardPage">
+        <a href="/6">
+            <span class="forwardPage">»</span>
+        </a>
+    </li>
+    <li class="lastPage">
+        <a href="/12">
+            <span class="pageNumber">12</span>
+        </a>
+    </li>
+</ul>
+```
+
+(The default `match` object creates default routes. [You probably don't want that.](#match-prop))
+
+### About `totalPages`
+
+*React Router Pagination* doesn't care about how many items you have and how many items you want to show per page.
+
+It only cares about the _total number of pages_.
+
+- Your data contains 120 items which you want to display at 10 items per page.
+- Your data contains 60 items which you want to display at 5 items per page.
+- Your data contains 240 items which you want to display at 20 items per page.
+
+In which case, `totalPages` should be 12.
+
+```javascript
+<Pagination 
+  totalPages={12}
+/>
+```
+
+- Your data contains 121 items which you want to display at 10 items per page.
+- Your data contains 61 items which you want to display at 5 items per page.
+- Your data contains 241 items which you want to display at 20 items per page.
+
+In which case, `totalPages` should be 13.
+
+```javascript
+<Pagination 
+  totalPages={13}
+/>
+```
+
+(Strings are coerced to numbers, and numbers are rounded.)
+
+*React Router Pagination* only _requires_ the _total number of pages_, which could be computed anywhere in your application ...
+
+... But it does expose a static function for computing the `totalPages`:
+
+```javascript
 const totalPages = Pagination.calculateTotalPages(120, 10)
-const pageNumber = Pagination.calculatePageNumber(4, totalPages)
 ```
 
-The method `calculateTotalPages()` ensures that a collection with 120 total items at 10 items per page has 12 page links, but 121 items at the same page size has 13.
+Or:
 
-The method `calculatePageNumber()` constrains the return value:
+```javascript
+const totalPages = Pagination.calculateTotalPages(121, 10)
+```
+(This is the same function the component uses internally.)
 
-1. If you pass 4 but `totalPages` is 3 then it will return 3.
-2. If you pass a string and it cannot be parsed to a number it will return 1.
+You can use this function anywhere in your application to ensure that the same value is being presented in different components.
 
-In addition, there are two configuration props:
+### About `pageNumber`
+
+- Your data contains 120 items which you want to display at 10 items per page.
+
+To display page 1:
+
+```javascript
+<Pagination 
+  totalPages={12}
+  pageNumber={1}
+/>
+```
+
+To display page 5:
+
+```javascript
+<Pagination 
+  totalPages={12}
+  pageNumber={5}
+/>
+```
+
+(Strings are coerced to numbers, and numbers are rounded.)
+
+*React Router Pagination* constrains `pageNumber` to a min of 1 and a max of `totalPages`. 
+
+Any of these will present page 1:
+
+```javascript
+<Pagination 
+  totalPages={12}
+  pageNumber={1}
+/>
+```
+```javascript
+<Pagination 
+  totalPages={12}
+/>
+```
+```javascript
+<Pagination 
+  totalPages={12}
+  pageNumber={0}
+/>
+```
+
+Either these will present page 12:
+
+```javascript
+<Pagination 
+  totalPages={12}
+  pageNumber={12}
+/>
+```
+```javascript
+<Pagination 
+  totalPages={12}
+  pageNumber={13}
+/>
+```
+
+(Strings are coerced to numbers, and numbers are rounded.)
+
+... *React Router Pagination* exposes a static function for computing the `pageNumber` prop:
+
+```javascript
+const pageNumber = Pagination.calculatePageNumber(0, 12)
+```
+
+Or:
+
+```javascript
+const pageNumber = Pagination.calculatePageNumber(13, 12)
+```
+
+Again, you can use this function anywhere in your application to ensure that the same value is being presented in different components.
+
+### Creating page routes with the `match` prop {#match-prop}
+
+The `match` prop has the same structure as *React Router* `match` prop. 
+
+The default has this structure:
+
+```javascript
+{ 
+  path: '/:pageNumber',
+  params: { 
+  	pageNumber: 1 /* or any integer */
+  }
+}
+```
+
+But your `path` is more complex. You have a `<Route />` component matching the pattern: 
+
+```
+/catalogue/products/:id
+``` 
+
+And you have a number of stores selling that product, for which you have a `<Route />` component matching the pattern:
+
+```
+/catalogue/products/:id/stores/:pageNumber
+```  
+
+Let's say the store `id` is `ABCDEF`.
+
+For the list of stores, supply the `Pagination` component  with a `match` prop of this structure:
+
+```javascript
+{ 
+  path: '/catalogue/products/:id/stores/:pageNumber',
+  params: { 
+  	id: 'ABCDEF'
+  }
+}
+```
+
+*React Router Pagination* uses the *React Router* utility `generatePath` to compute paths:
+
+```javascript
+const getLinkTo = ({ path, params }, pageNumber) => generatePath(path, { ...params, pageNumber })
+```
+
+Given a `totalPages` of 12 and a `spread` of 5 then *React Router Pagination* will create a list of `<Link />` components:
+
+```html
+<ul class="pagination">
+    <li class="currentPage">
+        <a href="/catalogue/products/ABCDEF/stores/1">
+            <span class="pageNumber">1</span>
+        </a>
+    </li>
+    <li>
+        <a href="/catalogue/products/ABCDEF/stores/2">
+            <span class="pageNumber">2</span>
+        </a>
+    </li>
+    <li>
+       <a href="/catalogue/products/ABCDEF/stores/3">
+           <span class="pageNumber">3</span>
+       </a>
+    </li>
+    <li>
+        <a href="/catalogue/products/ABCDEF/stores/4">
+            <span class="pageNumber">4</span>
+        </a>
+    </li>
+    <li>
+        <a href="/catalogue/products/ABCDEF/stores/5">
+           <span class="pageNumber">5</span>
+        </a>
+    </li>
+    <li class="forwardPage">
+        <a href="/catalogue/products/ABCDEF/stores/6">
+            <span class="forwardPage">»</span>
+        </a>
+    </li>
+    <li class="lastPage">
+        <a href="/catalogue/products/ABCDEF/stores/12">
+            <span class="pageNumber">12</span>
+        </a>
+    </li>
+</ul>
+```
+
+What's `spread`?
+
+### Additional props, etc {#additional-props}
 
 1. `spread`
 2. `format`
 
 The value for `spread` should be an integer. It's the maximum number of page links to be displayed together.
 
+#### Spread
+
 If `totalPages` is 12, `pageNumber` is 1, and `spread` is 5, then links to pages 1, 2, 3, 4 and 5 will be displayed (as well as a "forward" link to page 6 and a link to the last page, 12).
 
 Class names indicate the `currentPage`, the `forwardPage`, and the `lastPage`.
 
-```
+```html
     <ul class="pagination">
         <li class="currentPage">
             <a href="/1">
@@ -85,7 +359,7 @@ If `totalPages` is 12, `pageNumber` is 4, and `spread` is 5, then links to pages
 
 Class names indicate the `zeroPage`, the `currentPage`, the `forwardPage`, and the `lastPage`.
 
-```
+```html
     <ul class="pagination">
         <li class="zeroPage">
             <a href="/1">
@@ -134,7 +408,7 @@ If `totalPages` is 12, `pageNumber` is 8, and `spread` is 5, then links to pages
 
 Class names indicate the `zeroPage`, the `reversePage`, the `currentPage`, the `forwardPage`, and the `lastPage`.
 
-```
+```html
     <ul class="pagination">
         <li class="zeroPage">
             <a href="/1">
@@ -183,5 +457,7 @@ Class names indicate the `zeroPage`, the `reversePage`, the `currentPage`, the `
         </li>
     </ul>
 ```
+
+### Format
 
 Pass the `format` prop a value of "center" and a different calculation is used for the page links. You might prefer to try that one out than read about it. But it give it some good, solid numbers: lots of pages, with a spread of 5.
