@@ -13,7 +13,7 @@ const SPREAD = 5
 
 const PATH = '/:pageNumber(\\d+)'
 
-const Home = ({ match, match: { params: { pageNumber = 1 } = {} } = {} } = {}) => (
+const Home = ({ match: { params: { pageNumber = 1 } = {} } = {} } = {}) => (
   <section>
     <h1>
       Home
