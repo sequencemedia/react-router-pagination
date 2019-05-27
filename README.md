@@ -99,7 +99,7 @@ It only cares about the _total number of pages_.
 In which case, `totalPages` should be 12.
 
 ```javascript
-<Pagination 
+<Pagination
   totalPages={12}
 />
 ```
@@ -111,7 +111,7 @@ In which case, `totalPages` should be 12.
 In which case, `totalPages` should be 13.
 
 ```javascript
-<Pagination 
+<Pagination
   totalPages={13}
 />
 ```
@@ -142,7 +142,7 @@ You can use this function anywhere in your application to ensure that the same v
 To display page 1:
 
 ```javascript
-<Pagination 
+<Pagination
   totalPages={12}
   pageNumber={1}
 />
@@ -151,7 +151,7 @@ To display page 1:
 To display page 5:
 
 ```javascript
-<Pagination 
+<Pagination
   totalPages={12}
   pageNumber={5}
 />
@@ -159,23 +159,23 @@ To display page 5:
 
 (Strings are coerced to numbers, and numbers are rounded.)
 
-*React Router Pagination* constrains `pageNumber` to a min of 1 and a max of `totalPages`. 
+*React Router Pagination* constrains `pageNumber` to a min of 1 and a max of `totalPages`.
 
 Any of these will present page 1:
 
 ```javascript
-<Pagination 
+<Pagination
   totalPages={12}
   pageNumber={1}
 />
 ```
 ```javascript
-<Pagination 
+<Pagination
   totalPages={12}
 />
 ```
 ```javascript
-<Pagination 
+<Pagination
   totalPages={12}
   pageNumber={0}
 />
@@ -184,13 +184,13 @@ Any of these will present page 1:
 Either these will present page 12:
 
 ```javascript
-<Pagination 
+<Pagination
   totalPages={12}
   pageNumber={12}
 />
 ```
 ```javascript
-<Pagination 
+<Pagination
   totalPages={12}
   pageNumber={13}
 />
@@ -214,39 +214,39 @@ Again, you can use this function anywhere in your application to ensure that the
 
 ### Creating page routes with the `match` prop
 
-The `match` prop has the same structure as *React Router* `match` prop. 
+The `match` prop has the same structure as *React Router* `match` prop.
 
 The default has this structure:
 
 ```javascript
-{ 
+{
   path: '/:pageNumber',
-  params: { 
+  params: {
   	pageNumber: 1 /* or any integer */
   }
 }
 ```
 
-But your `path` is more complex. You have a `<Route />` component matching the pattern: 
+But your `path` is more complex. You have a `<Route />` component matching the pattern:
 
 ```
 /catalogue/products/:id
-``` 
+```
 
 And you have a number of stores selling that product, for which you have a `<Route />` component matching the pattern:
 
 ```
 /catalogue/products/:id/stores/:pageNumber
-```  
+```
 
 Let's say the store `id` is `ABCDEF`.
 
 For the list of stores, supply the `Pagination` component  with a `match` prop of this structure:
 
 ```javascript
-{ 
+{
   path: '/catalogue/products/:id/stores/:pageNumber',
-  params: { 
+  params: {
   	id: 'ABCDEF'
   }
 }
@@ -316,43 +316,43 @@ If `totalPages` is 12, `pageNumber` is 1, and `spread` is 5, then links to pages
 Class names indicate the `currentPage`, the `forwardPage`, and the `lastPage`.
 
 ```html
-    <ul class="pagination">
-        <li class="currentPage">
-            <a href="/1">
-                <span class="pageNumber">1</span>
-            </a>
-        </li>
-        <li>
-            <a href="/2">
-                <span class="pageNumber">2</span>
-            </a>
-        </li>
-        <li>
-            <a href="/3">
-                <span class="pageNumber">3</span>
-            </a>
-        </li>
-        <li>
-            <a href="/4">
-                <span class="pageNumber">4</span>
-            </a>
-        </li>
-        <li>
-            <a href="/5">
-                <span class="pageNumber">5</span>
-            </a>
-        </li>
-        <li class="forwardPage">
-            <a href="/6">
-                <span class="forwardPage">»</span>
-            </a>
-        </li>
-        <li class="lastPage">
-            <a href="/12">
-                <span class="pageNumber">12</span>
-            </a>
-        </li>
-    </ul>
+<ul class="pagination">
+    <li class="currentPage">
+        <a href="/1">
+            <span class="pageNumber">1</span>
+        </a>
+    </li>
+    <li>
+        <a href="/2">
+            <span class="pageNumber">2</span>
+        </a>
+    </li>
+    <li>
+        <a href="/3">
+            <span class="pageNumber">3</span>
+        </a>
+    </li>
+    <li>
+        <a href="/4">
+            <span class="pageNumber">4</span>
+        </a>
+    </li>
+    <li>
+        <a href="/5">
+            <span class="pageNumber">5</span>
+        </a>
+    </li>
+    <li class="forwardPage">
+        <a href="/6">
+            <span class="forwardPage">»</span>
+        </a>
+    </li>
+    <li class="lastPage">
+        <a href="/12">
+            <span class="pageNumber">12</span>
+        </a>
+    </li>
+</ul>
 ```
 
 If `totalPages` is 12, `pageNumber` is 4, and `spread` is 5, then links to pages 1, 2, 3, 4 and 5 will be displayed (as well as a "forward" link to page 6 and a link to the last page, 12).
@@ -360,48 +360,48 @@ If `totalPages` is 12, `pageNumber` is 4, and `spread` is 5, then links to pages
 Class names indicate the `zeroPage`, the `currentPage`, the `forwardPage`, and the `lastPage`.
 
 ```html
-    <ul class="pagination">
-        <li class="zeroPage">
-            <a href="/1">
-                <span class="pageNumber">1</span>
-            </a>
-        </li>
-        <li>
-            <a href="/2">
-                <span class="pageNumber">2</span>
-            </a>
-        </li>
-        <li>
-            <a href="/3">
-                <span class="pageNumber">3</span>
-            </a>
-        </li>
-        <li class="currentPage">
-            <a href="/4">
-                <span class="pageNumber">4</span>
-            </a>
-        </li>
-        <li>
-            <a href="/5">
-                <span class="pageNumber">5</span>
-            </a>
-        </li>
-        <li>
-            <a href="/6">
-                <span class="pageNumber">6</span>
-            </a>
-        </li>
-        <li class="forwardPage">
-            <a href="/7">
-                <span class="forwardPage">»</span>
-            </a>
-        </li>
-        <li class="lastPage">
-            <a href="/12">
-                <span class="pageNumber">12</span>
-            </a>
-        </li>
-    </ul>
+<ul class="pagination">
+    <li class="zeroPage">
+        <a href="/1">
+            <span class="pageNumber">1</span>
+        </a>
+    </li>
+    <li>
+        <a href="/2">
+            <span class="pageNumber">2</span>
+        </a>
+    </li>
+    <li>
+        <a href="/3">
+            <span class="pageNumber">3</span>
+        </a>
+    </li>
+    <li class="currentPage">
+        <a href="/4">
+            <span class="pageNumber">4</span>
+        </a>
+    </li>
+    <li>
+        <a href="/5">
+            <span class="pageNumber">5</span>
+        </a>
+    </li>
+    <li>
+        <a href="/6">
+            <span class="pageNumber">6</span>
+        </a>
+    </li>
+    <li class="forwardPage">
+        <a href="/7">
+            <span class="forwardPage">»</span>
+        </a>
+    </li>
+    <li class="lastPage">
+        <a href="/12">
+            <span class="pageNumber">12</span>
+        </a>
+    </li>
+</ul>
 ```
 
 If `totalPages` is 12, `pageNumber` is 8, and `spread` is 5, then links to pages 6, 7, 8, 9, and 10 will be displayed (as well as a "reverse" link to page 5, a "forward" link to page 11 and a link to the first page, 1, and the last page, 12).
@@ -409,53 +409,53 @@ If `totalPages` is 12, `pageNumber` is 8, and `spread` is 5, then links to pages
 Class names indicate the `zeroPage`, the `reversePage`, the `currentPage`, the `forwardPage`, and the `lastPage`.
 
 ```html
-    <ul class="pagination">
-        <li class="zeroPage">
-            <a href="/1">
-                <span class="pageNumber">1</span>
-            </a>
-        </li>
-        <li class="reversePage">
-            <a href="/5">
-                <span class="reverse">«</span>
-            </a>
-        </li>
-        <li>
-            <a href="/6">
-                <span class="pageNumber">6</span>
-            </a>
-        </li>
-        <li>
-            <a href="/7">
-                <span class="pageNumber">7</span>
-            </a>
-        </li>
-        <li class="currentPage">
-            <a href="/8">
-                <span class="pageNumber">8</span>
-            </a>
-        </li>
-        <li>
-            <a href="/9">
-                <span class="pageNumber">9</span>
-            </a>
-        </li>
-        <li>
-            <a href="/10">
-                <span class="pageNumber">10</span>
-            </a>
-        </li>
-        <li class="forwardPage">
-            <a href="/11">
-                <span class="forwardPage">»</span>
-            </a>
-        </li>
-        <li class="lastPage">
-            <a href="/12">
-                <span class="pageNumber">12</span>
-            </a>
-        </li>
-    </ul>
+<ul class="pagination">
+    <li class="zeroPage">
+        <a href="/1">
+            <span class="pageNumber">1</span>
+        </a>
+    </li>
+    <li class="reversePage">
+        <a href="/5">
+            <span class="reverse">«</span>
+        </a>
+    </li>
+    <li>
+        <a href="/6">
+            <span class="pageNumber">6</span>
+        </a>
+    </li>
+    <li>
+        <a href="/7">
+            <span class="pageNumber">7</span>
+        </a>
+    </li>
+    <li class="currentPage">
+        <a href="/8">
+            <span class="pageNumber">8</span>
+        </a>
+    </li>
+    <li>
+        <a href="/9">
+            <span class="pageNumber">9</span>
+        </a>
+    </li>
+    <li>
+        <a href="/10">
+            <span class="pageNumber">10</span>
+        </a>
+    </li>
+    <li class="forwardPage">
+        <a href="/11">
+            <span class="forwardPage">»</span>
+        </a>
+    </li>
+    <li class="lastPage">
+        <a href="/12">
+            <span class="pageNumber">12</span>
+        </a>
+    </li>
+</ul>
 ```
 
 ### Format
