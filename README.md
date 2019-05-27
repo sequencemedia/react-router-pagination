@@ -84,7 +84,7 @@ Generates:
 </ul>
 ```
 
-(The default `match` object creates default routes. You probably don't want that.)
+(The default `match` object creates default route paths. You probably don't want that.)
 
 ### About `totalPages`
 
