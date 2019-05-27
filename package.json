@@ -17,22 +17,25 @@
     "build": "babel src -d lib",
     "build:watch": "npm run build -- -w",
     "prepublishOnly": "npm run build",
-    "lint": "eslint *.js src",
+    "lint": "eslint *.js src stories .storybook",
     "lint:fix": "npm run lint -- --fix",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
     "pre-commit": "npm run lint && npm run build && git add lib"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-router": "3.0.5"
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-proposal-export-default-from": "^7.2.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
+    "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^5.0.11",
     "@storybook/addon-links": "^5.0.11",
@@ -49,7 +52,8 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-standard": "^4.0.0",
-    "husky": "^2.3.0"
+    "husky": "^2.3.0",
+    "webpack-merge": "^4.2.1"
   },
   "husky": {
     "hooks": {

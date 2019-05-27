@@ -1,0 +1,53 @@
+<style type="text/css">
+
+  body {
+    font-family: arial, helvetica, sans-serif;
+  }
+
+  ul.pagination {
+    list-style-type: none;
+    padding: 16px;
+    background-color: #444;
+    border-color: 1px solid #222;
+    border-radius: 4px;
+  }
+
+  ul.pagination li {
+    display: inline-block;
+    padding: 4px;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 4px;
+    margin: 0 8px 0 0;
+  }
+
+  ul.pagination li:last-child {
+    margin-right: 0;
+  }
+
+  li.zeroPage,
+  li.lastPage {
+    background-color: #555;
+  }
+
+  li.zeroPage a span::after,
+  li.lastPage a span::before {
+    display: inline;
+    content: "—"
+  }
+
+  li.currentPage {
+    background-color: #222;
+  }
+
+  ul.pagination li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 4px;
+  }
+
+  ul.pagination li a:hover {
+    text-decoration: underline;
+  }
+
+</style>
