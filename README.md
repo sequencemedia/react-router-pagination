@@ -6,7 +6,7 @@ A *React Router 5* pagination component.
 
 - You have lots of data?
 - You want users to page through that data?
-- You want the page to be reflected in the route, and you're using React Router?
+- You want the page to be reflected in the route, and you're using *React Router*?
 
 Given some simple props, *React Router Pagination* will create a list of links to those pages.
 
