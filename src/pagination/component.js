@@ -33,6 +33,7 @@ export {
 
 export default class Pagination extends Component {
   static calculateTotalPages = calculateTotalPages
+
   static calculatePageNumber = calculatePageNumber
 
   state = {

@@ -15,6 +15,7 @@ export {
 
 export class Centered extends Pagination {
   static calculateTotalPages = calculateTotalPages
+
   static calculatePageNumber = calculatePageNumber
 
   state = {
