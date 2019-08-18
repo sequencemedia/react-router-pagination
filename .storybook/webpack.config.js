@@ -5,7 +5,7 @@ const merge = require('webpack-merge')
  *  parameters Webpack Dev Server says it should. Is
  *  Storybook using a superceded version?
  */
-module.exports = async ({ config, mode }) => {
+module.exports = async ({ config }) => {
   return merge(config, {
     devServer: {
       setup: function (app) {

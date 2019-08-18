@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
+    "react": "^16.9.0",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1"
   },
@@ -37,13 +37,13 @@
     "@babel/plugin-proposal-export-namespace-from": "^7.5.2",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
-    "@storybook/addon-actions": "^5.1.9",
-    "@storybook/addon-links": "^5.1.9",
-    "@storybook/react": "^5.1.9",
+    "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-links": "^5.1.11",
+    "@storybook/react": "^5.1.11",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "^3.2.0",
-    "core-js": "^3.1.4",
+    "core-js": "^3.2.1",
     "eslint": "^6.1.0",
     "eslint-config-standard": "^13.0.1",
     "eslint-import-resolver-babel-module": "^5.1.0",
@@ -52,7 +52,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-standard": "^4.0.0",
-    "husky": "^3.0.1",
+    "husky": "^3.0.4",
     "webpack-merge": "^4.2.1"
   },
   "husky": {
