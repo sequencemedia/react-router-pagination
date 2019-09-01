@@ -4,4 +4,10 @@
 **/npm-debug.log
 
 # NPM
+.npmignore
 .npmrc
+
+.storybook
+.eslintignore
+.eslintrc
+stories
