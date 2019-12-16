@@ -160,11 +160,11 @@ export default class Pagination extends Component {
     return a
   }
 
-  componentWillReceiveProps ({ pageNumber, totalPages }) {
-    this.setState({
+  static getDerivedStateFromProps ({ pageNumber, totalPages }) {
+    return {
       pageNumber: toInteger(pageNumber),
       totalPages: toInteger(totalPages)
-    })
+    }
   }
 
   shouldComponentUpdate (props) {
