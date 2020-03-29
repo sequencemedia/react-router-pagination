@@ -222,7 +222,7 @@ The default has this structure:
 {
   path: '/:pageNumber',
   params: {
-  	pageNumber: 1 /* or any integer */
+    pageNumber: 1 /* or any integer */
   }
 }
 ```
@@ -247,7 +247,7 @@ For the list of stores, supply the `Pagination` component  with a `match` prop o
 {
   path: '/catalogue/products/:id/stores/:pageNumber',
   params: {
-  	id: 'ABCDEF'
+    id: 'ABCDEF'
   }
 }
 ```
