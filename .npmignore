@@ -3,11 +3,12 @@
 **/node_modules/**/*
 **/npm-debug.log
 
-# NPM
-.npmignore
-.npmrc
-
+# Storybook
 .storybook
-.eslintignore
-.eslintrc
 stories
+
+# NPM
+.npmrc
+.npmignore
+
+.eslintignore
