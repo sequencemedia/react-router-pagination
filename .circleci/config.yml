@@ -1,38 +1,51 @@
 version: 2.1
-orbs:
-  node: circleci/node@1.1.6
+
 jobs:
   publish:
-    executor:
-      name: node/default
+    docker:
+      - image: circleci/node:lts
     steps:
       - checkout
       - run:
-          name: Authenticate with NPM
-          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
-      - run:
-          name: Install
-          command: npm install
-      - run:
-          name: Publish package to NPM
+          name: Publish to NPM
           command: |
             set -e
 
-            NAME=$(node -p "require('./package.json').name")
-            VERSION=$(node -p "require('./package.json').version")
+            echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+
+            PATTERN="([0-9]+)\.([0-9]+)\.([0-9]+)"
+            NAME=$(node -p "require('./package').name")
+            VERSION=$(node -p "require('./package').version")
             PUBLISHED_VERSION=$(npm view $NAME version)
 
-            if [ "$VERSION" != "$PUBLISHED_VERSION" ]
+            echo Version is $VERSION
+            echo Published version is $PUBLISHED_VERSION
+
+            [[ $VERSION =~ $PATTERN ]]
+
+            VERSION_MAJOR="${BASH_REMATCH[1]}"
+            VERSION_MINOR="${BASH_REMATCH[2]}"
+            VERSION_PATCH="${BASH_REMATCH[3]}"
+
+            [[ $PUBLISHED_VERSION =~ $PATTERN ]]
+
+            PUBLISHED_VERSION_MAJOR="${BASH_REMATCH[1]}"
+            PUBLISHED_VERSION_MINOR="${BASH_REMATCH[2]}"
+            PUBLISHED_VERSION_PATCH="${BASH_REMATCH[3]}"
+
+            if [ $VERSION_MAJOR -gt $PUBLISHED_VERSION_MAJOR ] || [ $VERSION_MINOR -gt $PUBLISHED_VERSION_MINOR ] || [ $VERSION_PATCH -gt $PUBLISHED_VERSION_PATCH ]
             then
+              npm ci
               npm publish
             fi
 
 workflows:
-    publish-to-npm:
-      jobs:
-        - publish:
-            filters:
-              tags:
-                only: /^v.*/
-              branches:
-                only: master
+  version: 2
+  commit-workflow:
+    jobs:
+      - publish:
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              only: master

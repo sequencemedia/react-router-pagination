@@ -13,7 +13,6 @@ module.exports = async ({ config }) => {
           res.redirect('/iframe.html')
         })
       },
-
       historyApiFallback: true /*
       historyApiFallback: {
         rewrites: [
