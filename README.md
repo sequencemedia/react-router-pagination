@@ -218,7 +218,7 @@ The `match` prop has the same structure as *React Router* `match` prop.
 
 The default has this structure:
 
-```json
+```javascript
 {
   path: '/:pageNumber',
   params: {
@@ -243,7 +243,7 @@ Let's say the store `id` is `ABCDEF`.
 
 For the list of stores, supply the `Pagination` component  with a `match` prop of this structure:
 
-```json
+```javascript
 {
   path: '/catalogue/products/:id/stores/:pageNumber',
   params: {
