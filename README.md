@@ -36,7 +36,7 @@ Additional props:
 
 A component with props:
 
-```javascript
+```jsx
 <Pagination
   totalPages={12}
   pageNumber={1}
@@ -98,7 +98,7 @@ It only cares about the _total number of pages_.
 
 In which case, `totalPages` should be 12.
 
-```javascript
+```jsx
 <Pagination
   totalPages={12}
 />
@@ -110,7 +110,7 @@ In which case, `totalPages` should be 12.
 
 In which case, `totalPages` should be 13.
 
-```javascript
+```jsx
 <Pagination
   totalPages={13}
 />
@@ -141,7 +141,7 @@ You can use this function anywhere in your application to ensure that the same v
 
 To display page 1:
 
-```javascript
+```jsx
 <Pagination
   totalPages={12}
   pageNumber={1}
@@ -150,7 +150,7 @@ To display page 1:
 
 To display page 5:
 
-```javascript
+```jsx
 <Pagination
   totalPages={12}
   pageNumber={5}
@@ -163,18 +163,18 @@ To display page 5:
 
 Any of these will present page 1:
 
-```javascript
+```jsx
 <Pagination
   totalPages={12}
   pageNumber={1}
 />
 ```
-```javascript
+```jsx
 <Pagination
   totalPages={12}
 />
 ```
-```javascript
+```jsx
 <Pagination
   totalPages={12}
   pageNumber={0}
@@ -183,13 +183,13 @@ Any of these will present page 1:
 
 Either these will present page 12:
 
-```javascript
+```jsx
 <Pagination
   totalPages={12}
   pageNumber={12}
 />
 ```
-```javascript
+```jsx
 <Pagination
   totalPages={12}
   pageNumber={13}
@@ -218,7 +218,7 @@ The `match` prop has the same structure as *React Router* `match` prop.
 
 The default has this structure:
 
-```javascript
+```json
 {
   path: '/:pageNumber',
   params: {
@@ -243,7 +243,7 @@ Let's say the store `id` is `ABCDEF`.
 
 For the list of stores, supply the `Pagination` component  with a `match` prop of this structure:
 
-```javascript
+```json
 {
   path: '/catalogue/products/:id/stores/:pageNumber',
   params: {
