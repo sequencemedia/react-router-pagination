@@ -36,7 +36,14 @@ jobs:
             if [ $VERSION_MAJOR -gt $PUBLISHED_VERSION_MAJOR ] || [ $VERSION_MINOR -gt $PUBLISHED_VERSION_MINOR ] || [ $VERSION_PATCH -gt $PUBLISHED_VERSION_PATCH ]
             then
               npm ci
-              npm publish
+              npm publish 2> /dev/null
+
+              if [[ $? != 0 ]];
+              then
+                echo Version $VERSION was not published
+              else
+                echo Published version $VERSION
+              fi
             fi
 
 workflows:
