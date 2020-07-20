@@ -3,13 +3,14 @@
     "standard",
     "plugin:react/recommended"
   ],
+  "parser": "babel-eslint",
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 2020,
+    "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
     }
   },
-  "parser": "babel-eslint",
   "plugins": [
     "react"
   ],
