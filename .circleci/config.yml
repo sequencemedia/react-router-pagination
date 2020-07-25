@@ -9,8 +9,6 @@ jobs:
       - run:
           name: Publish to NPM
           command: |
-            set -e
-
             echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
 
             PATTERN="([0-9]+)\.([0-9]+)\.([0-9]+)"
