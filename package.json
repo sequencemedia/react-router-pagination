@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react": "^16.14.0",
+    "react": "^17.0.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"
   },
