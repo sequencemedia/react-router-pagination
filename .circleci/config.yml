@@ -33,8 +33,10 @@ jobs:
 
             if [ $VERSION_MAJOR -gt $PUBLISHED_VERSION_MAJOR ] || [ $VERSION_MINOR -gt $PUBLISHED_VERSION_MINOR ] || [ $VERSION_PATCH -gt $PUBLISHED_VERSION_PATCH ]
             then
+              set +e
+
               npm ci
-              npm publish 2> /dev/null
+              npm publish
 
               if [[ $? != 0 ]];
               then
