@@ -23,7 +23,7 @@ function currentPageClassName (pageNumber, currentPageNumber) {
 }
 
 const getListItemKey = (key) => `list-item-${key}`
-const getLinkTo = ({ path = '/:pageNumber', params = {} } = {}, pageNumber) => generatePath(path, { ...params, pageNumber })
+const getLinkTo = ({ path = '/:pageNumber', params = {} } = {}, pageNumber = 0) => generatePath(path, { ...params, pageNumber })
 
 export {
   toInteger,
