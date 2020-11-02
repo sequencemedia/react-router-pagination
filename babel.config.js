@@ -3,6 +3,11 @@ module.exports = {
   comments: false,
   presets: [
     [
+      '@babel/typescript', {
+        allExtensions: true
+      }
+    ],
+    [
       '@babel/env', {
         useBuiltIns: 'usage',
         targets: {
@@ -17,6 +22,7 @@ module.exports = {
     '@babel/react'
   ],
   plugins: [
+    '@babel/transform-typescript',
     '@babel/proposal-export-default-from',
     '@babel/proposal-export-namespace-from',
     [

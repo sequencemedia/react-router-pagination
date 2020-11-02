@@ -1,19 +1,18 @@
 {
   "extends": [
     "plugin:react/recommended",
-    "standard"
+    "standard-with-typescript"
   ],
-  "parser": "@babel/eslint-parser",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2020,
-    "sourceType": "module",
+    "project": "tsconfig.json",
     "ecmaFeatures": {
       "jsx": true
     }
   },
   "plugins": [
-    "react",
-    "standard"
+    "@typescript-eslint/eslint-plugin",
+    "react"
   ],
   "rules": {
     "react/display-name": 0
@@ -23,7 +22,9 @@
       "version": "detect"
     },
     "import/resolver": {
-      "babel-module": {}
+      "node": {
+        "extensions": [".ts", ".tsx"]
+      }
     }
   }
 }

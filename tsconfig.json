@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "module": "es2020",
+    "target": "es2020",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "isolatedModules": true,
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "react-router-pagination/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ]
+}

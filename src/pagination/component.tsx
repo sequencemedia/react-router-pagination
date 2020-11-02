@@ -2,7 +2,6 @@
  * Pagination component
  */
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 import {
   generatePath
@@ -18,12 +17,13 @@ import {
   calculatePageNumber
 } from 'react-router-pagination/pagination'
 
-function currentPageClassName (pageNumber, currentPageNumber) {
-  if (pageNumber === currentPageNumber) return 'currentPage'
+function currentPageClassName (pageNumber: string | number, currentPageNumber: string | number): string | undefined {
+  if (toInteger(pageNumber) === toInteger(currentPageNumber)) return 'currentPage'
 }
 
-const getListItemKey = (key) => `list-item-${key}`
-const getLinkTo = ({ path = '/:pageNumber', params = {} } = {}, pageNumber = 0) => generatePath(path, { ...params, pageNumber })
+const getListItemKey = (key: string | number): string => `list-item-${key}`
+
+const getLinkTo = ({ path = '/:pageNumber', params = {} } = {}, pageNumber = 0): any => generatePath(path, { ...params, pageNumber })
 
 export {
   toInteger,
@@ -31,7 +31,29 @@ export {
   calculatePageNumber
 }
 
-export default class Pagination extends Component {
+export interface PaginationProps {
+  onClick: (pageNumber: number) => void
+  pageNumber: string | number
+  totalPages: string | number
+  match: {
+    path?: string
+    params?: object
+  }
+}
+
+export interface PaginationState {
+  pageNumber: number
+  totalPages: number
+}
+
+export default class Pagination<P, S> extends Component<P & PaginationProps, S & PaginationState> {
+  static defaultProps = {
+    onClick: () => {},
+    pageNumber: 0,
+    totalPages: 0,
+    match: {}
+  }
+
   static calculateTotalPages = calculateTotalPages
 
   static calculatePageNumber = calculatePageNumber
@@ -41,43 +63,43 @@ export default class Pagination extends Component {
     totalPages: toInteger(this.props.totalPages)
   }
 
-  x () {
+  x (): number { // pageNumber: string | number, totalPages: string | number) {
     return 0
   }
 
-  y () {
+  y (): number { // pageNumber: string | number, totalPages: string | number) {
     return 0
   }
 
-  z () {
+  z (): number { // pageNumber: string | number, totalPages: string | number) {
     return 0
   }
 
-  zeroIndex () {
+  zeroIndex (pageNumber: string | number, totalPages: string | number): number {
     return 0
   }
 
-  lastIndex () {
+  lastIndex (pageNumber: string | number, totalPages: string | number): number {
     return 0
   }
 
-  hasReversePageLink (pageNumber, totalPages) {
+  hasReversePageLink (pageNumber: string | number, totalPages: string | number): boolean {
     return (this.zeroIndex(pageNumber, totalPages) - 1) > 0
   }
 
-  hasForwardPageLink (pageNumber, totalPages) {
+  hasForwardPageLink (pageNumber: string | number, totalPages: string | number): boolean {
     return (this.lastIndex(pageNumber, totalPages) + 1) < totalPages
   }
 
-  hasZeroPageLink (pageNumber, totalPages) {
+  hasZeroPageLink (pageNumber: string | number, totalPages: string | number): boolean {
     return this.zeroIndex(pageNumber, totalPages) > 0
   }
 
-  hasLastPageLink (pageNumber, totalPages) {
+  hasLastPageLink (pageNumber: string | number, totalPages: string | number): boolean {
     return this.lastIndex(pageNumber, totalPages) < totalPages
   }
 
-  reversePageLinkItem (match, pageNumber, totalPages) {
+  reversePageLinkItem (match: object, pageNumber: string | number, totalPages: string | number): JSX.Element | null {
     if (this.hasReversePageLink(pageNumber, totalPages)) {
       const n = this.zeroIndex(pageNumber, totalPages)
       return (
@@ -93,7 +115,7 @@ export default class Pagination extends Component {
     return null
   }
 
-  forwardPageLinkItem (match, pageNumber, totalPages) {
+  forwardPageLinkItem (match: object, pageNumber: string | number, totalPages: string | number): JSX.Element | null {
     if (this.hasForwardPageLink(pageNumber, totalPages)) {
       const n = this.lastIndex(pageNumber, totalPages) + 1
       return (
@@ -109,7 +131,7 @@ export default class Pagination extends Component {
     return null
   }
 
-  zeroPageLinkItem (match, pageNumber, totalPages) {
+  zeroPageLinkItem (match: object, pageNumber: string | number, totalPages: string | number): JSX.Element | null {
     if (this.hasZeroPageLink(pageNumber, totalPages)) {
       const n = 1
       return (
@@ -125,9 +147,9 @@ export default class Pagination extends Component {
     return null
   }
 
-  lastPageLinkItem (match, pageNumber, totalPages) {
+  lastPageLinkItem (match: object, pageNumber: string | number, totalPages: string | number): JSX.Element | null {
     if (this.hasLastPageLink(pageNumber, totalPages)) {
-      const n = totalPages
+      const n = toInteger(totalPages)
       return (
         <li key={getListItemKey(n)} className='lastPage'>
           <Link to={getLinkTo(match, n)} onClick={() => this.handleClick(n)}>
@@ -141,11 +163,11 @@ export default class Pagination extends Component {
     return null
   }
 
-  pageLinkItems (match, pageNumber, totalPages) {
+  pageLinkItems (match: object, pageNumber: string | number, totalPages: string | number): JSX.Element[] {
     let i = this.zeroIndex(pageNumber, totalPages)
     const j = this.lastIndex(pageNumber, totalPages)
     const a = []
-    for (i, j; i < j; i = i + 1) {
+    for (j; i < j; i = i + 1) {
       const n = (i + 1)
       a.push((
         <li key={getListItemKey(n)} className={currentPageClassName(pageNumber, n)}>
@@ -160,23 +182,23 @@ export default class Pagination extends Component {
     return a
   }
 
-  static getDerivedStateFromProps ({ pageNumber, totalPages }) {
+  static getDerivedStateFromProps ({ pageNumber, totalPages }: PaginationProps): PaginationState {
     return {
       pageNumber: toInteger(pageNumber),
       totalPages: toInteger(totalPages)
     }
   }
 
-  shouldComponentUpdate (props) {
+  shouldComponentUpdate (props: PaginationProps): boolean {
     return (
       (props.pageNumber !== this.props.pageNumber) ||
       (props.totalPages !== this.props.totalPages) ||
       (props.match !== this.props.match))
   }
 
-  handleClick = (pageNumber) => this.props.onClick(pageNumber)
+  handleClick = (pageNumber: number): any => this.props.onClick(pageNumber)
 
-  render () {
+  render (): JSX.Element | null {
     const { totalPages } = this.state
     if (totalPages > 1) {
       const { match } = this.props
@@ -202,27 +224,4 @@ export default class Pagination extends Component {
     }
     return null
   }
-}
-
-Pagination.propTypes = {
-  onClick: PropTypes.func,
-  pageNumber: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number
-  ]).isRequired,
-  totalPages: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number
-  ]).isRequired,
-  match: PropTypes.shape({
-    path: PropTypes.string,
-    params: PropTypes.shape()
-  })
-}
-
-Pagination.defaultProps = {
-  onClick: () => {},
-  pageNumber: 0,
-  totalPages: 0,
-  match: {}
 }
