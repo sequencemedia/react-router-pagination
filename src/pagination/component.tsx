@@ -188,9 +188,9 @@ export default abstract class AbstractPagination<P, S> extends Component<P & Abs
 
   shouldComponentUpdate (props: AbstractPaginationProps): boolean {
     return (
-      (props.pageNumber !== this.props.pageNumber) ||
-      (props.totalPages !== this.props.totalPages) ||
-      (props.match !== this.props.match))
+      toInteger(props.pageNumber) !== toInteger(this.props.pageNumber) ||
+      toInteger(props.totalPages) !== toInteger(this.props.totalPages) ||
+      props.match !== this.props.match)
   }
 
   handleClick = (pageNumber: number): any => this.props.onClick(pageNumber)

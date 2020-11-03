@@ -39,13 +39,13 @@ export class Standard extends AbstractPagination<StandardProps, StandardState> {
     return z
   }
 
-  zeroIndex = (pageNumber: string | number): number => {
+  zeroIndex (pageNumber: string | number): number {
     const p = toInteger(pageNumber) - 1
     const z = this.z()
     return (p - (p % z))
   }
 
-  lastIndex = (pageNumber: string | number, totalPages: string | number): number => {
+  lastIndex (pageNumber: string | number, totalPages: string | number): number {
     const p = toInteger(pageNumber) - 1
     const z = this.z()
     return Math.min((p - (p % z)) + z, toInteger(totalPages))

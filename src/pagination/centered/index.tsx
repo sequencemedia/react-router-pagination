@@ -56,20 +56,18 @@ export class Centered extends AbstractPagination<CenteredProps, CenteredState> {
     return (s) ? z : z - 1
   }
 
-  zeroIndex = (pageNumber: string | number, totalPages: string | number): number => {
+  zeroIndex (pageNumber: string | number, totalPages: string | number): number {
     const p = toInteger(pageNumber)
     const t = toInteger(totalPages)
-
     const x = this.x()
     const z = this.z()
     const y = this.y()
     return (p > x) ? (t > z) ? ((p + y) > t) ? t - z : (t > (p + y)) ? p - x : t - z : 0 : 0
   }
 
-  lastIndex = (pageNumber: string | number, totalPages: string | number): number => {
+  lastIndex (pageNumber: string | number, totalPages: string | number): number {
     const p = toInteger(pageNumber)
     const t = toInteger(totalPages)
-
     const x = this.x()
     const z = this.z()
     const y = this.y()
