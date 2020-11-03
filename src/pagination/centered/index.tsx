@@ -32,19 +32,23 @@ export class Centered extends AbstractPagination<CenteredProps, CenteredState> {
     spread: toInteger(this.props.spread)
   }
 
-  x = (): number => (
-    Math.ceil(
-      this.z() / 2
+  x (): number {
+    return (
+      Math.ceil(
+        this.z() / 2
+      )
     )
-  )
+  }
 
-  y = (): number => (
-    Math.floor(
-      this.z() / 2
+  y (): number {
+    return (
+      Math.floor(
+        this.z() / 2
+      )
     )
-  )
+  }
 
-  z = (): number => {
+  z (): number {
     const {
       spread: z
     } = this.state
