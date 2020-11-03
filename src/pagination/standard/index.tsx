@@ -32,7 +32,7 @@ export class Standard extends AbstractPagination<StandardProps, StandardState> {
     spread: toInteger(this.props.spread)
   }
 
-  z = (): number => {
+  z (): number {
     const {
       spread: z
     } = this.state
