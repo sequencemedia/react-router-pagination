@@ -17,13 +17,15 @@ import {
   calculatePageNumber
 } from 'react-router-pagination/pagination'
 
-function currentPageClassName (pageNumber: string | number, currentPageNumber: string | number): string | undefined {
-  if (toInteger(pageNumber) === toInteger(currentPageNumber)) return 'currentPage'
+function getListItemClassName (currentPageNumber: string | number, pageNumber: string | number): string | undefined {
+  if (toInteger(currentPageNumber) === toInteger(pageNumber)) {
+    return 'currentPage'
+  }
 }
 
 const getListItemKey = (key: string | number): string => `list-item-${key}`
 
-const getLinkTo = ({ path = '/:pageNumber', params = {} } = {}, pageNumber = 0): any => generatePath(path, { ...params, pageNumber })
+const getLinkTo = ({ path = '/:pageNumber', params = {} } = {}, pageNumber = 0): string => generatePath(path, { ...params, pageNumber })
 
 export {
   toInteger,
@@ -165,7 +167,7 @@ export default abstract class Pagination<P, S> extends Component<P & PaginationP
     for (j; i < j; i = i + 1) {
       const n = (i + 1)
       a.push((
-        <li key={getListItemKey(n)} className={currentPageClassName(pageNumber, n)}>
+        <li key={getListItemKey(n)} className={getListItemClassName(pageNumber, n)}>
           <Link to={getLinkTo(match, n)} onClick={() => this.handleClick(n)}>
             <span className='pageNumber'>
               {n}
