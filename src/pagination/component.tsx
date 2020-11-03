@@ -46,7 +46,7 @@ export interface PaginationState {
   totalPages: number
 }
 
-export default class Pagination<P, S> extends Component<P & PaginationProps, S & PaginationState> {
+export default abstract class Pagination<P, S> extends Component<P & PaginationProps, S & PaginationState> {
   static defaultProps = {
     onClick: () => {},
     pageNumber: 0,
@@ -58,20 +58,15 @@ export default class Pagination<P, S> extends Component<P & PaginationProps, S &
 
   static calculatePageNumber = calculatePageNumber
 
-  state = {
-    pageNumber: toInteger(this.props.pageNumber),
-    totalPages: toInteger(this.props.totalPages)
-  }
-
-  x (): number { // pageNumber: string | number, totalPages: string | number) {
+  x (): number {
     return 0
   }
 
-  y (): number { // pageNumber: string | number, totalPages: string | number) {
+  y (): number {
     return 0
   }
 
-  z (): number { // pageNumber: string | number, totalPages: string | number) {
+  z (): number {
     return 0
   }
 
