@@ -1,6 +1,6 @@
-import Pagination, {
-  PaginationProps,
-  PaginationState,
+import AbstractPagination, {
+  AbstractPaginationProps,
+  AbstractPaginationState,
   toInteger,
   calculateTotalPages,
   calculatePageNumber
@@ -12,23 +12,19 @@ export {
   calculatePageNumber
 }
 
-interface StandardProps extends PaginationProps {
+interface StandardProps extends AbstractPaginationProps {
   spread: string | number
 }
 
-interface StandardState extends PaginationState {
+interface StandardState extends AbstractPaginationState {
   spread: number
 }
 
-export class Standard extends Pagination<StandardProps, StandardState> {
+export class Standard extends AbstractPagination<StandardProps, StandardState> {
   static defaultProps = {
-    ...Pagination.defaultProps,
+    ...AbstractPagination.defaultProps,
     spread: 1
   }
-
-  static calculateTotalPages = calculateTotalPages
-
-  static calculatePageNumber = calculatePageNumber
 
   state = {
     pageNumber: toInteger(this.props.pageNumber),
@@ -43,16 +39,16 @@ export class Standard extends Pagination<StandardProps, StandardState> {
     return z
   }
 
-  zeroIndex = (pageNumber: number): number => {
-    const p = pageNumber - 1
+  zeroIndex = (pageNumber: string | number): number => {
+    const p = toInteger(pageNumber) - 1
     const z = this.z()
     return (p - (p % z))
   }
 
-  lastIndex = (pageNumber: number, totalPages: number): number => {
-    const p = pageNumber - 1
+  lastIndex = (pageNumber: string | number, totalPages: string | number): number => {
+    const p = toInteger(pageNumber) - 1
     const z = this.z()
-    return Math.min((p - (p % z)) + z, totalPages)
+    return Math.min((p - (p % z)) + z, toInteger(totalPages))
   }
 
   static getDerivedStateFromProps ({ pageNumber, totalPages, spread }: StandardProps): StandardState {

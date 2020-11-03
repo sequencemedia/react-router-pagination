@@ -1,6 +1,6 @@
-import Pagination, {
-  PaginationProps,
-  PaginationState,
+import AbstractPagination, {
+  AbstractPaginationProps,
+  AbstractPaginationState,
   toInteger,
   calculateTotalPages,
   calculatePageNumber
@@ -12,23 +12,19 @@ export {
   calculatePageNumber
 }
 
-interface CenteredProps extends PaginationProps {
+interface CenteredProps extends AbstractPaginationProps {
   spread: string | number
 }
 
-interface CenteredState extends PaginationState {
+interface CenteredState extends AbstractPaginationState {
   spread: number
 }
 
-export class Centered extends Pagination<CenteredProps, CenteredState> {
+export class Centered extends AbstractPagination<CenteredProps, CenteredState> {
   static defaultProps = {
-    ...Pagination.defaultProps,
+    ...AbstractPagination.defaultProps,
     spread: 3
   }
-
-  static calculateTotalPages = calculateTotalPages
-
-  static calculatePageNumber = calculatePageNumber
 
   state = {
     pageNumber: toInteger(this.props.pageNumber),

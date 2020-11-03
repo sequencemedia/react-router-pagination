@@ -32,7 +32,7 @@
         "root": [".."],
         "cwd": "babelrc",
         "alias": {
-          "react-router-pagination": "."
+          "react-router-pagination": "../src"
         }
       }
     ]

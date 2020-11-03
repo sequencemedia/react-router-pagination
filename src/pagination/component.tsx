@@ -33,7 +33,7 @@ export {
   calculatePageNumber
 }
 
-export interface PaginationProps {
+export interface AbstractPaginationProps {
   onClick: (pageNumber: number) => void
   pageNumber: string | number
   totalPages: string | number
@@ -43,12 +43,12 @@ export interface PaginationProps {
   }
 }
 
-export interface PaginationState {
+export interface AbstractPaginationState {
   pageNumber: number
   totalPages: number
 }
 
-export default abstract class Pagination<P, S> extends Component<P & PaginationProps, S & PaginationState> {
+export default abstract class AbstractPagination<P, S> extends Component<P & AbstractPaginationProps, S & AbstractPaginationState> {
   static defaultProps = {
     onClick: () => {},
     pageNumber: 0,
@@ -179,14 +179,14 @@ export default abstract class Pagination<P, S> extends Component<P & PaginationP
     return a
   }
 
-  static getDerivedStateFromProps ({ pageNumber, totalPages }: PaginationProps): PaginationState {
+  static getDerivedStateFromProps ({ pageNumber, totalPages }: AbstractPaginationProps): AbstractPaginationState {
     return {
       pageNumber: toInteger(pageNumber),
       totalPages: toInteger(totalPages)
     }
   }
 
-  shouldComponentUpdate (props: PaginationProps): boolean {
+  shouldComponentUpdate (props: AbstractPaginationProps): boolean {
     return (
       (props.pageNumber !== this.props.pageNumber) ||
       (props.totalPages !== this.props.totalPages) ||
@@ -220,5 +220,12 @@ export default abstract class Pagination<P, S> extends Component<P & PaginationP
       }
     }
     return null
+  }
+}
+
+export class Pagination extends AbstractPagination<AbstractPaginationProps, AbstractPaginationState> {
+  state = {
+    pageNumber: toInteger(this.props.pageNumber),
+    totalPages: toInteger(this.props.totalPages)
   }
 }
