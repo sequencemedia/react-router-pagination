@@ -37,18 +37,6 @@ const presets = [
   ]
 ]
 
-const plugins = [
-  [
-    'module-resolver', {
-      root: ['./src'],
-      cwd: 'babelrc',
-      alias: {
-        'react-router-pagination': './src'
-      }
-    }
-  ]
-]
-
 module.exports = (api) => {
   if (api) api.cache.using(env)
 
@@ -56,6 +44,6 @@ module.exports = (api) => {
     compact: true,
     comments: false,
     presets,
-    plugins
+    plugins: []
   }
 }

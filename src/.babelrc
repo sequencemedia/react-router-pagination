@@ -28,6 +28,15 @@
       {
         "loose": false
       }
+    ],
+    [
+      "module-resolver", {
+        "root": [".."],
+        "cwd": "babelrc",
+        "alias": {
+          "react-router-pagination": "."
+        }
+      }
     ]
   ]
 }
