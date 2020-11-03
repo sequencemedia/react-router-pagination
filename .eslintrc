@@ -1,27 +1,14 @@
 {
-  "extends": [
-    "standard",
-    "plugin:react/recommended"
-  ],
+  "extends": "standard",
   "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": 2020,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
+    "sourceType": "module"
   },
   "plugins": [
-    "standard",
-    "react"
+    "standard"
   ],
-  "rules": {
-    "react/display-name": 0
-  },
   "settings": {
-    "react": {
-      "version": "detect"
-    },
     "import/resolver": {
       "babel-module": {}
     }

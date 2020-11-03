@@ -1,36 +1,49 @@
-module.exports = {
-  compact: true,
-  comments: false,
-  presets: [
-    [
-      '@babel/env', {
-        useBuiltIns: 'usage',
-        targets: {
-          node: '12.9.0',
-          browsers: [
-            'last 2 versions'
-          ]
-        },
-        corejs: 3
-      }
-    ],
-    '@babel/react'
-  ],
-  plugins: [
-    '@babel/proposal-export-default-from',
-    '@babel/proposal-export-namespace-from',
-    [
-      '@babel/proposal-class-properties',
-      {
-        loose: false
-      }
-    ],
-    [
-      'module-resolver', {
-        alias: {
-          'react-router-pagination': './src'
-        }
-      }
-    ]
+const debug = require('debug')
+
+const log = debug('react-router-pagination')
+
+const {
+  env: {
+    NODE_ENV = 'development'
+  }
+} = process
+
+log('`react-router-pagination` is awake')
+
+function env () {
+  log({ NODE_ENV })
+
+  return (
+    NODE_ENV === 'production'
+  )
+}
+
+const presets = [
+  [
+    '@babel/env', {
+      targets: {
+        node: '12.19.0',
+        browsers: [
+          'last 4 versions',
+          'safari >= 9',
+          'ios >= 8',
+          'ie >= 9',
+          '> 2%'
+        ]
+      },
+      useBuiltIns: 'usage',
+      corejs: 3
+    }
   ]
+]
+
+module.exports = (api) => {
+  if (api) api.cache.using(env)
+
+  return {
+    compact: true,
+    comments: false,
+    presets,
+    plugins: []
+  }
 }

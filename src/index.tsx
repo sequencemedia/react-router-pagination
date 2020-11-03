@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import {
   Standard
@@ -19,7 +18,11 @@ export {
   Centered
 }
 
-const Pagination = ({ format, ...props }) => (
+export interface PaginationProps {
+  format?: string
+}
+
+const Pagination = ({ format, ...props }: PaginationProps): JSX.Element => (
   format !== 'center'
     ? <Standard {...props} />
     : <Centered {...props} />
@@ -27,9 +30,5 @@ const Pagination = ({ format, ...props }) => (
 
 Pagination.calculateTotalPages = calculateTotalPages
 Pagination.calculatePageNumber = calculatePageNumber
-
-Pagination.propTypes = {
-  format: PropTypes.string
-}
 
 export default Pagination

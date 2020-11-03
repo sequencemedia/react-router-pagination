@@ -1,0 +1,42 @@
+{
+  "presets": [
+    "@babel/typescript",
+    [
+      "@babel/env", {
+        "targets": {
+          "node": "12.19.0",
+          "browsers": [
+            "last 4 versions",
+            "safari >= 9",
+            "ios >= 8",
+            "ie >= 9",
+            "> 2%"
+          ]
+        },
+        "useBuiltIns": "usage",
+        "corejs": 3
+      }
+    ],
+    "@babel/react"
+  ],
+  "plugins": [
+    "@babel/transform-typescript",
+    "@babel/proposal-export-default-from",
+    "@babel/proposal-export-namespace-from",
+    [
+      "@babel/proposal-class-properties",
+      {
+        "loose": false
+      }
+    ],
+    [
+      "module-resolver", {
+        "root": [".."],
+        "cwd": "babelrc",
+        "alias": {
+          "react-router-pagination": "."
+        }
+      }
+    ]
+  ]
+}
