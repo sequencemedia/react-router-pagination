@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`react-router-pagination <Centered /> With \`pageNumber\` and \`totalPages\` and \`spread\` renders 1`] = `
+<ul
+  className="pagination"
+>
+  <li
+    className="zeroPage"
+  >
+    <a
+      href="/1"
+      onClick={[Function]}
+    >
+      <span
+        className="pageNumber"
+      >
+        1
+      </span>
+    </a>
+  </li>
+  <li
+    className="reversePage"
+  >
+    <a
+      href="/6"
+      onClick={[Function]}
+    >
+      <span
+        className="reverse"
+      >
+        «
+      </span>
+    </a>
+  </li>
+  <li
+    className="page"
+  >
+    <a
+      href="/7"
+      onClick={[Function]}
+    >
+      <span
+        className="pageNumber"
+      >
+        7
+      </span>
+    </a>
+  </li>
+  <li
+    className="page"
+  >
+    <a
+      href="/8"
+      onClick={[Function]}
+    >
+      <span
+        className="pageNumber"
+      >
+        8
+      </span>
+    </a>
+  </li>
+  <li
+    className="currentPage"
+  >
+    <a
+      href="/9"
+      onClick={[Function]}
+    >
+      <span
+        className="pageNumber"
+      >
+        9
+      </span>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`react-router-pagination <Pagination /> With \`pageNumber\` and \`totalPages\` renders 1`] = `
+<ul
+  className="pagination"
+>
+  <li
+    className="forwardPage"
+  >
+    <a
+      href="/1"
+      onClick={[Function]}
+    >
+      <span
+        className="forwardPage"
+      >
+        »
+      </span>
+    </a>
+  </li>
+  <li
+    className="lastPage"
+  >
+    <a
+      href="/2"
+      onClick={[Function]}
+    >
+      <span
+        className="pageNumber"
+      >
+        2
+      </span>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`react-router-pagination <Standard /> With \`pageNumber\` and \`totalPages\` and \`spread\` renders 1`] = `
+<ul
+  className="pagination"
+>
+  <li
+    className="zeroPage"
+  >
+    <a
+      href="/1"
+      onClick={[Function]}
+    >
+      <span
+        className="pageNumber"
+      >
+        1
+      </span>
+    </a>
+  </li>
+  <li
+    className="reversePage"
+  >
+    <a
+      href="/6"
+      onClick={[Function]}
+    >
+      <span
+        className="reverse"
+      >
+        «
+      </span>
+    </a>
+  </li>
+  <li
+    className="page"
+  >
+    <a
+      href="/7"
+      onClick={[Function]}
+    >
+      <span
+        className="pageNumber"
+      >
+        7
+      </span>
+    </a>
+  </li>
+  <li
+    className="page"
+  >
+    <a
+      href="/8"
+      onClick={[Function]}
+    >
+      <span
+        className="pageNumber"
+      >
+        8
+      </span>
+    </a>
+  </li>
+  <li
+    className="currentPage"
+  >
+    <a
+      href="/9"
+      onClick={[Function]}
+    >
+      <span
+        className="pageNumber"
+      >
+        9
+      </span>
+    </a>
+  </li>
+</ul>
+`;

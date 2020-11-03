@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`react-router-pagination/pagination/standard <Standard /> With \`pageNumber\` and \`totalPages\` With \`spread\` renders 1`] = `
+<ul
+  className="pagination"
+>
+  <li
+    className="zeroPage"
+  >
+    <a
+      href="/1"
+      onClick={[Function]}
+    >
+      <span
+        className="pageNumber"
+      >
+        1
+      </span>
+    </a>
+  </li>
+  <li
+    className="reversePage"
+  >
+    <a
+      href="/3"
+      onClick={[Function]}
+    >
+      <span
+        className="reverse"
+      >
+        «
+      </span>
+    </a>
+  </li>
+  <li
+    className="page"
+  >
+    <a
+      href="/4"
+      onClick={[Function]}
+    >
+      <span
+        className="pageNumber"
+      >
+        4
+      </span>
+    </a>
+  </li>
+  <li
+    className="currentPage"
+  >
+    <a
+      href="/5"
+      onClick={[Function]}
+    >
+      <span
+        className="pageNumber"
+      >
+        5
+      </span>
+    </a>
+  </li>
+  <li
+    className="page"
+  >
+    <a
+      href="/6"
+      onClick={[Function]}
+    >
+      <span
+        className="pageNumber"
+      >
+        6
+      </span>
+    </a>
+  </li>
+  <li
+    className="forwardPage"
+  >
+    <a
+      href="/7"
+      onClick={[Function]}
+    >
+      <span
+        className="forwardPage"
+      >
+        »
+      </span>
+    </a>
+  </li>
+  <li
+    className="lastPage"
+  >
+    <a
+      href="/9"
+      onClick={[Function]}
+    >
+      <span
+        className="pageNumber"
+      >
+        9
+      </span>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`react-router-pagination/pagination/standard <Standard /> With \`pageNumber\` and \`totalPages\` renders 1`] = `
+<ul
+  className="pagination"
+>
+  <li
+    className="currentPage"
+  >
+    <a
+      href="/1"
+      onClick={[Function]}
+    >
+      <span
+        className="pageNumber"
+      >
+        1
+      </span>
+    </a>
+  </li>
+  <li
+    className="lastPage"
+  >
+    <a
+      href="/2"
+      onClick={[Function]}
+    >
+      <span
+        className="pageNumber"
+      >
+        2
+      </span>
+    </a>
+  </li>
+</ul>
+`;

@@ -15,13 +15,13 @@ import {
   toInteger,
   calculateTotalPages,
   calculatePageNumber
-} from 'react-router-pagination/pagination'
+} from './common'
 
-function getListItemClassName (currentPageNumber: string | number, pageNumber: string | number): string | undefined {
-  if (toInteger(currentPageNumber) === toInteger(pageNumber)) {
-    return 'currentPage'
-  }
-}
+const getListItemClassName = (currentPageNumber: string | number, pageNumber: string | number): string => (
+  toInteger(currentPageNumber) === toInteger(pageNumber)
+    ? 'currentPage'
+    : 'page'
+)
 
 const getListItemKey = (key: string | number): string => `list-item-${key}`
 

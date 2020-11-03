@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`react-router-pagination/pagination/component <Pagination /> With \`pageNumber\` and \`totalPages\` renders 1`] = `
+<ul
+  className="pagination"
+>
+  <li
+    className="forwardPage"
+  >
+    <a
+      href="/1"
+      onClick={[Function]}
+    >
+      <span
+        className="forwardPage"
+      >
+        »
+      </span>
+    </a>
+  </li>
+  <li
+    className="lastPage"
+  >
+    <a
+      href="/2"
+      onClick={[Function]}
+    >
+      <span
+        className="pageNumber"
+      >
+        2
+      </span>
+    </a>
+  </li>
+</ul>
+`;

@@ -1,4 +1,4 @@
-export const toInteger = (v: number | string): number => {
+export function toInteger (v: number | string): number {
   const n = Number(v)
 
   return isNaN(n) ? 0 : Math.round(n)

@@ -2,16 +2,16 @@ import React from 'react'
 
 import {
   Standard
-} from 'react-router-pagination/pagination/standard'
+} from './pagination/standard'
 
 import {
   Centered
-} from 'react-router-pagination/pagination/centered'
+} from './pagination/centered'
 
 import {
   calculateTotalPages,
   calculatePageNumber
-} from 'react-router-pagination/pagination'
+} from './pagination/common'
 
 export {
   Standard,
