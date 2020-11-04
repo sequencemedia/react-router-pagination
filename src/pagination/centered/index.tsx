@@ -33,19 +33,13 @@ export class Centered extends AbstractPagination<CenteredProps, CenteredState> {
   }
 
   x (): number {
-    return (
-      Math.ceil(
-        this.z() / 2
-      )
-    )
+    const n = this.z() / 2
+    return Math.ceil(n)
   }
 
   y (): number {
-    return (
-      Math.floor(
-        this.z() / 2
-      )
-    )
+    const n = this.z() / 2
+    return Math.floor(n)
   }
 
   z (): number {
