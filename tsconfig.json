@@ -11,6 +11,9 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
+      "react-router-pagination": [
+        "src"
+      ],
       "react-router-pagination/*": [
         "src/*"
       ]
