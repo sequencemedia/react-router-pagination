@@ -5,9 +5,6 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "plugins": [
-    "standard"
-  ],
   "settings": {
     "import/resolver": {
       "babel-module": {}

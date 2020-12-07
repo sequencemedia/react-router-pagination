@@ -12,7 +12,6 @@
     }
   },
   "plugins": [
-    "standard",
     "react"
   ],
   "settings": {
