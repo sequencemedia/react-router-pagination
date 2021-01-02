@@ -57,7 +57,7 @@
     "cross-env": "^7.0.3",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
-    "eslint": "^7.16.0",
+    "eslint": "^7.17.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-config-standard-with-typescript": "^19.0.1",
     "eslint-import-resolver-babel-module": "^5.2.0",
