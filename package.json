@@ -45,7 +45,7 @@
     "@types/enzyme": "^3.10.8",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^26.0.20",
-    "@types/react": "^17.0.2",
+    "@types/react": "^17.0.3",
     "@types/react-router": "^5.1.12",
     "@types/react-router-dom": "^5.1.7",
     "@types/react-test-renderer": "^17.0.1",
