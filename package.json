@@ -53,7 +53,7 @@
     "@typescript-eslint/parser": "^4.26.0",
     "babel-jest": "^27.0.2",
     "babel-plugin-module-resolver": "^4.1.0",
-    "core-js": "^3.13.1",
+    "core-js": "^3.14.0",
     "cross-env": "^7.0.3",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
