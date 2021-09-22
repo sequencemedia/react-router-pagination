@@ -1,6 +1,6 @@
 {
   "name": "react-router-pagination",
-  "version": "2.2.4",
+  "version": "2.2.5",
   "description": "A React Router Pagination component",
   "main": "./index.js",
   "author": {
@@ -27,9 +27,8 @@
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "test": "cross-env NODE_ENV=test jest --verbose --run-in-band",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "pre-commit": "npm run lint && npm run test && npm run build && git add lib"
+    "gulp": "gulp --color",
+    "pre-commit": "npm run lint && npm run test && npm run build && git add lib && npm run gulp -- pre-commit"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
@@ -42,6 +41,7 @@
     "@babel/preset-env": "^7.15.6",
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.15.0",
+    "@babel/register": "^7.15.3",
     "@types/enzyme": "^3.10.9",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^27.0.2",
@@ -65,6 +65,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.26.0",
+    "gulp": "^4.0.2",
     "husky": "^7.0.2",
     "jest": "^27.2.1",
     "prop-types": "15.7.2",
