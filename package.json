@@ -1,6 +1,6 @@
 {
   "name": "react-router-pagination",
-  "version": "2.2.54",
+  "version": "2.2.55",
   "description": "A React Router Pagination component",
   "main": "./index.js",
   "author": {
@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=12.19.0"
+    "node": ">=16.13.0"
   },
   "repository": {
     "type": "git",
