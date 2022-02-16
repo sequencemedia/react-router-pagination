@@ -31,8 +31,8 @@
     "pre-commit": "npm run lint && npm run test && npm run build && git add lib && npm run gulp -- pre-commit"
   },
   "devDependencies": {
-    "@babel/cli": "^7.17.0",
-    "@babel/core": "^7.17.2",
+    "@babel/cli": "^7.17.3",
+    "@babel/core": "^7.17.4",
     "@babel/eslint-parser": "^7.17.0",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/plugin-proposal-export-default-from": "^7.16.7",
