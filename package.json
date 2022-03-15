@@ -1,6 +1,6 @@
 {
   "name": "react-router-pagination",
-  "version": "2.2.137",
+  "version": "2.2.138",
   "description": "A React Router Pagination component",
   "main": "./index.js",
   "author": {
@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
-    "@babel/core": "^7.17.5",
+    "@babel/core": "^7.17.7",
     "@babel/eslint-parser": "^7.17.0",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/plugin-proposal-export-default-from": "^7.16.7",
@@ -41,7 +41,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
-    "@babel/register": "^7.17.0",
+    "@babel/register": "^7.17.7",
     "@types/enzyme": "^3.10.11",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^27.4.1",
@@ -49,8 +49,8 @@
     "@types/react-router": "^5.1.18",
     "@types/react-router-dom": "^5.3.3",
     "@types/react-test-renderer": "^17.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.14.0",
-    "@typescript-eslint/parser": "^5.14.0",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
     "babel-jest": "^27.5.1",
     "babel-plugin-module-resolver": "^4.1.0",
     "core-js": "^3.21.1",
