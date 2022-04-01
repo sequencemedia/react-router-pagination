@@ -1,6 +1,6 @@
 {
   "name": "react-router-pagination",
-  "version": "2.2.154",
+  "version": "2.2.155",
   "description": "A React Router Pagination component",
   "main": "./index.js",
   "author": {
@@ -71,8 +71,8 @@
     "prop-types": "15.7.2",
     "react": "16.14.0",
     "react-dom": "16.14.0",
-    "react-router": "^6.2.2",
-    "react-router-dom": "^6.2.2",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
     "rimraf": "^3.0.2",
     "typescript": "^4.6.3"
   }
