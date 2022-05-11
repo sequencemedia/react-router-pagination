@@ -1,14 +1,26 @@
 .DS_Store
 
-**/node_modules/**/*
-**/npm-debug.log
+.circleci
+.husky
+
+.editorconfig
+
+.eslintignore
+.eslintrc
+
+.github
+.gitignore
+
+# NPM
+.npmignore
+.npmrc
+
+# NVM
+.nvmrc
+
+# Deps
+.depsrc
 
 # Storybook
 .storybook
 stories
-
-# NPM
-.npmrc
-.npmignore
-
-.eslintignore

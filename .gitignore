@@ -11,3 +11,6 @@
 
 # Coverage
 coverage
+
+# Deps
+.depsrc
