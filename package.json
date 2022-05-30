@@ -1,6 +1,6 @@
 {
   "name": "react-router-pagination",
-  "version": "2.2.177",
+  "version": "2.2.178",
   "description": "A React Router Pagination component",
   "main": "./index.js",
   "author": {
@@ -37,7 +37,7 @@
     "@babel/plugin-proposal-class-properties": "^7.17.12",
     "@babel/plugin-proposal-export-default-from": "^7.17.12",
     "@babel/plugin-proposal-export-namespace-from": "^7.17.12",
-    "@babel/plugin-transform-typescript": "^7.18.1",
+    "@babel/plugin-transform-typescript": "^7.18.4",
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "@babel/preset-typescript": "^7.17.12",
