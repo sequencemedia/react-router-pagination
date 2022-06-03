@@ -37,6 +37,8 @@ const presets = [
   ]
 ]
 
+const plugins = []
+
 module.exports = (api) => {
   if (api) api.cache.using(env)
 
@@ -44,6 +46,6 @@ module.exports = (api) => {
     compact: true,
     comments: false,
     presets,
-    plugins: []
+    plugins
   }
 }
