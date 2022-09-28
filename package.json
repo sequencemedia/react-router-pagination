@@ -1,6 +1,6 @@
 {
   "name": "react-router-pagination",
-  "version": "2.2.209",
+  "version": "2.2.210",
   "description": "A React Router Pagination component",
   "main": "./index.js",
   "author": {
@@ -31,15 +31,15 @@
     "pre-commit": "npm run lint && npm run test && npm run build && git add lib && npm run gulp -- pre-commit"
   },
   "devDependencies": {
-    "@babel/cli": "^7.18.10",
-    "@babel/core": "^7.19.1",
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.3",
     "@babel/eslint-parser": "^7.19.1",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-proposal-export-default-from": "^7.18.10",
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
     "@babel/plugin-syntax-jsx": "^7.18.6",
-    "@babel/plugin-transform-typescript": "^7.19.1",
-    "@babel/preset-env": "^7.19.1",
+    "@babel/plugin-transform-typescript": "^7.19.3",
+    "@babel/preset-env": "^7.19.3",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
     "@babel/register": "^7.18.9",
@@ -74,6 +74,6 @@
     "react-router": "^6.4.1",
     "react-router-dom": "^6.4.1",
     "rimraf": "^3.0.2",
-    "typescript": "^4.8.3"
+    "typescript": "^4.8.4"
   }
 }
