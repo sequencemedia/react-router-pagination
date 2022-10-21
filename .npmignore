@@ -24,3 +24,7 @@
 # Storybook
 .storybook
 stories
+
+# Build
+build
+gulpfile.*
