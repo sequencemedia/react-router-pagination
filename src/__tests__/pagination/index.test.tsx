@@ -79,7 +79,7 @@ describe('react-router-pagination', () => {
           </MemoryRouter>
         )
 
-        return expect(renderer.create(component).toJSON())
+        expect(renderer.create(component).toJSON())
           .toMatchSnapshot()
       })
     })
@@ -94,7 +94,7 @@ describe('react-router-pagination', () => {
           </MemoryRouter>
         )
 
-        return expect(renderer.create(component).toJSON())
+        expect(renderer.create(component).toJSON())
           .toMatchSnapshot()
       })
     })
@@ -109,7 +109,7 @@ describe('react-router-pagination', () => {
           </MemoryRouter>
         )
 
-        return expect(renderer.create(component).toJSON())
+        expect(renderer.create(component).toJSON())
           .toMatchSnapshot()
       })
     })

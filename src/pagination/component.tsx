@@ -190,10 +190,13 @@ export default abstract class AbstractPagination<P, S> extends Component<P & Abs
     return (
       toInteger(props.pageNumber) !== toInteger(this.props.pageNumber) ||
       toInteger(props.totalPages) !== toInteger(this.props.totalPages) ||
-      props.match !== this.props.match)
+      props.match !== this.props.match
+    )
   }
 
-  handleClick = (pageNumber: number): any => this.props.onClick(pageNumber)
+  handleClick = (pageNumber: number): any => {
+    this.props.onClick(pageNumber)
+  }
 
   render (): JSX.Element | null {
     const { totalPages } = this.state

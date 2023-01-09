@@ -50,7 +50,7 @@ describe('react-router-pagination/pagination/centered', () => {
           </MemoryRouter>
         )
 
-        return expect(renderer.create(component).toJSON())
+        expect(renderer.create(component).toJSON())
           .toMatchSnapshot()
       })
     })
@@ -67,7 +67,7 @@ describe('react-router-pagination/pagination/centered', () => {
           </MemoryRouter>
         )
 
-        return expect(renderer.create(component).toJSON())
+        expect(renderer.create(component).toJSON())
           .toMatchSnapshot()
       })
     })

@@ -47,7 +47,7 @@ describe('react-router-pagination/pagination/component', () => {
           </MemoryRouter>
         )
 
-        return expect(renderer.create(component).toJSON())
+        expect(renderer.create(component).toJSON())
           .toMatchSnapshot()
       })
     })
