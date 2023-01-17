@@ -53,7 +53,7 @@
     "@types/react-test-renderer": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.48.2",
     "@typescript-eslint/parser": "^5.48.2",
-    "babel-plugin-module-resolver": "4.1.0",
+    "babel-plugin-module-resolver": "5.0.0",
     "core-js": "^3.27.1",
     "cross-env": "^7.0.3",
     "enzyme": "^3.11.0",
