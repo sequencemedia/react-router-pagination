@@ -1,6 +1,9 @@
-import AbstractPagination, {
+import type {
   AbstractPaginationProps,
-  AbstractPaginationState,
+  AbstractPaginationState
+} from 'react-router-pagination/pagination/component'
+
+import AbstractPagination, {
   toInteger,
   calculateTotalPages,
   calculatePageNumber
