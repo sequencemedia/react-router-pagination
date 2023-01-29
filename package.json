@@ -1,6 +1,6 @@
 {
   "name": "react-router-pagination",
-  "version": "2.2.297",
+  "version": "2.2.298",
   "description": "A React Router Pagination component",
   "main": "./index.js",
   "author": {
@@ -65,7 +65,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-react": "^7.32.1",
+    "eslint-plugin-react": "^7.32.2",
     "gulp": "^4.0.2",
     "husky": "^8.0.3",
     "jest": "^29.4.1",
