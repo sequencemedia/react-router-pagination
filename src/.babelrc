@@ -2,9 +2,10 @@
   "presets": [
     "@babel/typescript",
     [
-      "@babel/env", {
+      "@babel/env",
+      {
         "targets": {
-          "node": "12.19.0",
+          "node": "current",
           "browsers": [
             "last 4 versions",
             "safari >= 9",
@@ -30,8 +31,11 @@
       }
     ],
     [
-      "module-resolver", {
-        "root": [".."],
+      "module-resolver",
+      {
+        "root": [
+          ".."
+        ],
         "cwd": "babelrc",
         "alias": {
           "react-router-pagination": "."
