@@ -74,7 +74,7 @@
     "react-dom": "16.14.0",
     "react-router": "^6.8.2",
     "react-router-dom": "^6.8.2",
-    "rimraf": "^4.3.1",
+    "rimraf": "^4.4.0",
     "typescript": "^4.9.5"
   }
 }
