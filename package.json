@@ -1,6 +1,6 @@
 {
   "name": "react-router-pagination",
-  "version": "2.2.342",
+  "version": "2.2.343",
   "description": "A React Router Pagination component",
   "main": "./index.js",
   "author": {
@@ -46,7 +46,7 @@
     "@babel/register": "^7.21.0",
     "@types/enzyme": "^3.10.12",
     "@types/enzyme-adapter-react-16": "^1.0.6",
-    "@types/jest": "^29.4.1",
+    "@types/jest": "^29.4.2",
     "@types/react": "^18.0.28",
     "@types/react-router": "^5.1.20",
     "@types/react-router-dom": "^5.3.3",
