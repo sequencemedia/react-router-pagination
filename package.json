@@ -70,8 +70,8 @@
     "prop-types": "15.7.2",
     "react": "16.14.0",
     "react-dom": "16.14.0",
-    "react-router": "^6.11.2",
-    "react-router-dom": "^6.11.2",
+    "react-router": "^6.12.0",
+    "react-router-dom": "^6.12.0",
     "rimraf": "^5.0.1",
     "typescript": "^5.1.3"
   }
