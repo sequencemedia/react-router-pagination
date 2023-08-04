@@ -3,5 +3,5 @@ module.exports = {
   verbose: true,
   rootDir: '.',
   collectCoverage: true,
-  coverageDirectory: './coverage'
+  coverageDirectory: './.coverage'
 }

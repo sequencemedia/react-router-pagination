@@ -27,14 +27,6 @@
       {
         "loose": false
       }
-    ],
-    [
-      "module-resolver",
-      {
-        "alias": {
-          "react-router-pagination": "../src"
-        }
-      }
     ]
   ]
 }

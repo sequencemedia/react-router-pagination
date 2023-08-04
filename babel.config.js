@@ -37,12 +37,24 @@ const presets = [
   ]
 ]
 
+const plugins = [
+  [
+    'module-resolver',
+    {
+      alias: {
+        'react-router-pagination': './src'
+      }
+    }
+  ]
+]
+
 module.exports = (api) => {
   if (api) api.cache.using(env)
 
   return {
     compact: true,
     comments: false,
-    presets
+    presets,
+    plugins
   }
 }

@@ -85,15 +85,21 @@ export default abstract class AbstractPagination<P, S> extends Component<P & Abs
   }
 
   hasForwardPageLink (pageNumber: string | number, totalPages: string | number): boolean {
-    return (this.lastIndex(pageNumber, totalPages) + 1) < totalPages
+    const i = Number(pageNumber)
+    const j = Number(totalPages)
+    return (this.lastIndex(i, j) + 1) < j
   }
 
   hasZeroPageLink (pageNumber: string | number, totalPages: string | number): boolean {
-    return this.zeroIndex(pageNumber, totalPages) > 0
+    const i = Number(pageNumber)
+    const j = Number(totalPages)
+    return this.zeroIndex(i, j) > 0
   }
 
   hasLastPageLink (pageNumber: string | number, totalPages: string | number): boolean {
-    return this.lastIndex(pageNumber, totalPages) < totalPages
+    const i = Number(pageNumber)
+    const j = Number(totalPages)
+    return this.lastIndex(i, j) < j
   }
 
   reversePageLinkItem (match: object, pageNumber: string | number, totalPages: string | number): JSX.Element | null {

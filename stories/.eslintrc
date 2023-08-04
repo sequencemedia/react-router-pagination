@@ -1,7 +1,8 @@
 {
   "extends": [
     "standard",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:storybook/recommended"
   ],
   "parser": "@babel/eslint-parser",
   "parserOptions": {
@@ -9,6 +10,11 @@
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
+    },
+    "babelOptions": {
+      "presets": [
+        "@babel/react"
+      ]
     }
   },
   "plugins": [
@@ -17,9 +23,6 @@
   "settings": {
     "react": {
       "version": "detect"
-    },
-    "import/resolver": {
-      "babel-module": {}
     }
   }
 }

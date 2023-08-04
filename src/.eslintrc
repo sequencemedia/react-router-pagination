@@ -12,7 +12,8 @@
   },
   "plugins": [
     "@typescript-eslint/eslint-plugin",
-    "react"
+    "react",
+    "storybook"
   ],
   "rules": {
     "no-use-before-define": "off",
