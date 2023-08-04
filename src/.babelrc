@@ -21,14 +21,6 @@
     "@babel/react"
   ],
   "plugins": [
-    "@babel/transform-typescript",
-    "@babel/proposal-export-default-from",
-    "@babel/proposal-export-namespace-from",
-    [
-      "@babel/proposal-class-properties",
-      {
-        "loose": false
-      }
-    ]
+    "@babel/transform-typescript"
   ]
 }
