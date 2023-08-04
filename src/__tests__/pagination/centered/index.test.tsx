@@ -1,7 +1,5 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Enzyme from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
 
 import {
   MemoryRouter
@@ -13,8 +11,6 @@ import {
   calculatePageNumber,
   Centered
 } from 'react-router-pagination/pagination/centered'
-
-Enzyme.configure({ adapter: new Adapter() })
 
 describe('react-router-pagination/pagination/centered', () => {
   describe('`toInteger`', () => {
