@@ -2,33 +2,32 @@ import React from 'react'
 
 import {
   Standard
-} from './pagination/standard'
+} from './pagination/standard/index.tsx'
 
 import {
   Centered
-} from './pagination/centered'
+} from './pagination/centered/index.tsx'
 
 import {
   calculateTotalPages,
   calculatePageNumber
-} from './pagination/common'
-
-export {
-  Standard,
-  Centered
-}
+} from './pagination/common/index.mts'
 
 export interface PaginationProps {
   format?: string
 }
 
-const Pagination = ({ format, ...props }: PaginationProps): JSX.Element => (
-  format !== 'center'
-    ? <Standard {...props} />
-    : <Centered {...props} />
-)
+export default class Pagination extends React.Component<PaginationProps> {
+  static calculateTotalPages = calculateTotalPages
+  static calculatePageNumber = calculatePageNumber
 
-Pagination.calculateTotalPages = calculateTotalPages
-Pagination.calculatePageNumber = calculatePageNumber
+  render (): JSX.Element {
+    const { format, ...props }: PaginationProps = this.props
 
-export default Pagination
+    return (
+      format !== 'center'
+        ? <Standard {...props} />
+        : <Centered {...props} />
+    )
+  }
+}

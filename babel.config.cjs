@@ -42,7 +42,10 @@ const plugins = [
     'module-resolver',
     {
       alias: {
-        'react-router-pagination': './src'
+        '#pagination/centered/index.tsx': './src/pagination/centered/index.tsx',
+        '#pagination/standard/index.tsx': './src/pagination/standard/index.tsx',
+        '#pagination/component.tsx': './src/pagination/component.tsx',
+        '#pagination/index.tsx': './src/pagination/index.tsx'
       }
     }
   ]
@@ -52,8 +55,6 @@ module.exports = (api) => {
   if (api) api.cache.using(env)
 
   return {
-    compact: true,
-    comments: false,
     presets,
     plugins
   }

@@ -1,7 +1,7 @@
 import React from 'react'
 import Pagination from 'react-router-pagination'
 
-import withReactRouter from './with-react-router.js'
+import withReactRouter from './with-react-router.jsx'
 
 const TOTALPAGES = Pagination.calculateTotalPages(120, 10)
 const PAGENUMBER = 1

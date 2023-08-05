@@ -11,7 +11,7 @@ import {
   Pagination,
   Centered,
   Standard
-} from 'react-router-pagination/pagination'
+} from '#pagination/index.tsx'
 
 describe('react-router-pagination', () => {
   describe('calculateTotalPages()', () => {

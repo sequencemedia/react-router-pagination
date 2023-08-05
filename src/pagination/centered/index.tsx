@@ -1,13 +1,13 @@
 import type {
   AbstractPaginationProps,
   AbstractPaginationState
-} from 'react-router-pagination/pagination/component'
+} from '../component.tsx'
 
 import AbstractPagination, {
   toInteger,
   calculateTotalPages,
   calculatePageNumber
-} from 'react-router-pagination/pagination/component'
+} from '../component.tsx'
 
 export {
   toInteger,

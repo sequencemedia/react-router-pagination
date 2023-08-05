@@ -2,7 +2,8 @@
   "name": "react-router-pagination",
   "version": "3.0.1",
   "description": "A React Router Pagination component",
-  "main": "./index.js",
+  "main": "./src/index.mjs",
+  "type": "module",
   "author": {
     "name": "Jonathan Perry for Sequence Media Limited",
     "email": "sequencemedia@sequencemedia.net",
@@ -17,22 +18,14 @@
     "url": "git://github.com/sequencemedia/react-router-pagination.git"
   },
   "scripts": {
-    "prepublishOnly": "cross-env NODE_ENV=production npm run build",
-    "prebuild": "npm run clean",
-    "build": "npm run babel",
-    "build:watch": "npm run babel:watch",
-    "babel": "babel src -d lib --extensions .ts,.tsx --ignore \"**/__tests__/**\"",
-    "babel:watch": "npm run babel -- -w",
-    "clean": "rimraf lib",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint": "eslint . .storybook --ext .mts,.cts,.tsx,.mjs,.cjs,.jsx",
     "lint:fix": "npm run lint -- --fix",
-    "test": "cross-env NODE_ENV=test jest --verbose --run-in-band",
+    "test": "cross-env NODE_ENV=test jest --verbose",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@babel/cli": "^7.22.9",
     "@babel/core": "^7.22.9",
     "@babel/eslint-parser": "^7.22.9",
     "@babel/plugin-syntax-jsx": "^7.22.5",
@@ -71,8 +64,55 @@
     "react-router": "^6.14.2",
     "react-router-dom": "^6.14.2",
     "react-test-renderer": "^18.2.0",
-    "rimraf": "^5.0.1",
     "storybook": "^7.2.1",
     "typescript": "^5.1.6"
+  },
+  "imports": {
+    "#pagination/centered": {
+      "require": "./src/pagination/centered/index.cjs",
+      "import": "./src/pagination/centered/index.mjs"
+    },
+    "#pagination/common": {
+      "require": "./src/pagination/common/index.cjs",
+      "import": "./src/pagination/common/index.mjs"
+    },
+    "#pagination/standard": {
+      "require": "./src/pagination/standard/index.cjs",
+      "import": "./src/pagination/standard/index.mjs"
+    },
+    "#pagination/component": {
+      "require": "./src/pagination/component.cjs",
+      "import": "./src/pagination/component.mjs"
+    },
+    "#pagination": {
+      "require": "./src/pagination/index.cjs",
+      "import": "./src/pagination/index.mjs"
+    }
+  },
+  "exports": {
+    ".": {
+      "require": "./src/index.cjs",
+      "import": "./src/index.mjs"
+    },
+    "./pagination/centered": {
+      "require": "./src/pagination/centered/index.cjs",
+      "import": "./src/pagination/centered/index.mjs"
+    },
+    "./pagination/common": {
+      "require": "./src/pagination/common/index.cjs",
+      "import": "./src/pagination/common/index.mjs"
+    },
+    "./pagination/standard": {
+      "require": "./src/pagination/standard/index.cjs",
+      "import": "./src/pagination/standard/index.mjs"
+    },
+    "./pagination/component": {
+      "require": "./src/pagination/component.cjs",
+      "import": "./src/pagination/component.mjs"
+    },
+    "./pagination": {
+      "require": "./src/pagination/index.cjs",
+      "import": "./src/pagination/index.mjs"
+    }
   }
 }

@@ -10,7 +10,7 @@ import {
   calculateTotalPages,
   calculatePageNumber,
   Standard
-} from 'react-router-pagination/pagination/standard'
+} from '#pagination/standard/index.tsx'
 
 describe('react-router-pagination/pagination/standard', () => {
   describe('`toInteger`', () => {

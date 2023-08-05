@@ -1,25 +1,27 @@
 {
   "compilerOptions": {
     "jsx": "react",
-    "module": "es2020",
-    "target": "es2020",
-    "moduleResolution": "node",
+    "module": "NodeNext",
+    "target": "ESNext",
+    "moduleResolution": "NodeNext",
     "noEmit": true,
     "strict": true,
     "isolatedModules": true,
     "noImplicitAny": true,
     "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
     "baseUrl": ".",
     "paths": {
-      "react-router-pagination": [
-        "src"
+      "#pagination": [
+        "src/pagination"
       ],
-      "react-router-pagination/*": [
-        "src/*"
+      "#pagination/*": [
+        "src/pagination/*"
       ]
     }
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    ".storybook/**/*"
   ]
 }

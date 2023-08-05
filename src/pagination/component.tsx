@@ -15,7 +15,7 @@ import {
   toInteger,
   calculateTotalPages,
   calculatePageNumber
-} from './common'
+} from './common/index.mts'
 
 const getListItemClassName = (currentPageNumber: string | number, pageNumber: string | number): string => (
   toInteger(currentPageNumber) === toInteger(pageNumber)
