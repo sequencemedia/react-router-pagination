@@ -69,7 +69,7 @@ describe('react-router-pagination', () => {
   describe('<Pagination />', () => {
     describe('With `pageNumber` and `totalPages`', () => {
       it('renders', () => {
-        const component = (
+        const rendered = renderer.create(
           <MemoryRouter>
             <Pagination
               pageNumber={1}
@@ -78,7 +78,7 @@ describe('react-router-pagination', () => {
           </MemoryRouter>
         )
 
-        expect(renderer.create(component).toJSON())
+        expect(rendered.toJSON())
           .toMatchSnapshot()
       })
     })
@@ -87,7 +87,7 @@ describe('react-router-pagination', () => {
   describe('<Centered />', () => {
     describe('With `pageNumber` and `totalPages` and `spread`', () => {
       it('renders', () => {
-        const component = (
+        const rendered = renderer.create(
           <MemoryRouter>
             <Centered
               pageNumber={9}
@@ -97,7 +97,7 @@ describe('react-router-pagination', () => {
           </MemoryRouter>
         )
 
-        expect(renderer.create(component).toJSON())
+        expect(rendered.toJSON())
           .toMatchSnapshot()
       })
     })
@@ -106,7 +106,7 @@ describe('react-router-pagination', () => {
   describe('<Standard />', () => {
     describe('With `pageNumber` and `totalPages` and `spread`', () => {
       it('renders', () => {
-        const component = (
+        const rendered = renderer.create(
           <MemoryRouter>
             <Standard
               pageNumber={9}
@@ -116,7 +116,7 @@ describe('react-router-pagination', () => {
           </MemoryRouter>
         )
 
-        expect(renderer.create(component).toJSON())
+        expect(rendered.toJSON())
           .toMatchSnapshot()
       })
     })

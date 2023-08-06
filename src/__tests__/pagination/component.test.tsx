@@ -37,13 +37,13 @@ describe('react-router-pagination/pagination/component', () => {
   describe('<Pagination />', () => {
     describe('With `pageNumber` and `totalPages`', () => {
       it('renders', () => {
-        const component = (
+        const rendered = renderer.create(
           <MemoryRouter>
             <Pagination pageNumber={1} totalPages={2} />
           </MemoryRouter>
         )
 
-        expect(renderer.create(component).toJSON())
+        expect(rendered.toJSON())
           .toMatchSnapshot()
       })
     })

@@ -37,7 +37,7 @@ describe('react-router-pagination/pagination/centered', () => {
   describe('<Centered />', () => {
     describe('With `pageNumber` and `totalPages`', () => {
       it('renders', () => {
-        const component = (
+        const rendered = renderer.create(
           <MemoryRouter>
             <Centered
               pageNumber={1}
@@ -46,14 +46,14 @@ describe('react-router-pagination/pagination/centered', () => {
           </MemoryRouter>
         )
 
-        expect(renderer.create(component).toJSON())
+        expect(rendered.toJSON())
           .toMatchSnapshot()
       })
     })
 
     describe('With `spread`', () => {
       it('renders', () => {
-        const component = (
+        const rendered = renderer.create(
           <MemoryRouter>
             <Centered
               pageNumber={5}
@@ -63,7 +63,7 @@ describe('react-router-pagination/pagination/centered', () => {
           </MemoryRouter>
         )
 
-        expect(renderer.create(component).toJSON())
+        expect(rendered.toJSON())
           .toMatchSnapshot()
       })
     })

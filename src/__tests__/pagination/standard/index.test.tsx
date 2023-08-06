@@ -37,7 +37,7 @@ describe('react-router-pagination/pagination/standard', () => {
   describe('<Standard />', () => {
     describe('With `pageNumber` and `totalPages`', () => {
       it('renders', () => {
-        const component = (
+        const rendered = renderer.create(
           <MemoryRouter>
             <Standard
               pageNumber={1}
@@ -46,13 +46,13 @@ describe('react-router-pagination/pagination/standard', () => {
           </MemoryRouter>
         )
 
-        expect(renderer.create(component).toJSON())
+        expect(rendered.toJSON())
           .toMatchSnapshot()
       })
 
       describe('With `spread`', () => {
         it('renders', () => {
-          const component = (
+          const rendered = renderer.create(
             <MemoryRouter>
               <Standard
                 pageNumber={5}
@@ -62,7 +62,7 @@ describe('react-router-pagination/pagination/standard', () => {
             </MemoryRouter>
           )
 
-          expect(renderer.create(component).toJSON())
+          expect(rendered.toJSON())
             .toMatchSnapshot()
         })
       })
