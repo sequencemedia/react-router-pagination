@@ -71,7 +71,10 @@ describe('react-router-pagination', () => {
       it('renders', () => {
         const component = (
           <MemoryRouter>
-            <Pagination pageNumber={1} totalPages={2} />
+            <Pagination
+              pageNumber={1}
+              totalPages={2}
+            />
           </MemoryRouter>
         )
 
@@ -86,7 +89,11 @@ describe('react-router-pagination', () => {
       it('renders', () => {
         const component = (
           <MemoryRouter>
-            <Centered pageNumber={9} totalPages={9} spread={3} />
+            <Centered
+              pageNumber={9}
+              totalPages={9}
+              spread={3}
+            />
           </MemoryRouter>
         )
 
@@ -101,7 +108,11 @@ describe('react-router-pagination', () => {
       it('renders', () => {
         const component = (
           <MemoryRouter>
-            <Standard pageNumber={9} totalPages={9} spread={3} />
+            <Standard
+              pageNumber={9}
+              totalPages={9}
+              spread={3}
+            />
           </MemoryRouter>
         )
 
