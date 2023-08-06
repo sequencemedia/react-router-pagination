@@ -1,7 +1,5 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Enzyme from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
 
 import {
   MemoryRouter
@@ -12,9 +10,7 @@ import {
   calculateTotalPages,
   calculatePageNumber,
   Pagination
-} from 'react-router-pagination/pagination/component'
-
-Enzyme.configure({ adapter: new Adapter() })
+} from '#pagination/component.tsx'
 
 describe('react-router-pagination/pagination/component', () => {
   describe('`toInteger`', () => {
@@ -41,13 +37,13 @@ describe('react-router-pagination/pagination/component', () => {
   describe('<Pagination />', () => {
     describe('With `pageNumber` and `totalPages`', () => {
       it('renders', () => {
-        const component = (
+        const rendered = renderer.create(
           <MemoryRouter>
             <Pagination pageNumber={1} totalPages={2} />
           </MemoryRouter>
         )
 
-        expect(renderer.create(component).toJSON())
+        expect(rendered.toJSON())
           .toMatchSnapshot()
       })
     })

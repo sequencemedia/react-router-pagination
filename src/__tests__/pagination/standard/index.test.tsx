@@ -1,7 +1,5 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Enzyme from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
 
 import {
   MemoryRouter
@@ -12,9 +10,7 @@ import {
   calculateTotalPages,
   calculatePageNumber,
   Standard
-} from 'react-router-pagination/pagination/standard'
-
-Enzyme.configure({ adapter: new Adapter() })
+} from '#pagination/standard/index.tsx'
 
 describe('react-router-pagination/pagination/standard', () => {
   describe('`toInteger`', () => {
@@ -41,7 +37,7 @@ describe('react-router-pagination/pagination/standard', () => {
   describe('<Standard />', () => {
     describe('With `pageNumber` and `totalPages`', () => {
       it('renders', () => {
-        const component = (
+        const rendered = renderer.create(
           <MemoryRouter>
             <Standard
               pageNumber={1}
@@ -50,13 +46,13 @@ describe('react-router-pagination/pagination/standard', () => {
           </MemoryRouter>
         )
 
-        expect(renderer.create(component).toJSON())
+        expect(rendered.toJSON())
           .toMatchSnapshot()
       })
 
       describe('With `spread`', () => {
         it('renders', () => {
-          const component = (
+          const rendered = renderer.create(
             <MemoryRouter>
               <Standard
                 pageNumber={5}
@@ -66,7 +62,7 @@ describe('react-router-pagination/pagination/standard', () => {
             </MemoryRouter>
           )
 
-          expect(renderer.create(component).toJSON())
+          expect(rendered.toJSON())
             .toMatchSnapshot()
         })
       })

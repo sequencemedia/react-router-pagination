@@ -1,7 +1,5 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Enzyme from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
 
 import {
   MemoryRouter
@@ -12,9 +10,7 @@ import {
   calculateTotalPages,
   calculatePageNumber,
   Centered
-} from 'react-router-pagination/pagination/centered'
-
-Enzyme.configure({ adapter: new Adapter() })
+} from '#pagination/centered/index.tsx'
 
 describe('react-router-pagination/pagination/centered', () => {
   describe('`toInteger`', () => {
@@ -41,7 +37,7 @@ describe('react-router-pagination/pagination/centered', () => {
   describe('<Centered />', () => {
     describe('With `pageNumber` and `totalPages`', () => {
       it('renders', () => {
-        const component = (
+        const rendered = renderer.create(
           <MemoryRouter>
             <Centered
               pageNumber={1}
@@ -50,14 +46,14 @@ describe('react-router-pagination/pagination/centered', () => {
           </MemoryRouter>
         )
 
-        expect(renderer.create(component).toJSON())
+        expect(rendered.toJSON())
           .toMatchSnapshot()
       })
     })
 
     describe('With `spread`', () => {
       it('renders', () => {
-        const component = (
+        const rendered = renderer.create(
           <MemoryRouter>
             <Centered
               pageNumber={5}
@@ -67,7 +63,7 @@ describe('react-router-pagination/pagination/centered', () => {
           </MemoryRouter>
         )
 
-        expect(renderer.create(component).toJSON())
+        expect(rendered.toJSON())
           .toMatchSnapshot()
       })
     })

@@ -5,19 +5,19 @@
 import {
   calculateTotalPages,
   calculatePageNumber
-} from './common'
+} from './common/index.mts'
 
 import {
   Pagination
-} from './component'
+} from './component.tsx'
 
 import {
   Centered
-} from './centered'
+} from './centered/index.tsx'
 
 import {
   Standard
-} from './standard'
+} from './standard/index.tsx'
 
 export {
   calculateTotalPages,

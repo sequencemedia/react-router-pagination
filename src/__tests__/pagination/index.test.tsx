@@ -1,7 +1,5 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Enzyme from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
 
 import {
   MemoryRouter
@@ -13,9 +11,7 @@ import {
   Pagination,
   Centered,
   Standard
-} from 'react-router-pagination/pagination'
-
-Enzyme.configure({ adapter: new Adapter() })
+} from '#pagination/index.tsx'
 
 describe('react-router-pagination', () => {
   describe('calculateTotalPages()', () => {
@@ -73,13 +69,16 @@ describe('react-router-pagination', () => {
   describe('<Pagination />', () => {
     describe('With `pageNumber` and `totalPages`', () => {
       it('renders', () => {
-        const component = (
+        const rendered = renderer.create(
           <MemoryRouter>
-            <Pagination pageNumber={1} totalPages={2} />
+            <Pagination
+              pageNumber={1}
+              totalPages={2}
+            />
           </MemoryRouter>
         )
 
-        expect(renderer.create(component).toJSON())
+        expect(rendered.toJSON())
           .toMatchSnapshot()
       })
     })
@@ -88,13 +87,17 @@ describe('react-router-pagination', () => {
   describe('<Centered />', () => {
     describe('With `pageNumber` and `totalPages` and `spread`', () => {
       it('renders', () => {
-        const component = (
+        const rendered = renderer.create(
           <MemoryRouter>
-            <Centered pageNumber={9} totalPages={9} spread={3} />
+            <Centered
+              pageNumber={9}
+              totalPages={9}
+              spread={3}
+            />
           </MemoryRouter>
         )
 
-        expect(renderer.create(component).toJSON())
+        expect(rendered.toJSON())
           .toMatchSnapshot()
       })
     })
@@ -103,13 +106,17 @@ describe('react-router-pagination', () => {
   describe('<Standard />', () => {
     describe('With `pageNumber` and `totalPages` and `spread`', () => {
       it('renders', () => {
-        const component = (
+        const rendered = renderer.create(
           <MemoryRouter>
-            <Standard pageNumber={9} totalPages={9} spread={3} />
+            <Standard
+              pageNumber={9}
+              totalPages={9}
+              spread={3}
+            />
           </MemoryRouter>
         )
 
-        expect(renderer.create(component).toJSON())
+        expect(rendered.toJSON())
           .toMatchSnapshot()
       })
     })
