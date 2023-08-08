@@ -1,9 +1,4 @@
-import React from 'react'
-
-import AbstractPagination, {
-  type AbstractPaginationProps,
-  type AbstractPaginationState
-} from './pagination/component.tsx'
+import React, { Component } from 'react'
 
 import {
   Standard
@@ -14,18 +9,17 @@ import {
 } from './pagination/centered/index.tsx'
 
 import {
-  toInteger
+  calculateTotalPages,
+  calculatePageNumber
 } from './pagination/common/index.mts'
 
-export interface PaginationProps extends AbstractPaginationProps {
+export interface PaginationProps {
   format?: string
 }
 
-export default class Pagination extends AbstractPagination<PaginationProps, AbstractPaginationState> {
-  state = {
-    pageNumber: toInteger(this.props.pageNumber),
-    totalPages: toInteger(this.props.totalPages)
-  }
+export default class Pagination extends Component<PaginationProps> {
+  static calculateTotalPages = calculateTotalPages
+  static calculatePageNumber = calculatePageNumber
 
   render (): JSX.Element {
     const { format, ...props }: PaginationProps = this.props
