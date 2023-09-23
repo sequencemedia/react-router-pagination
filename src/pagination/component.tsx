@@ -109,7 +109,7 @@ export default abstract class AbstractPagination<P, S> extends Component<P & Abs
         <li key={getListItemKey('reverse')} className='reverse-page'>
           <Link to={getLinkTo(match, n)} onClick={() => this.handlePageNumberSelect(n)}>
             <span className='reverse'>
-              {'\u00AB'}
+              {'\u2039'}
             </span>
           </Link>
         </li>
@@ -124,8 +124,8 @@ export default abstract class AbstractPagination<P, S> extends Component<P & Abs
       return (
         <li key={getListItemKey('forward')} className='forward-page'>
           <Link to={getLinkTo(match, n)} onClick={() => this.handlePageNumberSelect(n)}>
-            <span className='forward-page'>
-              {'\u00BB'}
+            <span className='forward'>
+              {'\u203A'}
             </span>
           </Link>
         </li>

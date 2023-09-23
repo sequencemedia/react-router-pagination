@@ -46,39 +46,39 @@ Generates:
 
 ```html
 <ul class="pagination">
-    <li class="currentPage">
+    <li class="current-page">
         <a href="/1">
-            <span class="pageNumber">1</span>
+            <span class="page-number">1</span>
         </a>
     </li>
     <li class="page">
         <a href="/2">
-            <span class="pageNumber">2</span>
+            <span class="page-number">2</span>
         </a>
     </li>
     <li class="page">
        <a href="/3">
-           <span class="pageNumber">3</span>
+           <span class="page-number">3</span>
        </a>
     </li>
     <li class="page">
         <a href="/4">
-            <span class="pageNumber">4</span>
+            <span class="page-number">4</span>
         </a>
     </li>
     <li class="page">
         <a href="/5">
-           <span class="pageNumber">5</span>
+           <span class="page-number">5</span>
         </a>
     </li>
-    <li class="forwardPage">
+    <li class="forward-page">
         <a href="/6">
-            <span class="forwardPage">»</span>
+            <span class="forward">»</span>
         </a>
     </li>
-    <li class="lastPage">
+    <li class="last-page">
         <a href="/12">
-            <span class="pageNumber">12</span>
+            <span class="page-number">12</span>
         </a>
     </li>
 </ul>
@@ -262,39 +262,39 @@ Given a `totalPages` of 12 and a `spread` of 5 then *React Router Pagination* wi
 
 ```html
 <ul class="pagination">
-    <li class="currentPage">
+    <li class="current-page">
         <a href="/catalogue/products/ABCDEF/stores/1">
-            <span class="pageNumber">1</span>
+            <span class="page-number">1</span>
         </a>
     </li>
     <li class="page">
         <a href="/catalogue/products/ABCDEF/stores/2">
-            <span class="pageNumber">2</span>
+            <span class="page-number">2</span>
         </a>
     </li>
     <li class="page">
        <a href="/catalogue/products/ABCDEF/stores/3">
-           <span class="pageNumber">3</span>
+           <span class="page-number">3</span>
        </a>
     </li>
     <li class="page">
         <a href="/catalogue/products/ABCDEF/stores/4">
-            <span class="pageNumber">4</span>
+            <span class="page-number">4</span>
         </a>
     </li>
     <li class="page">
         <a href="/catalogue/products/ABCDEF/stores/5">
-           <span class="pageNumber">5</span>
+           <span class="page-number">5</span>
         </a>
     </li>
-    <li class="forwardPage">
+    <li class="forward-page">
         <a href="/catalogue/products/ABCDEF/stores/6">
-            <span class="forwardPage">»</span>
+            <span class="forward">»</span>
         </a>
     </li>
-    <li class="lastPage">
+    <li class="last-page">
         <a href="/catalogue/products/ABCDEF/stores/12">
-            <span class="pageNumber">12</span>
+            <span class="page-number">12</span>
         </a>
     </li>
 </ul>
@@ -313,43 +313,43 @@ The value for `spread` should be an integer. It's the maximum number of page lin
 
 If `totalPages` is 12, `pageNumber` is 1, and `spread` is 5, then links to pages 1, 2, 3, 4 and 5 will be displayed (as well as a "forward" link to page 6 and a link to the last page, 12).
 
-Class names indicate the `currentPage`, the `forwardPage`, and the `lastPage`.
+Class names indicate the `current-page`, the `forward-page`, and the `last-page`.
 
 ```html
 <ul class="pagination">
-    <li class="currentPage">
+    <li class="current-page">
         <a href="/1">
-            <span class="pageNumber">1</span>
+            <span class="page-number">1</span>
         </a>
     </li>
     <li class="page">
         <a href="/2">
-            <span class="pageNumber">2</span>
+            <span class="page-number">2</span>
         </a>
     </li>
     <li class="page">
         <a href="/3">
-            <span class="pageNumber">3</span>
+            <span class="page-number">3</span>
         </a>
     </li>
     <li class="page">
         <a href="/4">
-            <span class="pageNumber">4</span>
+            <span class="page-number">4</span>
         </a>
     </li>
     <li class="page">
         <a href="/5">
-            <span class="pageNumber">5</span>
+            <span class="page-number">5</span>
         </a>
     </li>
-    <li class="forwardPage">
+    <li class="forward-page">
         <a href="/6">
-            <span class="forwardPage">»</span>
+            <span class="forward">»</span>
         </a>
     </li>
-    <li class="lastPage">
+    <li class="last-page">
         <a href="/12">
-            <span class="pageNumber">12</span>
+            <span class="page-number">12</span>
         </a>
     </li>
 </ul>
@@ -357,48 +357,48 @@ Class names indicate the `currentPage`, the `forwardPage`, and the `lastPage`.
 
 If `totalPages` is 12, `pageNumber` is 4, and `spread` is 5, then links to pages 1, 2, 3, 4 and 5 will be displayed (as well as a "forward" link to page 6 and a link to the last page, 12).
 
-Class names indicate the `zeroPage`, the `currentPage`, the `forwardPage`, and the `lastPage`.
+Class names indicate the `zero-page`, the `current-page`, the `forward-page`, and the `last-page`.
 
 ```html
 <ul class="pagination">
-    <li class="zeroPage">
+    <li class="zero-page">
         <a href="/1">
-            <span class="pageNumber">1</span>
+            <span class="page-number">1</span>
         </a>
     </li>
     <li class="page">
         <a href="/2">
-            <span class="pageNumber">2</span>
+            <span class="page-number">2</span>
         </a>
     </li>
     <li class="page">
         <a href="/3">
-            <span class="pageNumber">3</span>
+            <span class="page-number">3</span>
         </a>
     </li>
-    <li class="currentPage">
+    <li class="current-page">
         <a href="/4">
-            <span class="pageNumber">4</span>
+            <span class="page-number">4</span>
         </a>
     </li>
     <li class="page">
         <a href="/5">
-            <span class="pageNumber">5</span>
+            <span class="page-number">5</span>
         </a>
     </li>
     <li class="page">
         <a href="/6">
-            <span class="pageNumber">6</span>
+            <span class="page-number">6</span>
         </a>
     </li>
-    <li class="forwardPage">
+    <li class="forward-page">
         <a href="/7">
-            <span class="forwardPage">»</span>
+            <span class="forward">»</span>
         </a>
     </li>
-    <li class="lastPage">
+    <li class="last-page">
         <a href="/12">
-            <span class="pageNumber">12</span>
+            <span class="page-number">12</span>
         </a>
     </li>
 </ul>
@@ -406,53 +406,53 @@ Class names indicate the `zeroPage`, the `currentPage`, the `forwardPage`, and t
 
 If `totalPages` is 12, `pageNumber` is 8, and `spread` is 5, then links to pages 6, 7, 8, 9, and 10 will be displayed (as well as a "reverse" link to page 5, a "forward" link to page 11 and a link to the first page, 1, and the last page, 12).
 
-Class names indicate the `zeroPage`, the `reversePage`, the `currentPage`, the `forwardPage`, and the `lastPage`.
+Class names indicate the `zero-page`, the `reverse-page`, the `current-page`, the `forward-page`, and the `last-page`.
 
 ```html
 <ul class="pagination">
-    <li class="zeroPage">
+    <li class="zero-page">
         <a href="/1">
-            <span class="pageNumber">1</span>
+            <span class="page-number">1</span>
         </a>
     </li>
-    <li class="reversePage">
+    <li class="reverse-page">
         <a href="/5">
             <span class="reverse">«</span>
         </a>
     </li>
     <li class="page">
         <a href="/6">
-            <span class="pageNumber">6</span>
+            <span class="page-number">6</span>
         </a>
     </li>
     <li class="page">
         <a href="/7">
-            <span class="pageNumber">7</span>
+            <span class="page-number">7</span>
         </a>
     </li>
-    <li class="currentPage">
+    <li class="current-page">
         <a href="/8">
-            <span class="pageNumber">8</span>
+            <span class="page-number">8</span>
         </a>
     </li>
     <li class="page">
         <a href="/9">
-            <span class="pageNumber">9</span>
+            <span class="page-number">9</span>
         </a>
     </li>
     <li class="page">
         <a href="/10">
-            <span class="pageNumber">10</span>
+            <span class="page-number">10</span>
         </a>
     </li>
-    <li class="forwardPage">
+    <li class="forward-page">
         <a href="/11">
-            <span class="forwardPage">»</span>
+            <span class="forward">»</span>
         </a>
     </li>
-    <li class="lastPage">
+    <li class="last-page">
         <a href="/12">
-            <span class="pageNumber">12</span>
+            <span class="page-number">12</span>
         </a>
     </li>
 </ul>

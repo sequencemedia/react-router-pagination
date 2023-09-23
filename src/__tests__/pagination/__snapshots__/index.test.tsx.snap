@@ -28,7 +28,7 @@ exports[`react-router-pagination <Centered /> With \`pageNumber\` and \`totalPag
       <span
         className="reverse"
       >
-        «
+        ‹
       </span>
     </a>
   </li>
@@ -89,9 +89,9 @@ exports[`react-router-pagination <Pagination /> With \`pageNumber\` and \`totalP
       onClick={[Function]}
     >
       <span
-        className="forward-page"
+        className="forward"
       >
-        »
+        ›
       </span>
     </a>
   </li>
@@ -140,7 +140,7 @@ exports[`react-router-pagination <Standard /> With \`pageNumber\` and \`totalPag
       <span
         className="reverse"
       >
-        «
+        ‹
       </span>
     </a>
   </li>

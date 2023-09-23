@@ -28,7 +28,7 @@ exports[`react-router-pagination/pagination/standard <Standard /> With \`pageNum
       <span
         className="reverse"
       >
-        «
+        ‹
       </span>
     </a>
   </li>
@@ -82,9 +82,9 @@ exports[`react-router-pagination/pagination/standard <Standard /> With \`pageNum
       onClick={[Function]}
     >
       <span
-        className="forward-page"
+        className="forward"
       >
-        »
+        ›
       </span>
     </a>
   </li>

@@ -30,10 +30,14 @@
     background-color: #555;
   }
 
-  li.zero-page a span::after,
+  li.zero-page a span::after {
+    display: inline;
+    content: " «"
+  }
+
   li.last-page a span::before {
     display: inline;
-    content: "—"
+    content: "» "
   }
 
   li.current-page {

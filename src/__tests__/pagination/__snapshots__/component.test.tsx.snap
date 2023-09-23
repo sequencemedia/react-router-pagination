@@ -12,9 +12,9 @@ exports[`react-router-pagination/pagination/component <Pagination /> With \`page
       onClick={[Function]}
     >
       <span
-        className="forward-page"
+        className="forward"
       >
-        »
+        ›
       </span>
     </a>
   </li>
