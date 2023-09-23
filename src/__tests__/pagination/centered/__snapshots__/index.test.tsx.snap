@@ -5,14 +5,14 @@ exports[`react-router-pagination/pagination/centered <Centered /> With \`pageNum
   className="pagination"
 >
   <li
-    className="currentPage"
+    className="current-page"
   >
     <a
       href="/1"
       onClick={[Function]}
     >
       <span
-        className="pageNumber"
+        className="page-number"
       >
         1
       </span>
@@ -26,7 +26,7 @@ exports[`react-router-pagination/pagination/centered <Centered /> With \`pageNum
       onClick={[Function]}
     >
       <span
-        className="pageNumber"
+        className="page-number"
       >
         2
       </span>
@@ -40,21 +40,21 @@ exports[`react-router-pagination/pagination/centered <Centered /> With \`spread\
   className="pagination"
 >
   <li
-    className="zeroPage"
+    className="zero-page"
   >
     <a
       href="/1"
       onClick={[Function]}
     >
       <span
-        className="pageNumber"
+        className="page-number"
       >
         1
       </span>
     </a>
   </li>
   <li
-    className="reversePage"
+    className="reverse-page"
   >
     <a
       href="/3"
@@ -75,21 +75,21 @@ exports[`react-router-pagination/pagination/centered <Centered /> With \`spread\
       onClick={[Function]}
     >
       <span
-        className="pageNumber"
+        className="page-number"
       >
         4
       </span>
     </a>
   </li>
   <li
-    className="currentPage"
+    className="current-page"
   >
     <a
       href="/5"
       onClick={[Function]}
     >
       <span
-        className="pageNumber"
+        className="page-number"
       >
         5
       </span>
@@ -103,35 +103,35 @@ exports[`react-router-pagination/pagination/centered <Centered /> With \`spread\
       onClick={[Function]}
     >
       <span
-        className="pageNumber"
+        className="page-number"
       >
         6
       </span>
     </a>
   </li>
   <li
-    className="forwardPage"
+    className="forward-page"
   >
     <a
       href="/7"
       onClick={[Function]}
     >
       <span
-        className="forwardPage"
+        className="forward-page"
       >
         »
       </span>
     </a>
   </li>
   <li
-    className="lastPage"
+    className="last-page"
   >
     <a
       href="/9"
       onClick={[Function]}
     >
       <span
-        className="pageNumber"
+        className="page-number"
       >
         9
       </span>

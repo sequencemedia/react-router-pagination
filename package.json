@@ -25,6 +25,9 @@
     "build-storybook": "storybook build",
     "prepare": "husky install"
   },
+  "dependencies": {
+    "debug": "^4.3.4"
+  },
   "devDependencies": {
     "@babel/core": "^7.22.20",
     "@babel/eslint-parser": "^7.22.15",
@@ -36,10 +39,9 @@
     "@babel/register": "^7.22.15",
     "@sequencemedia/hooks": "^1.0.454",
     "@storybook/addon-essentials": "^7.4.4",
-    "@storybook/addon-links": "^7.4.4",
-    "@storybook/blocks": "^7.4.4",
     "@storybook/react": "^7.4.4",
     "@storybook/react-webpack5": "^7.4.4",
+    "@types/debug": "^4.1.9",
     "@types/jest": "^29.5.5",
     "@types/react": "^18.2.22",
     "@types/react-router": "^5.1.20",
@@ -68,26 +70,11 @@
     "typescript": "^5.2.2"
   },
   "imports": {
-    "#pagination/centered": {
-      "require": "./src/pagination/centered/index.cjs",
-      "import": "./src/pagination/centered/index.mjs"
-    },
-    "#pagination/common": {
-      "require": "./src/pagination/common/index.cjs",
-      "import": "./src/pagination/common/index.mjs"
-    },
-    "#pagination/standard": {
-      "require": "./src/pagination/standard/index.cjs",
-      "import": "./src/pagination/standard/index.mjs"
-    },
-    "#pagination/component": {
-      "require": "./src/pagination/component.cjs",
-      "import": "./src/pagination/component.mjs"
-    },
-    "#pagination": {
-      "require": "./src/pagination/index.cjs",
-      "import": "./src/pagination/index.mjs"
-    }
+    "#pagination/centered": "./src/pagination/centered/index.tsx",
+    "#pagination/common": "./src/pagination/common/index.mts",
+    "#pagination/standard": "./src/pagination/standard/index.tsx",
+    "#pagination/component": "./src/pagination/component.tsx",
+    "#pagination": "./src/pagination/index.tsx"
   },
   "exports": {
     ".": {

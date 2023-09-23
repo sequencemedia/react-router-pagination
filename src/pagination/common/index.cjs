@@ -9,6 +9,4 @@ require('@babel/register')({
   ]
 })
 
-console.log(require('./index.mts'))
-
 module.exports = require('./index.mts')

@@ -1,13 +1,17 @@
+import debug from 'debug'
+
 import type {
   AbstractPaginationProps,
   AbstractPaginationState
-} from '../component.tsx'
+} from '#pagination/component'
 
 import AbstractPagination, {
   toInteger,
   calculateTotalPages,
   calculatePageNumber
-} from '../component.tsx'
+} from '#pagination/component'
+
+const error = debug('react-router-pagination/pagination/component')
 
 export {
   toInteger,
@@ -15,18 +19,20 @@ export {
   calculatePageNumber
 }
 
-interface CenteredProps extends AbstractPaginationProps {
+export interface CenteredProps extends AbstractPaginationProps {
   spread: string | number
+  onChange: (pageNumber: number) => void
 }
 
-interface CenteredState extends AbstractPaginationState {
+export interface CenteredState extends AbstractPaginationState {
   spread: number
 }
 
 export class Centered extends AbstractPagination<CenteredProps, CenteredState> {
   static defaultProps = {
     ...AbstractPagination.defaultProps,
-    spread: 3
+    spread: 3,
+    onChange () {}
   }
 
   state = {
@@ -81,5 +87,27 @@ export class Centered extends AbstractPagination<CenteredProps, CenteredState> {
 
   shouldComponentUpdate (props: CenteredProps): boolean {
     return super.shouldComponentUpdate(props) || (props.spread !== this.props.spread)
+  }
+
+  handlePageNumberSelect = (pageNumber: number): any => {
+    const { onClick } = this.props
+
+    try {
+      onClick(pageNumber)
+    } catch {
+      error('Error `onClick`')
+    }
+
+    if (pageNumber !== this.state.pageNumber) {
+      this.setState({ pageNumber }, () => {
+        const { onChange } = this.props
+
+        try {
+          onChange(pageNumber)
+        } catch {
+          error('Error `onChange`')
+        }
+      })
+    }
   }
 }

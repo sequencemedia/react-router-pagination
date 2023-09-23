@@ -19,7 +19,7 @@ import {
 
 const getListItemClassName = (currentPageNumber: string | number, pageNumber: string | number): string => (
   toInteger(currentPageNumber) === toInteger(pageNumber)
-    ? 'currentPage'
+    ? 'current-page'
     : 'page'
 )
 
@@ -50,7 +50,7 @@ export interface AbstractPaginationState {
 
 export default abstract class AbstractPagination<P, S> extends Component<P & AbstractPaginationProps, S & AbstractPaginationState> {
   static defaultProps = {
-    onClick: () => {},
+    onClick () {},
     pageNumber: 0,
     totalPages: 0,
     match: {}
@@ -106,8 +106,8 @@ export default abstract class AbstractPagination<P, S> extends Component<P & Abs
     if (this.hasReversePageLink(pageNumber, totalPages)) {
       const n = this.zeroIndex(pageNumber, totalPages)
       return (
-        <li key={getListItemKey('reverse')} className='reversePage'>
-          <Link to={getLinkTo(match, n)} onClick={() => this.handleClick(n)}>
+        <li key={getListItemKey('reverse')} className='reverse-page'>
+          <Link to={getLinkTo(match, n)} onClick={() => this.handlePageNumberSelect(n)}>
             <span className='reverse'>
               {'\u00AB'}
             </span>
@@ -122,9 +122,9 @@ export default abstract class AbstractPagination<P, S> extends Component<P & Abs
     if (this.hasForwardPageLink(pageNumber, totalPages)) {
       const n = this.lastIndex(pageNumber, totalPages) + 1
       return (
-        <li key={getListItemKey('forward')} className='forwardPage'>
-          <Link to={getLinkTo(match, n)} onClick={() => this.handleClick(n)}>
-            <span className='forwardPage'>
+        <li key={getListItemKey('forward')} className='forward-page'>
+          <Link to={getLinkTo(match, n)} onClick={() => this.handlePageNumberSelect(n)}>
+            <span className='forward-page'>
               {'\u00BB'}
             </span>
           </Link>
@@ -138,9 +138,9 @@ export default abstract class AbstractPagination<P, S> extends Component<P & Abs
     if (this.hasZeroPageLink(pageNumber, totalPages)) {
       const n = 1
       return (
-        <li key={getListItemKey(n)} className='zeroPage'>
-          <Link to={getLinkTo(match, n)} onClick={() => this.handleClick(n)}>
-            <span className='pageNumber'>
+        <li key={getListItemKey(n)} className='zero-page'>
+          <Link to={getLinkTo(match, n)} onClick={() => this.handlePageNumberSelect(n)}>
+            <span className='page-number'>
               {n}
             </span>
           </Link>
@@ -154,9 +154,9 @@ export default abstract class AbstractPagination<P, S> extends Component<P & Abs
     if (this.hasLastPageLink(pageNumber, totalPages)) {
       const n = toInteger(totalPages)
       return (
-        <li key={getListItemKey(n)} className='lastPage'>
-          <Link to={getLinkTo(match, n)} onClick={() => this.handleClick(n)}>
-            <span className='pageNumber'>
+        <li key={getListItemKey(n)} className='last-page'>
+          <Link to={getLinkTo(match, n)} onClick={() => this.handlePageNumberSelect(n)}>
+            <span className='page-number'>
               {n}
             </span>
           </Link>
@@ -174,8 +174,8 @@ export default abstract class AbstractPagination<P, S> extends Component<P & Abs
       const n = (i + 1)
       a.push((
         <li key={getListItemKey(n)} className={getListItemClassName(pageNumber, n)}>
-          <Link to={getLinkTo(match, n)} onClick={() => this.handleClick(n)}>
-            <span className='pageNumber'>
+          <Link to={getLinkTo(match, n)} onClick={() => this.handlePageNumberSelect(n)}>
+            <span className='page-number'>
               {n}
             </span>
           </Link>
@@ -200,7 +200,7 @@ export default abstract class AbstractPagination<P, S> extends Component<P & Abs
     )
   }
 
-  handleClick = (pageNumber: number): any => {
+  handlePageNumberSelect = (pageNumber: number): any => {
     this.props.onClick(pageNumber)
   }
 

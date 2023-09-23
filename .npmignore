@@ -22,10 +22,21 @@
 # Deps
 .depsrc
 
+# Build
+build
+gulpfile.*
+
+# Jest
+__tests__
+jest.config.cjs
+
+# Coverage
+.coverage
+
 # Storybook
 .storybook
 stories
 
-# Build
-build
-gulpfile.*
+# TypeScript
+tsconfig.json
+jsconfig.json

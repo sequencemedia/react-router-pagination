@@ -42,10 +42,10 @@ const plugins = [
     'module-resolver',
     {
       alias: {
-        '#pagination/centered/index.tsx': './src/pagination/centered/index.tsx',
-        '#pagination/standard/index.tsx': './src/pagination/standard/index.tsx',
-        '#pagination/component.tsx': './src/pagination/component.tsx',
-        '#pagination/index.tsx': './src/pagination/index.tsx'
+        '#pagination/centered': './src/pagination/centered/index.tsx',
+        '#pagination/standard': './src/pagination/standard/index.tsx',
+        '#pagination/component': './src/pagination/component.tsx',
+        '#pagination/index': './src/pagination/index.tsx'
       }
     }
   ]

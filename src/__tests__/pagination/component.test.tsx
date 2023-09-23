@@ -10,7 +10,7 @@ import {
   calculateTotalPages,
   calculatePageNumber,
   Pagination
-} from '#pagination/component.tsx'
+} from '#pagination/component'
 
 describe('react-router-pagination/pagination/component', () => {
   describe('`toInteger`', () => {

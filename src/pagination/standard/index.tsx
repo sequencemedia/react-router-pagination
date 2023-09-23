@@ -1,13 +1,17 @@
+import debug from 'debug'
+
 import type {
   AbstractPaginationProps,
   AbstractPaginationState
-} from '../component.tsx'
+} from '#pagination/component'
 
 import AbstractPagination, {
   toInteger,
   calculateTotalPages,
   calculatePageNumber
-} from '../component.tsx'
+} from '#pagination/component'
+
+const error = debug('react-router-pagination/pagination/component')
 
 export {
   toInteger,
@@ -15,18 +19,24 @@ export {
   calculatePageNumber
 }
 
-interface StandardProps extends AbstractPaginationProps {
+export interface StandardProps extends AbstractPaginationProps {
+  pageNumber: string | number
+  totalPages: string | number
   spread: string | number
+  onChange: (pageNumber: number) => void
 }
 
-interface StandardState extends AbstractPaginationState {
+export interface StandardState extends AbstractPaginationState {
+  pageNumber: number
+  totalPages: number
   spread: number
 }
 
 export class Standard extends AbstractPagination<StandardProps, StandardState> {
   static defaultProps = {
     ...AbstractPagination.defaultProps,
-    spread: 1
+    spread: 1,
+    onChange () {}
   }
 
   state = {
@@ -64,5 +74,27 @@ export class Standard extends AbstractPagination<StandardProps, StandardState> {
 
   shouldComponentUpdate (props: StandardProps): boolean {
     return super.shouldComponentUpdate(props) || (props.spread !== this.props.spread)
+  }
+
+  handlePageNumberSelect = (pageNumber: number): any => {
+    const { onClick } = this.props
+
+    try {
+      onClick(pageNumber)
+    } catch {
+      error('Error `onClick`')
+    }
+
+    if (pageNumber !== this.state.pageNumber) {
+      this.setState({ pageNumber }, () => {
+        const { onChange } = this.props
+
+        try {
+          onChange(pageNumber)
+        } catch {
+          error('Error `onChange`')
+        }
+      })
+    }
   }
 }

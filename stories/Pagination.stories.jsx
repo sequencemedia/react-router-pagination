@@ -1,4 +1,6 @@
 import React from 'react'
+import { action } from '@storybook/addon-actions'
+
 import Pagination from 'react-router-pagination'
 
 import withReactRouter from './with-react-router.jsx'
@@ -11,6 +13,7 @@ function Component (props) {
   return (
     <Pagination
       {...props}
+      onChange={action('onChange')}
     />
   )
 }
@@ -23,6 +26,12 @@ export default {
   ],
   argTypes: {
     totalPages: {
+      control: 'number',
+      min: 1,
+      max: TOTALPAGES,
+      step: 1
+    },
+    pageNumber: {
       control: 'number',
       min: 1,
       max: TOTALPAGES,

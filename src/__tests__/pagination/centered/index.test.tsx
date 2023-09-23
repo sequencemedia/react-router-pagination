@@ -10,7 +10,7 @@ import {
   calculateTotalPages,
   calculatePageNumber,
   Centered
-} from '#pagination/centered/index.tsx'
+} from '#pagination/centered'
 
 describe('react-router-pagination/pagination/centered', () => {
   describe('`toInteger`', () => {

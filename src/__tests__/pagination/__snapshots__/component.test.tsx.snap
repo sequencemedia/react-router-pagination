@@ -5,28 +5,28 @@ exports[`react-router-pagination/pagination/component <Pagination /> With \`page
   className="pagination"
 >
   <li
-    className="forwardPage"
+    className="forward-page"
   >
     <a
       href="/1"
       onClick={[Function]}
     >
       <span
-        className="forwardPage"
+        className="forward-page"
       >
         »
       </span>
     </a>
   </li>
   <li
-    className="lastPage"
+    className="last-page"
   >
     <a
       href="/2"
       onClick={[Function]}
     >
       <span
-        className="pageNumber"
+        className="page-number"
       >
         2
       </span>
