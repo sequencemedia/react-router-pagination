@@ -73,7 +73,7 @@ Generates:
     </li>
     <li class="forward-page">
         <a href="/6">
-            <span class="forward">»</span>
+            <span class="forward">›</span>
         </a>
     </li>
     <li class="last-page">
@@ -289,7 +289,7 @@ Given a `totalPages` of 12 and a `spread` of 5 then *React Router Pagination* wi
     </li>
     <li class="forward-page">
         <a href="/catalogue/products/ABCDEF/stores/6">
-            <span class="forward">»</span>
+            <span class="forward">›</span>
         </a>
     </li>
     <li class="last-page">
@@ -344,7 +344,7 @@ Class names indicate the `current-page`, the `forward-page`, and the `last-page`
     </li>
     <li class="forward-page">
         <a href="/6">
-            <span class="forward">»</span>
+            <span class="forward">›</span>
         </a>
     </li>
     <li class="last-page">
@@ -393,7 +393,7 @@ Class names indicate the `zero-page`, the `current-page`, the `forward-page`, an
     </li>
     <li class="forward-page">
         <a href="/7">
-            <span class="forward">»</span>
+            <span class="forward">›</span>
         </a>
     </li>
     <li class="last-page">
@@ -417,7 +417,7 @@ Class names indicate the `zero-page`, the `reverse-page`, the `current-page`, th
     </li>
     <li class="reverse-page">
         <a href="/5">
-            <span class="reverse">«</span>
+            <span class="reverse">‹</span>
         </a>
     </li>
     <li class="page">
@@ -447,7 +447,7 @@ Class names indicate the `zero-page`, the `reverse-page`, the `current-page`, th
     </li>
     <li class="forward-page">
         <a href="/11">
-            <span class="forward">»</span>
+            <span class="forward">›</span>
         </a>
     </li>
     <li class="last-page">
