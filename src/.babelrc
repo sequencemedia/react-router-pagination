@@ -21,6 +21,7 @@
     "@babel/react"
   ],
   "plugins": [
+    "@babel/syntax-jsx",
     "@babel/transform-typescript"
   ]
 }
