@@ -1,6 +1,5 @@
 export function toInteger (v: number | string): number {
   const n = Number(v)
-
   return isNaN(n) ? 0 : Math.round(n)
 }
 
@@ -9,7 +8,7 @@ export function calculateTotalPages (totalItemsInCollection: number | string, it
   const p = toInteger(itemsPerPage)
   const r = Boolean(e % p) // !!(e % p)
   const l = Math.floor(e / p)
-  return (r) ? l + 1 : l
+  return r ? l + 1 : l
 }
 
 export function calculatePageNumber (pageNumber: number | string, totalPages: number | string): number {
