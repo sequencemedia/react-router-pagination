@@ -4,6 +4,7 @@
   "description": "A React Router Pagination component",
   "main": "./src/index.mjs",
   "type": "module",
+  "types": "./src/index.d.mts",
   "author": {
     "name": "Jonathan Perry for Sequence Media Limited",
     "email": "sequencemedia@sequencemedia.net",

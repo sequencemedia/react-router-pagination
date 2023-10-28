@@ -33,20 +33,9 @@ export {
   calculatePageNumber
 }
 
-export interface AbstractPaginationProps {
-  onClick: (pageNumber: number) => void
-  pageNumber: string | number
-  totalPages: string | number
-  match: {
-    path?: string
-    params?: object
-  }
-}
+type AbstractPaginationProps = ReactRouterPaginationTypes.AbstractPaginationProps
 
-export interface AbstractPaginationState {
-  pageNumber: number
-  totalPages: number
-}
+type AbstractPaginationState = ReactRouterPaginationTypes.AbstractPaginationState
 
 export default abstract class AbstractPagination<P, S> extends Component<P & AbstractPaginationProps, S & AbstractPaginationState> {
   static defaultProps = {

@@ -1,10 +1,5 @@
 import debug from 'debug'
 
-import type {
-  AbstractPaginationProps,
-  AbstractPaginationState
-} from '#pagination/component'
-
 import AbstractPagination, {
   toInteger,
   calculateTotalPages,
@@ -19,14 +14,9 @@ export {
   calculatePageNumber
 }
 
-export interface CenteredProps extends AbstractPaginationProps {
-  spread: string | number
-  onChange: (pageNumber: number) => void
-}
+type CenteredProps = ReactRouterPaginationTypes.CenteredProps
 
-export interface CenteredState extends AbstractPaginationState {
-  spread: number
-}
+type CenteredState = ReactRouterPaginationTypes.CenteredState
 
 export class Centered extends AbstractPagination<CenteredProps, CenteredState> {
   static defaultProps = {

@@ -1,10 +1,5 @@
 import debug from 'debug'
 
-import type {
-  AbstractPaginationProps,
-  AbstractPaginationState
-} from '#pagination/component'
-
 import AbstractPagination, {
   toInteger,
   calculateTotalPages,
@@ -19,18 +14,9 @@ export {
   calculatePageNumber
 }
 
-export interface StandardProps extends AbstractPaginationProps {
-  pageNumber: string | number
-  totalPages: string | number
-  spread: string | number
-  onChange: (pageNumber: number) => void
-}
+type StandardProps = ReactRouterPaginationTypes.StandardProps
 
-export interface StandardState extends AbstractPaginationState {
-  pageNumber: number
-  totalPages: number
-  spread: number
-}
+type StandardState = ReactRouterPaginationTypes.StandardState
 
 export class Standard extends AbstractPagination<StandardProps, StandardState> {
   static defaultProps = {

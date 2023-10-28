@@ -13,9 +13,7 @@ import {
   calculatePageNumber
 } from './pagination/common/index.mts'
 
-export interface PaginationProps {
-  format?: string
-}
+type PaginationProps = ReactRouterPaginationTypes.PaginationProps
 
 export default class Pagination extends Component<PaginationProps> {
   static calculateTotalPages = calculateTotalPages
