@@ -44,7 +44,7 @@
     "@storybook/react-webpack5": "^7.5.2",
     "@types/debug": "^4.1.10",
     "@types/jest": "^29.5.7",
-    "@types/react": "^18.2.34",
+    "@types/react": "^18.2.35",
     "@types/react-router": "^5.1.20",
     "@types/react-router-dom": "^5.3.3",
     "@types/react-test-renderer": "^18.0.5",
