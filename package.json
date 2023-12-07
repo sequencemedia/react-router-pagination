@@ -68,7 +68,7 @@
     "react-router-dom": "^6.20.1",
     "react-test-renderer": "^18.2.0",
     "storybook": "^7.6.3",
-    "typescript": "^5.3.2"
+    "typescript": "^5.3.3"
   },
   "imports": {
     "#pagination/centered": "./src/pagination/centered/index.tsx",
