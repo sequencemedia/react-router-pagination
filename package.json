@@ -19,7 +19,7 @@
     "url": "git://github.com/sequencemedia/react-router-pagination.git"
   },
   "scripts": {
-    "lint": "eslint . .storybook --ext .mts,.cts,.tsx,.mjs,.cjs,.jsx",
+    "lint": "eslint . .storybook --ext .mjs,.cjs,.jsx,.mts,.cts,.tsx",
     "lint:fix": "npm run lint -- --fix",
     "test": "cross-env NODE_ENV=test jest --verbose",
     "storybook": "storybook dev -p 6006",
