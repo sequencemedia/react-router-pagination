@@ -24,7 +24,7 @@
     "test": "cross-env NODE_ENV=test jest --verbose",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "debug": "^4.3.4"
@@ -39,9 +39,9 @@
     "@babel/preset-typescript": "^7.23.3",
     "@babel/register": "^7.23.7",
     "@sequencemedia/hooks": "^1.0.480",
-    "@storybook/addon-essentials": "^7.6.15",
-    "@storybook/react": "^7.6.15",
-    "@storybook/react-webpack5": "^7.6.15",
+    "@storybook/addon-essentials": "^7.6.16",
+    "@storybook/react": "^7.6.16",
+    "@storybook/react-webpack5": "^7.6.16",
     "@types/debug": "^4.1.12",
     "@types/jest": "^29.5.12",
     "@types/react": "^18.2.55",
@@ -67,7 +67,7 @@
     "react-router": "^6.22.0",
     "react-router-dom": "^6.22.0",
     "react-test-renderer": "^18.2.0",
-    "storybook": "^7.6.15",
+    "storybook": "^7.6.16",
     "typescript": "^5.3.3"
   },
   "imports": {
