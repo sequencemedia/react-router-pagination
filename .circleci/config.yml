@@ -35,7 +35,7 @@ jobs:
             then
               set +e
 
-              npm ci
+              npm i --force
               npm publish
 
               if [[ $? != 0 ]];
