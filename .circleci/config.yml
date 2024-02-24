@@ -47,7 +47,6 @@ jobs:
             fi
 
 workflows:
-  version: 2
   commit-workflow:
     jobs:
       - publish:
