@@ -44,7 +44,7 @@
     "@storybook/react-webpack5": "^7.6.17",
     "@types/debug": "^4.1.12",
     "@types/jest": "^29.5.12",
-    "@types/react": "^18.2.63",
+    "@types/react": "^18.2.64",
     "@types/react-router": "^5.1.20",
     "@types/react-router-dom": "^5.3.3",
     "@types/react-test-renderer": "^18.0.7",
@@ -68,7 +68,7 @@
     "react-router-dom": "^6.22.2",
     "react-test-renderer": "^18.2.0",
     "storybook": "^7.6.17",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.2"
   },
   "imports": {
     "#pagination/centered": "./src/pagination/centered/index.tsx",
