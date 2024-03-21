@@ -30,15 +30,15 @@
     "debug": "^4.3.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.1",
+    "@babel/core": "^7.24.3",
     "@babel/eslint-parser": "^7.24.1",
     "@babel/plugin-syntax-jsx": "^7.24.1",
     "@babel/plugin-transform-typescript": "^7.24.1",
-    "@babel/preset-env": "^7.24.1",
+    "@babel/preset-env": "^7.24.3",
     "@babel/preset-react": "^7.24.1",
     "@babel/preset-typescript": "^7.24.1",
     "@babel/register": "^7.23.7",
-    "@sequencemedia/hooks": "^1.0.485",
+    "@sequencemedia/hooks": "^1.0.486",
     "@storybook/addon-essentials": "^8.0.2",
     "@storybook/react": "^8.0.2",
     "@storybook/react-webpack5": "^8.0.2",
@@ -68,7 +68,7 @@
     "react-router-dom": "^6.22.3",
     "react-test-renderer": "^18.2.0",
     "storybook": "^8.0.2",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.3"
   },
   "imports": {
     "#pagination/centered": "./src/pagination/centered/index.tsx",
