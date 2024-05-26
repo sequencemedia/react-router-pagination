@@ -19,12 +19,12 @@
     "url": "git://github.com/sequencemedia/react-router-pagination.git"
   },
   "scripts": {
+    "build-storybook": "storybook build",
     "lint": "eslint . .storybook --ext .mjs,.cjs,.jsx,.mts,.cts,.tsx",
     "lint:fix": "npm run lint -- --fix",
-    "test": "cross-env NODE_ENV=test jest --verbose",
+    "prepare": "husky",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "prepare": "husky"
+    "test": "cross-env NODE_ENV=test jest --verbose"
   },
   "dependencies": {
     "debug": "^4.3.4"
@@ -71,16 +71,20 @@
     "typescript": "^5.4.5"
   },
   "imports": {
+    "#pagination": "./src/pagination/index.tsx",
     "#pagination/centered": "./src/pagination/centered/index.tsx",
     "#pagination/common": "./src/pagination/common/index.mts",
-    "#pagination/standard": "./src/pagination/standard/index.tsx",
     "#pagination/component": "./src/pagination/component.tsx",
-    "#pagination": "./src/pagination/index.tsx"
+    "#pagination/standard": "./src/pagination/standard/index.tsx"
   },
   "exports": {
     ".": {
       "require": "./src/index.cjs",
       "import": "./src/index.mjs"
+    },
+    "./pagination": {
+      "require": "./src/pagination/index.cjs",
+      "import": "./src/pagination/index.mjs"
     },
     "./pagination/centered": {
       "require": "./src/pagination/centered/index.cjs",
@@ -90,17 +94,13 @@
       "require": "./src/pagination/common/index.cjs",
       "import": "./src/pagination/common/index.mjs"
     },
-    "./pagination/standard": {
-      "require": "./src/pagination/standard/index.cjs",
-      "import": "./src/pagination/standard/index.mjs"
-    },
     "./pagination/component": {
       "require": "./src/pagination/component.cjs",
       "import": "./src/pagination/component.mjs"
     },
-    "./pagination": {
-      "require": "./src/pagination/index.cjs",
-      "import": "./src/pagination/index.mjs"
+    "./pagination/standard": {
+      "require": "./src/pagination/standard/index.cjs",
+      "import": "./src/pagination/standard/index.mjs"
     }
   }
 }
