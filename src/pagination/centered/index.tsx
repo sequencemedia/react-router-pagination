@@ -1,5 +1,7 @@
 import debug from 'debug'
 
+import type ReactRouterPaginationTypes from 'react-router-pagination'
+
 import AbstractPagination, {
   toInteger,
   calculateTotalPages,
