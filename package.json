@@ -39,9 +39,9 @@
     "@babel/preset-typescript": "^7.24.7",
     "@babel/register": "^7.24.6",
     "@sequencemedia/hooks": "^1.0.506",
-    "@storybook/addon-essentials": "^8.2.5",
-    "@storybook/react": "^8.2.5",
-    "@storybook/react-webpack5": "^8.2.5",
+    "@storybook/addon-essentials": "^8.2.6",
+    "@storybook/react": "^8.2.6",
+    "@storybook/react-webpack5": "^8.2.6",
     "@types/debug": "^4.1.12",
     "@types/jest": "^29.5.12",
     "@types/react": "^18.3.3",
@@ -67,7 +67,7 @@
     "react-router": "^6.25.1",
     "react-router-dom": "^6.25.1",
     "react-test-renderer": "^18.3.1",
-    "storybook": "^8.2.5",
+    "storybook": "^8.2.6",
     "typescript": "^5.5.4"
   },
   "imports": {
