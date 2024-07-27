@@ -1,5 +1,4 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
 
 get_package_changes () {
   local CURRENT_BRANCH
