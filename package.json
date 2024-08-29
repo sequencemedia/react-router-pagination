@@ -1,6 +1,6 @@
 {
   "name": "react-router-pagination",
-  "version": "3.2.188",
+  "version": "3.2.189",
   "description": "A React Router Pagination component",
   "main": "./src/index.mjs",
   "type": "module",
