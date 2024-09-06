@@ -27,7 +27,7 @@
     "test": "cross-env NODE_ENV=test jest --verbose"
   },
   "dependencies": {
-    "debug": "^4.3.6"
+    "debug": "^4.3.7"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
@@ -38,7 +38,7 @@
     "@babel/preset-react": "^7.24.7",
     "@babel/preset-typescript": "^7.24.7",
     "@babel/register": "^7.24.6",
-    "@sequencemedia/hooks": "^1.0.546",
+    "@sequencemedia/hooks": "^1.0.547",
     "@storybook/addon-essentials": "^8.2.9",
     "@storybook/react": "^8.2.9",
     "@storybook/react-webpack5": "^8.2.9",
