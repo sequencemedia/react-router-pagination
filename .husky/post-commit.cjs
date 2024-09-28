@@ -1,5 +1,5 @@
 module.exports = (
-  import('@sequencemedia/hooks')
+  import('./hooks/index.mjs')
     .then(({
       postCommit
     }) => (

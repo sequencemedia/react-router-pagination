@@ -1,5 +1,5 @@
 import {
   postCommit
-} from '@sequencemedia/hooks'
+} from './hooks/index.mjs'
 
 export default postCommit()
