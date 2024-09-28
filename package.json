@@ -38,7 +38,6 @@
     "@babel/preset-react": "^7.24.7",
     "@babel/preset-typescript": "^7.24.7",
     "@babel/register": "^7.24.6",
-    "@sequencemedia/hooks": "^1.0.563",
     "@storybook/addon-essentials": "^8.3.4",
     "@storybook/react": "^8.3.4",
     "@storybook/react-webpack5": "^8.3.4",
