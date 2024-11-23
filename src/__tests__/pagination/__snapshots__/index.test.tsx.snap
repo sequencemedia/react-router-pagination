@@ -8,6 +8,7 @@ exports[`react-router-pagination <Centered /> With \`pageNumber\` and \`totalPag
     className="zero-page"
   >
     <a
+      data-discover="true"
       href="/1"
       onClick={[Function]}
     >
@@ -22,6 +23,7 @@ exports[`react-router-pagination <Centered /> With \`pageNumber\` and \`totalPag
     className="reverse-page"
   >
     <a
+      data-discover="true"
       href="/6"
       onClick={[Function]}
     >
@@ -36,6 +38,7 @@ exports[`react-router-pagination <Centered /> With \`pageNumber\` and \`totalPag
     className="page"
   >
     <a
+      data-discover="true"
       href="/7"
       onClick={[Function]}
     >
@@ -50,6 +53,7 @@ exports[`react-router-pagination <Centered /> With \`pageNumber\` and \`totalPag
     className="page"
   >
     <a
+      data-discover="true"
       href="/8"
       onClick={[Function]}
     >
@@ -64,6 +68,7 @@ exports[`react-router-pagination <Centered /> With \`pageNumber\` and \`totalPag
     className="current-page"
   >
     <a
+      data-discover="true"
       href="/9"
       onClick={[Function]}
     >
@@ -85,6 +90,7 @@ exports[`react-router-pagination <Pagination /> With \`pageNumber\` and \`totalP
     className="forward-page"
   >
     <a
+      data-discover="true"
       href="/1"
       onClick={[Function]}
     >
@@ -99,6 +105,7 @@ exports[`react-router-pagination <Pagination /> With \`pageNumber\` and \`totalP
     className="last-page"
   >
     <a
+      data-discover="true"
       href="/2"
       onClick={[Function]}
     >
@@ -120,6 +127,7 @@ exports[`react-router-pagination <Standard /> With \`pageNumber\` and \`totalPag
     className="zero-page"
   >
     <a
+      data-discover="true"
       href="/1"
       onClick={[Function]}
     >
@@ -134,6 +142,7 @@ exports[`react-router-pagination <Standard /> With \`pageNumber\` and \`totalPag
     className="reverse-page"
   >
     <a
+      data-discover="true"
       href="/6"
       onClick={[Function]}
     >
@@ -148,6 +157,7 @@ exports[`react-router-pagination <Standard /> With \`pageNumber\` and \`totalPag
     className="page"
   >
     <a
+      data-discover="true"
       href="/7"
       onClick={[Function]}
     >
@@ -162,6 +172,7 @@ exports[`react-router-pagination <Standard /> With \`pageNumber\` and \`totalPag
     className="page"
   >
     <a
+      data-discover="true"
       href="/8"
       onClick={[Function]}
     >
@@ -176,6 +187,7 @@ exports[`react-router-pagination <Standard /> With \`pageNumber\` and \`totalPag
     className="current-page"
   >
     <a
+      data-discover="true"
       href="/9"
       onClick={[Function]}
     >

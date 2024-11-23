@@ -8,6 +8,7 @@ exports[`react-router-pagination/pagination/component <Pagination /> With \`page
     className="forward-page"
   >
     <a
+      data-discover="true"
       href="/1"
       onClick={[Function]}
     >
@@ -22,6 +23,7 @@ exports[`react-router-pagination/pagination/component <Pagination /> With \`page
     className="last-page"
   >
     <a
+      data-discover="true"
       href="/2"
       onClick={[Function]}
     >
