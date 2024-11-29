@@ -8,7 +8,6 @@ exports[`react-router-pagination/pagination/centered <Centered /> With \`pageNum
     className="current-page"
   >
     <a
-      data-discover="true"
       href="/1"
       onClick={[Function]}
     >
@@ -23,7 +22,6 @@ exports[`react-router-pagination/pagination/centered <Centered /> With \`pageNum
     className="page"
   >
     <a
-      data-discover="true"
       href="/2"
       onClick={[Function]}
     >
@@ -45,7 +43,6 @@ exports[`react-router-pagination/pagination/centered <Centered /> With \`spread\
     className="zero-page"
   >
     <a
-      data-discover="true"
       href="/1"
       onClick={[Function]}
     >
@@ -60,7 +57,6 @@ exports[`react-router-pagination/pagination/centered <Centered /> With \`spread\
     className="reverse-page"
   >
     <a
-      data-discover="true"
       href="/3"
       onClick={[Function]}
     >
@@ -75,7 +71,6 @@ exports[`react-router-pagination/pagination/centered <Centered /> With \`spread\
     className="page"
   >
     <a
-      data-discover="true"
       href="/4"
       onClick={[Function]}
     >
@@ -90,7 +85,6 @@ exports[`react-router-pagination/pagination/centered <Centered /> With \`spread\
     className="current-page"
   >
     <a
-      data-discover="true"
       href="/5"
       onClick={[Function]}
     >
@@ -105,7 +99,6 @@ exports[`react-router-pagination/pagination/centered <Centered /> With \`spread\
     className="page"
   >
     <a
-      data-discover="true"
       href="/6"
       onClick={[Function]}
     >
@@ -120,7 +113,6 @@ exports[`react-router-pagination/pagination/centered <Centered /> With \`spread\
     className="forward-page"
   >
     <a
-      data-discover="true"
       href="/7"
       onClick={[Function]}
     >
@@ -135,7 +127,6 @@ exports[`react-router-pagination/pagination/centered <Centered /> With \`spread\
     className="last-page"
   >
     <a
-      data-discover="true"
       href="/9"
       onClick={[Function]}
     >
