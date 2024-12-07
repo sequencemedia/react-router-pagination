@@ -27,7 +27,7 @@
     "test": "cross-env NODE_ENV=test jest --verbose"
   },
   "dependencies": {
-    "debug": "^4.3.7"
+    "debug": "^4.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -43,7 +43,7 @@
     "@storybook/react-webpack5": "7.6.20",
     "@types/debug": "^4.1.12",
     "@types/jest": "^29.5.14",
-    "@types/react": "^19.0.0",
+    "@types/react": "^19.0.1",
     "@types/react-router": "^5.1.20",
     "@types/react-router-dom": "^5.3.3",
     "@types/react-test-renderer": "18.3.1",
