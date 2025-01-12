@@ -6,12 +6,9 @@ import type ReactRouterPaginationTypes from 'react-router-pagination'
 import React, { Component } from 'react'
 
 import {
+  Link,
   generatePath
 } from 'react-router'
-
-import {
-  Link
-} from 'react-router-dom'
 
 import {
   toInteger,
