@@ -39,6 +39,7 @@
     "@babel/preset-typescript": "^7.26.0",
     "@babel/register": "^7.25.9",
     "@storybook/addon-essentials": "7.6.20",
+    "@storybook/addon-links": "7.6.20",
     "@storybook/react": "7.6.20",
     "@storybook/react-webpack5": "7.6.20",
     "@types/debug": "^4.1.12",
