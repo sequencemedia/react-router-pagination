@@ -1,9 +1,0 @@
-{
-  "root": true,
-  "extends": "standard",
-  "parser": "@babel/eslint-parser",
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  }
-}

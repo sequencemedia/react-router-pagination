@@ -24,7 +24,7 @@ export class Centered extends AbstractPagination<CenteredProps, CenteredState> {
   static defaultProps = {
     ...AbstractPagination.defaultProps,
     spread: 3,
-    onChange () {}
+    onChange ():void {}
   }
 
   state = {
@@ -81,7 +81,7 @@ export class Centered extends AbstractPagination<CenteredProps, CenteredState> {
     return super.shouldComponentUpdate(props) || (props.spread !== this.props.spread)
   }
 
-  handlePageNumberSelect = (pageNumber: number): any => {
+  handlePageNumberSelect = (pageNumber: number): void => {
     const { onClick } = this.props
 
     try {

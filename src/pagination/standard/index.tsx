@@ -64,7 +64,7 @@ export class Standard extends AbstractPagination<StandardProps, StandardState> {
     return super.shouldComponentUpdate(props) || (props.spread !== this.props.spread)
   }
 
-  handlePageNumberSelect = (pageNumber: number): any => {
+  handlePageNumberSelect = (pageNumber: number): void => {
     const { onClick } = this.props
 
     try {

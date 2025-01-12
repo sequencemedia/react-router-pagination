@@ -39,7 +39,7 @@ type AbstractPaginationProps = ReactRouterPaginationTypes.AbstractPaginationProp
 
 type AbstractPaginationState = ReactRouterPaginationTypes.AbstractPaginationState
 
-export default abstract class AbstractPagination<P, S> extends Component<P & AbstractPaginationProps, S & AbstractPaginationState> {
+export default abstract class AbstractPagination<P, S> extends Component<P & AbstractPaginationProps, S & AbstractPaginationState> { // eslint-disable-line @typescript-eslint/no-unnecessary-type-parameters -- Base
   static defaultProps = {
     onClick () {},
     pageNumber: 0,
@@ -63,11 +63,11 @@ export default abstract class AbstractPagination<P, S> extends Component<P & Abs
     return 0
   }
 
-  zeroIndex (pageNumber: string | number, totalPages: string | number): number {
+  zeroIndex (pageNumber: string | number, totalPages: string | number): number { // eslint-disable-line no-unused-vars -- Base
     return 0
   }
 
-  lastIndex (pageNumber: string | number, totalPages: string | number): number {
+  lastIndex (pageNumber: string | number, totalPages: string | number): number { // eslint-disable-line no-unused-vars -- Base
     return 0
   }
 
@@ -98,7 +98,7 @@ export default abstract class AbstractPagination<P, S> extends Component<P & Abs
       const n = this.zeroIndex(pageNumber, totalPages)
       return (
         <li key={getListItemKey('reverse')} className='reverse-page'>
-          <Link to={getLinkTo(match, n)} onClick={() => this.handlePageNumberSelect(n)}>
+          <Link to={getLinkTo(match, n)} onClick={() => { this.handlePageNumberSelect(n) }}>
             <span className='reverse'>
               {'\u2039'}
             </span>
@@ -114,7 +114,7 @@ export default abstract class AbstractPagination<P, S> extends Component<P & Abs
       const n = this.lastIndex(pageNumber, totalPages) + 1
       return (
         <li key={getListItemKey('forward')} className='forward-page'>
-          <Link to={getLinkTo(match, n)} onClick={() => this.handlePageNumberSelect(n)}>
+          <Link to={getLinkTo(match, n)} onClick={() => { this.handlePageNumberSelect(n) }}>
             <span className='forward'>
               {'\u203A'}
             </span>
@@ -130,7 +130,7 @@ export default abstract class AbstractPagination<P, S> extends Component<P & Abs
       const n = 1
       return (
         <li key={getListItemKey(n)} className='zero-page'>
-          <Link to={getLinkTo(match, n)} onClick={() => this.handlePageNumberSelect(n)}>
+          <Link to={getLinkTo(match, n)} onClick={() => { this.handlePageNumberSelect(n) }}>
             <span className='page-number'>
               {n}
             </span>
@@ -146,7 +146,7 @@ export default abstract class AbstractPagination<P, S> extends Component<P & Abs
       const n = toInteger(totalPages)
       return (
         <li key={getListItemKey(n)} className='last-page'>
-          <Link to={getLinkTo(match, n)} onClick={() => this.handlePageNumberSelect(n)}>
+          <Link to={getLinkTo(match, n)} onClick={() => { this.handlePageNumberSelect(n) }}>
             <span className='page-number'>
               {n}
             </span>
@@ -165,7 +165,7 @@ export default abstract class AbstractPagination<P, S> extends Component<P & Abs
       const n = (i + 1)
       a.push((
         <li key={getListItemKey(n)} className={getListItemClassName(pageNumber, n)}>
-          <Link to={getLinkTo(match, n)} onClick={() => this.handlePageNumberSelect(n)}>
+          <Link to={getLinkTo(match, n)} onClick={() => { this.handlePageNumberSelect(n) }}>
             <span className='page-number'>
               {n}
             </span>
@@ -191,7 +191,7 @@ export default abstract class AbstractPagination<P, S> extends Component<P & Abs
     )
   }
 
-  handlePageNumberSelect = (pageNumber: number): any => {
+  handlePageNumberSelect = (pageNumber: number): void => {
     this.props.onClick(pageNumber)
   }
 

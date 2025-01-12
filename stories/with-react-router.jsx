@@ -9,7 +9,7 @@ export default function withReactRouter (Story) {
   return (
     <Router>
       <Routes>
-        <Route element={<Story />} path="*" />
+        <Route element={<Story />} path='*' />
       </Routes>
     </Router>
   )
