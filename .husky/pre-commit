@@ -1,4 +1,7 @@
 #!/bin/sh
 
+rm -rf .coverage 2> /dev/null
+
+NODE_OPTIONS='--disable-warning=ExperimentalWarning'
 npm run lint
 npm test
