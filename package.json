@@ -39,7 +39,7 @@
     "@babel/preset-typescript": "^7.26.0",
     "@babel/register": "^7.25.9",
     "@chromatic-com/storybook": "^3.2.4",
-    "@sequencemedia/eslint-config-standard": "^0.2.17",
+    "@sequencemedia/eslint-config-standard": "^0.2.18",
     "@sequencemedia/eslint-config-typescript": "^0.1.25",
     "@storybook/addon-essentials": "^8.5.2",
     "@storybook/addon-links": "^8.5.2",
