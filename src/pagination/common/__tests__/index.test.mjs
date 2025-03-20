@@ -4,7 +4,7 @@ import {
   calculatePageNumber
 } from '#pagination/pagination/common'
 
-describe('react-router-pagination/pagination/common', () => {
+describe('#pagination/pagination/common', () => {
   describe('`toInteger()`', () => {
     describe('A number', () => {
       it('returns a number', () => {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`react-router-pagination/pagination/component <Pagination /> With \`pageNumber\` and \`totalPages\` renders 1`] = `
+exports[`#pagination/pagination/component <Pagination /> With \`pageNumber\` and \`totalPages\` renders 1`] = `
 <ul
   className="pagination"
 >

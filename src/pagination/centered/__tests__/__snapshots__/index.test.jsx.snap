@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`react-router-pagination/pagination/centered <Centered /> With \`pageNumber\` and \`totalPages\` renders 1`] = `
+exports[`#pagination/pagination/centered <Centered /> With \`pageNumber\` and \`totalPages\` renders 1`] = `
 <ul
   className="pagination"
 >
@@ -39,7 +39,7 @@ exports[`react-router-pagination/pagination/centered <Centered /> With \`pageNum
 </ul>
 `;
 
-exports[`react-router-pagination/pagination/centered <Centered /> With \`spread\` renders 1`] = `
+exports[`#pagination/pagination/centered <Centered /> With \`spread\` renders 1`] = `
 <ul
   className="pagination"
 >

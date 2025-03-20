@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`react-router-pagination <Centered /> With \`pageNumber\` and \`totalPages\` and \`spread\` renders 1`] = `
+exports[`#pagination <Pagination format='centered' /> With \`pageNumber\` and \`totalPages\` and \`spread\` renders 1`] = `
 <ul
   className="pagination"
 >
@@ -91,29 +91,28 @@ exports[`react-router-pagination <Centered /> With \`pageNumber\` and \`totalPag
 </ul>
 `;
 
-exports[`react-router-pagination <Pagination /> With \`pageNumber\` and \`totalPages\` renders 1`] = `
+exports[`#pagination <Pagination format='centered' /> With \`pageNumber\` and \`totalPages\` renders 1`] = `
 <ul
   className="pagination"
 >
-  <Fragment />
-  <li
-    className="forward-page"
-  >
-    <Link>
-      <a
-        data-discover="true"
-        href="/1"
-        onClick={[Function]}
-        ref={[Function]}
-      >
-        <span
-          className="forward"
+  <Fragment>
+    <li
+      className="current-page"
+    >
+      <Link>
+        <a
+          data-discover="true"
+          href="/1"
+          onClick={[Function]}
+          ref={[Function]}
         >
-          ›
-        </span>
-      </a>
-    </Link>
-  </li>
+          <span
+            className="page-number"
+          />
+        </a>
+      </Link>
+    </li>
+  </Fragment>
   <li
     className="last-page"
   >
@@ -133,7 +132,7 @@ exports[`react-router-pagination <Pagination /> With \`pageNumber\` and \`totalP
 </ul>
 `;
 
-exports[`react-router-pagination <Standard /> With \`pageNumber\` and \`totalPages\` and \`spread\` renders 1`] = `
+exports[`#pagination <Pagination format='standard' /> With \`pageNumber\` and \`totalPages\` and \`spread\` renders 1`] = `
 <ul
   className="pagination"
 >
@@ -221,5 +220,46 @@ exports[`react-router-pagination <Standard /> With \`pageNumber\` and \`totalPag
       </Link>
     </li>
   </Fragment>
+</ul>
+`;
+
+exports[`#pagination <Pagination format='standard' /> With \`pageNumber\` and \`totalPages\` renders 1`] = `
+<ul
+  className="pagination"
+>
+  <Fragment>
+    <li
+      className="current-page"
+    >
+      <Link>
+        <a
+          data-discover="true"
+          href="/1"
+          onClick={[Function]}
+          ref={[Function]}
+        >
+          <span
+            className="page-number"
+          />
+        </a>
+      </Link>
+    </li>
+  </Fragment>
+  <li
+    className="last-page"
+  >
+    <Link>
+      <a
+        data-discover="true"
+        href="/2"
+        onClick={[Function]}
+        ref={[Function]}
+      >
+        <span
+          className="page-number"
+        />
+      </a>
+    </Link>
+  </li>
 </ul>
 `;

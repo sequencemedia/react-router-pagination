@@ -18,10 +18,10 @@ import {
   toInteger,
   calculateTotalPages,
   calculatePageNumber,
-  Centered
-} from '#pagination/pagination/centered'
+  Standard
+} from '#pagination/pagination/standard'
 
-describe('react-router-pagination/pagination/centered', () => {
+describe('#pagination/pagination/standard', () => {
   describe('`toInteger`', () => {
     it('is a function', () => {
       expect(toInteger)
@@ -43,12 +43,12 @@ describe('react-router-pagination/pagination/centered', () => {
     })
   })
 
-  describe('<Centered />', () => {
+  describe('<Standard />', () => {
     describe('With `pageNumber` and `totalPages`', () => {
       it('renders', () => {
         expect(toSnapshot(render(
           <MemoryRouter>
-            <Centered
+            <Standard
               pageNumber={1}
               totalPages={2}
             />
@@ -56,72 +56,72 @@ describe('react-router-pagination/pagination/centered', () => {
         )))
           .toMatchSnapshot()
       })
-    })
 
-    describe('With `spread`', () => {
-      it('renders', () => {
-        expect(toSnapshot(render(
-          <MemoryRouter>
-            <Centered
-              pageNumber={5}
-              totalPages={9}
-              spread={3}
-            />
-          </MemoryRouter>
-        )))
-          .toMatchSnapshot()
+      describe('With `spread`', () => {
+        it('renders', () => {
+          expect(toSnapshot(render(
+            <MemoryRouter>
+              <Standard
+                pageNumber={5}
+                totalPages={9}
+                spread={3}
+              />
+            </MemoryRouter>
+          )))
+            .toMatchSnapshot()
+        })
       })
     })
   })
 
-  describe('`Centered.calculateTotalPages()`', () => {
+  describe('`Standard.calculateTotalPages()`', () => {
     describe('Your data contains 120 items which you want to display at 10 items per page', () => {
       it('returns 12', () => {
-        expect(Centered.calculateTotalPages(120, 10)).toBe(12)
+        expect(Standard.calculateTotalPages(120, 10)).toBe(12)
       })
     })
 
     describe('Your data contains 60 items which you want to display at 5 items per page', () => {
       it('returns 12', () => {
-        expect(Centered.calculateTotalPages(60, 5)).toBe(12)
+        expect(Standard.calculateTotalPages(60, 5)).toBe(12)
       })
     })
 
     describe('Your data contains 240 items which you want to display at 20 items per page', () => {
       it('returns 12', () => {
-        expect(Centered.calculateTotalPages(240, 20)).toBe(12)
+        expect(Standard.calculateTotalPages(240, 20)).toBe(12)
       })
     })
 
     describe('Your data contains 121 items which you want to display at 10 items per page', () => {
       it('returns 13', () => {
-        expect(Centered.calculateTotalPages(121, 10)).toBe(13)
+        expect(Standard.calculateTotalPages(121, 10)).toBe(13)
       })
     })
 
     describe('Your data contains 61 items which you want to display at 5 items per page', () => {
       it('returns 13', () => {
-        expect(Centered.calculateTotalPages(61, 5)).toBe(13)
+        expect(Standard.calculateTotalPages(61, 5)).toBe(13)
       })
     })
 
     describe('Your data contains 241 items which you want to display at 20 items per page', () => {
       it('returns 13', () => {
-        expect(Centered.calculateTotalPages(241, 20)).toBe(13)
+        expect(Standard.calculateTotalPages(241, 20)).toBe(13)
       })
     })
   })
 
-  describe('`Centered.calculatePageNumber()`', () => {
+  describe('`Standard.calculatePageNumber()`', () => {
     describe('Min', () => {
       it('returns 1', () => {
-        expect(Centered.calculatePageNumber(0, 12)).toBe(1)
+        expect(Standard.calculatePageNumber(0, 12)).toBe(1)
       })
     })
 
     describe('Max', () => {
       it('returns 12', () => {
-        expect(Centered.calculatePageNumber(13, 12)).toBe(12)
+        expect(Standard.calculatePageNumber(13, 12)).toBe(12)
       })
     })
   })
