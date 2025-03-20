@@ -35,7 +35,9 @@ exports[`#pagination/pagination/component <Pagination /> With \`pageNumber\` and
       >
         <span
           className="page-number"
-        />
+        >
+          2
+        </span>
       </a>
     </Link>
   </li>

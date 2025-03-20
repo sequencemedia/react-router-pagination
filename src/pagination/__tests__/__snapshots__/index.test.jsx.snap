@@ -16,7 +16,9 @@ exports[`#pagination <Centered /> With \`pageNumber\` and \`totalPages\` and \`s
       >
         <span
           className="page-number"
-        />
+        >
+          1
+        </span>
       </a>
     </Link>
   </li>
@@ -51,7 +53,9 @@ exports[`#pagination <Centered /> With \`pageNumber\` and \`totalPages\` and \`s
         >
           <span
             className="page-number"
-          />
+          >
+            7
+          </span>
         </a>
       </Link>
     </li>
@@ -67,7 +71,9 @@ exports[`#pagination <Centered /> With \`pageNumber\` and \`totalPages\` and \`s
         >
           <span
             className="page-number"
-          />
+          >
+            8
+          </span>
         </a>
       </Link>
     </li>
@@ -83,7 +89,9 @@ exports[`#pagination <Centered /> With \`pageNumber\` and \`totalPages\` and \`s
         >
           <span
             className="page-number"
-          />
+          >
+            9
+          </span>
         </a>
       </Link>
     </li>
@@ -126,7 +134,9 @@ exports[`#pagination <Pagination /> With \`pageNumber\` and \`totalPages\` rende
       >
         <span
           className="page-number"
-        />
+        >
+          2
+        </span>
       </a>
     </Link>
   </li>
@@ -149,7 +159,9 @@ exports[`#pagination <Standard /> With \`pageNumber\` and \`totalPages\` and \`s
       >
         <span
           className="page-number"
-        />
+        >
+          1
+        </span>
       </a>
     </Link>
   </li>
@@ -184,7 +196,9 @@ exports[`#pagination <Standard /> With \`pageNumber\` and \`totalPages\` and \`s
         >
           <span
             className="page-number"
-          />
+          >
+            7
+          </span>
         </a>
       </Link>
     </li>
@@ -200,7 +214,9 @@ exports[`#pagination <Standard /> With \`pageNumber\` and \`totalPages\` and \`s
         >
           <span
             className="page-number"
-          />
+          >
+            8
+          </span>
         </a>
       </Link>
     </li>
@@ -216,7 +232,9 @@ exports[`#pagination <Standard /> With \`pageNumber\` and \`totalPages\` and \`s
         >
           <span
             className="page-number"
-          />
+          >
+            9
+          </span>
         </a>
       </Link>
     </li>

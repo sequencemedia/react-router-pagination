@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`#pagination <Pagination format='centered' /> With \`pageNumber\` and \`totalPages\` and \`spread\` renders 1`] = `
+exports[`#pagination <Pagination /> With \`pageNumber\` and \`totalPages\` and \`spread\` renders 1`] = `
 <ul
   className="pagination"
 >
@@ -16,7 +16,9 @@ exports[`#pagination <Pagination format='centered' /> With \`pageNumber\` and \`
       >
         <span
           className="page-number"
-        />
+        >
+          1
+        </span>
       </a>
     </Link>
   </li>
@@ -51,7 +53,9 @@ exports[`#pagination <Pagination format='centered' /> With \`pageNumber\` and \`
         >
           <span
             className="page-number"
-          />
+          >
+            7
+          </span>
         </a>
       </Link>
     </li>
@@ -67,7 +71,9 @@ exports[`#pagination <Pagination format='centered' /> With \`pageNumber\` and \`
         >
           <span
             className="page-number"
-          />
+          >
+            8
+          </span>
         </a>
       </Link>
     </li>
@@ -83,7 +89,9 @@ exports[`#pagination <Pagination format='centered' /> With \`pageNumber\` and \`
         >
           <span
             className="page-number"
-          />
+          >
+            9
+          </span>
         </a>
       </Link>
     </li>
@@ -91,7 +99,7 @@ exports[`#pagination <Pagination format='centered' /> With \`pageNumber\` and \`
 </ul>
 `;
 
-exports[`#pagination <Pagination format='centered' /> With \`pageNumber\` and \`totalPages\` renders 1`] = `
+exports[`#pagination <Pagination /> With \`pageNumber\` and \`totalPages\` renders 1`] = `
 <ul
   className="pagination"
 >
@@ -108,7 +116,9 @@ exports[`#pagination <Pagination format='centered' /> With \`pageNumber\` and \`
         >
           <span
             className="page-number"
-          />
+          >
+            1
+          </span>
         </a>
       </Link>
     </li>
@@ -125,14 +135,16 @@ exports[`#pagination <Pagination format='centered' /> With \`pageNumber\` and \`
       >
         <span
           className="page-number"
-        />
+        >
+          2
+        </span>
       </a>
     </Link>
   </li>
 </ul>
 `;
 
-exports[`#pagination <Pagination format='standard' /> With \`pageNumber\` and \`totalPages\` and \`spread\` renders 1`] = `
+exports[`#pagination <Pagination format='center' /> With \`pageNumber\` and \`totalPages\` and \`spread\` renders 1`] = `
 <ul
   className="pagination"
 >
@@ -148,7 +160,9 @@ exports[`#pagination <Pagination format='standard' /> With \`pageNumber\` and \`
       >
         <span
           className="page-number"
-        />
+        >
+          1
+        </span>
       </a>
     </Link>
   </li>
@@ -183,7 +197,9 @@ exports[`#pagination <Pagination format='standard' /> With \`pageNumber\` and \`
         >
           <span
             className="page-number"
-          />
+          >
+            7
+          </span>
         </a>
       </Link>
     </li>
@@ -199,7 +215,9 @@ exports[`#pagination <Pagination format='standard' /> With \`pageNumber\` and \`
         >
           <span
             className="page-number"
-          />
+          >
+            8
+          </span>
         </a>
       </Link>
     </li>
@@ -215,7 +233,9 @@ exports[`#pagination <Pagination format='standard' /> With \`pageNumber\` and \`
         >
           <span
             className="page-number"
-          />
+          >
+            9
+          </span>
         </a>
       </Link>
     </li>
@@ -223,30 +243,30 @@ exports[`#pagination <Pagination format='standard' /> With \`pageNumber\` and \`
 </ul>
 `;
 
-exports[`#pagination <Pagination format='standard' /> With \`pageNumber\` and \`totalPages\` renders 1`] = `
+exports[`#pagination <Pagination format='center' /> With \`pageNumber\` and \`totalPages\` renders 1`] = `
 <ul
   className="pagination"
 >
-  <Fragment>
-    <li
-      className="current-page"
-    >
-      <Link>
-        <a
-          data-discover="true"
-          href="/1"
-          onClick={[Function]}
-          ref={[Function]}
-        >
-          <span
-            className="page-number"
-          />
-        </a>
-      </Link>
-    </li>
-  </Fragment>
   <li
-    className="last-page"
+    className="current-page"
+  >
+    <Link>
+      <a
+        data-discover="true"
+        href="/1"
+        onClick={[Function]}
+        ref={[Function]}
+      >
+        <span
+          className="page-number"
+        >
+          1
+        </span>
+      </a>
+    </Link>
+  </li>
+  <li
+    className="page"
   >
     <Link>
       <a
@@ -257,7 +277,9 @@ exports[`#pagination <Pagination format='standard' /> With \`pageNumber\` and \`
       >
         <span
           className="page-number"
-        />
+        >
+          2
+        </span>
       </a>
     </Link>
   </li>

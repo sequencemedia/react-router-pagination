@@ -51,6 +51,7 @@
     "@storybook/theming": "^8.6.7",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
+    "@types/babel__register": "^7.17.3",
     "@types/debug": "^4.1.12",
     "@types/jest": "^29.5.14",
     "@types/prop-types": "^15.7.14",
@@ -106,6 +107,10 @@
     "#pagination/super/pagination/component": {
       "require": "./src/super/pagination/component.cjs",
       "import": "./src/super/pagination/component.mjs"
+    },
+    "#pagination/super/pagination/common": {
+      "require": "./src/super/pagination/common/index.cjs",
+      "import": "./src/super/pagination/common/index.mjs"
     }
   },
   "exports": {

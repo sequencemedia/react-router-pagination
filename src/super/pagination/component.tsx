@@ -13,7 +13,7 @@ import {
   toInteger,
   calculateTotalPages,
   calculatePageNumber
-} from '#pagination/pagination/common'
+} from '#pagination/super/pagination/common'
 
 const getListItemClassName = (currentPageNumber: string | number, pageNumber: string | number): string => (
   toInteger(currentPageNumber) === toInteger(pageNumber)
@@ -122,7 +122,7 @@ export abstract class AbstractPagination<P, S> extends Component<P & AbstractPag
         <li key={getListItemKey(n)} className='zero-page'>
           <Link to={getLinkTo(match, n)} onClick={() => { this.handlePageNumberSelect(n) }}>
             <span className='page-number'>
-              {n}
+              1
             </span>
           </Link>
         </li>
@@ -138,7 +138,7 @@ export abstract class AbstractPagination<P, S> extends Component<P & AbstractPag
         <li key={getListItemKey(n)} className='last-page'>
           <Link to={getLinkTo(match, n)} onClick={() => { this.handlePageNumberSelect(n) }}>
             <span className='page-number'>
-              {n}
+              {String(n)}
             </span>
           </Link>
         </li>
@@ -153,15 +153,15 @@ export abstract class AbstractPagination<P, S> extends Component<P & AbstractPag
     const a = []
     for (j; i < j; i = i + 1) {
       const n = (i + 1)
-      a.push((
+      a.push(
         <li key={getListItemKey(n)} className={getListItemClassName(pageNumber, n)}>
           <Link to={getLinkTo(match, n)} onClick={() => { this.handlePageNumberSelect(n) }}>
             <span className='page-number'>
-              {n}
+              {String(n)}
             </span>
           </Link>
         </li>
-      ))
+      )
     }
     return a
   }
@@ -201,13 +201,13 @@ export abstract class AbstractPagination<P, S> extends Component<P & AbstractPag
             {this.lastPageLinkItem(match, page, totalPages)}
           </ul>
         )
-      } else {
-        return (
-          <ul className='pagination'>
-            {this.pageLinkItems(match, page, totalPages)}
-          </ul>
-        )
       }
+
+      return (
+        <ul className='pagination'>
+          {this.pageLinkItems(match, page, totalPages)}
+        </ul>
+      )
     }
     return null
   }

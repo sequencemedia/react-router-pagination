@@ -17,13 +17,12 @@ import {
 import Pagination from '#pagination'
 
 describe('#pagination', () => {
-  describe('<Pagination format=\'standard\' />', () => {
+  describe('<Pagination />', () => {
     describe('With `pageNumber` and `totalPages`', () => {
       it('renders', () => {
         expect(toSnapshot(render(
           <MemoryRouter>
             <Pagination
-              format='standard'
               pageNumber={1}
               totalPages={2}
             />
@@ -38,7 +37,6 @@ describe('#pagination', () => {
         expect(toSnapshot(render(
           <MemoryRouter>
             <Pagination
-              format='standard'
               pageNumber={9}
               totalPages={9}
               spread={3}
@@ -50,13 +48,13 @@ describe('#pagination', () => {
     })
   })
 
-  describe('<Pagination format=\'centered\' />', () => {
+  describe('<Pagination format=\'center\' />', () => {
     describe('With `pageNumber` and `totalPages`', () => {
       it('renders', () => {
         expect(toSnapshot(render(
           <MemoryRouter>
             <Pagination
-              format='centered'
+              format='center'
               pageNumber={1}
               totalPages={2}
             />
@@ -71,7 +69,7 @@ describe('#pagination', () => {
         expect(toSnapshot(render(
           <MemoryRouter>
             <Pagination
-              format='centered'
+              format='center'
               pageNumber={9}
               totalPages={9}
               spread={3}

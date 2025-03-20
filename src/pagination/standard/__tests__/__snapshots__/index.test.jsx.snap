@@ -16,7 +16,9 @@ exports[`#pagination/pagination/standard <Standard /> With \`pageNumber\` and \`
       >
         <span
           className="page-number"
-        />
+        >
+          1
+        </span>
       </a>
     </Link>
   </li>
@@ -51,7 +53,9 @@ exports[`#pagination/pagination/standard <Standard /> With \`pageNumber\` and \`
         >
           <span
             className="page-number"
-          />
+          >
+            4
+          </span>
         </a>
       </Link>
     </li>
@@ -67,7 +71,9 @@ exports[`#pagination/pagination/standard <Standard /> With \`pageNumber\` and \`
         >
           <span
             className="page-number"
-          />
+          >
+            5
+          </span>
         </a>
       </Link>
     </li>
@@ -83,7 +89,9 @@ exports[`#pagination/pagination/standard <Standard /> With \`pageNumber\` and \`
         >
           <span
             className="page-number"
-          />
+          >
+            6
+          </span>
         </a>
       </Link>
     </li>
@@ -118,7 +126,9 @@ exports[`#pagination/pagination/standard <Standard /> With \`pageNumber\` and \`
       >
         <span
           className="page-number"
-        />
+        >
+          9
+        </span>
       </a>
     </Link>
   </li>
@@ -142,7 +152,9 @@ exports[`#pagination/pagination/standard <Standard /> With \`pageNumber\` and \`
         >
           <span
             className="page-number"
-          />
+          >
+            1
+          </span>
         </a>
       </Link>
     </li>
@@ -159,7 +171,9 @@ exports[`#pagination/pagination/standard <Standard /> With \`pageNumber\` and \`
       >
         <span
           className="page-number"
-        />
+        >
+          2
+        </span>
       </a>
     </Link>
   </li>

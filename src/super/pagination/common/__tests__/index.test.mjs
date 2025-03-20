@@ -2,9 +2,9 @@ import {
   toInteger,
   calculateTotalPages,
   calculatePageNumber
-} from '#pagination/pagination/common'
+} from '#pagination/super/pagination/common'
 
-describe('#pagination/pagination/common', () => {
+describe('#pagination/super/pagination/common', () => {
   describe('`toInteger()`', () => {
     describe('A number', () => {
       it('returns a number', () => {

@@ -2,4 +2,4 @@ export {
   toInteger,
   calculateTotalPages,
   calculatePageNumber
-} from '#pagination/super/pagination/common'
+} from './index.cjs'
