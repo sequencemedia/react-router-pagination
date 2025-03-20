@@ -54,7 +54,7 @@ const reactSettings = {
 export default [
   {
     ignores: [
-      '.coverage'
+      'coverage'
     ]
   },
   /**
