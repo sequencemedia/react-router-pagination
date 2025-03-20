@@ -41,15 +41,7 @@ const presets = [
 ]
 
 const plugins = [
-  '@babel/syntax-jsx',
-  [
-    'module-resolver', {
-      alias: {
-        '#pagination/pagination/component': './src/pagination/component.tsx',
-        '#pagination/super/pagination/component': './src/super/pagination/component.tsx'
-      }
-    }
-  ]
+  '@babel/syntax-jsx'
 ]
 
 // @ts-ignore
