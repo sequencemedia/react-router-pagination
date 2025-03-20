@@ -1,2 +1,6 @@
-export { default } from './index.cjs'
-export * from './index.cjs'
+export {
+  toInteger,
+  calculateTotalPages,
+  calculatePageNumber,
+  Standard
+} from './index.cjs'

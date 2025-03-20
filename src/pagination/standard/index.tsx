@@ -6,7 +6,9 @@ import {
   calculatePageNumber
 } from '#pagination/pagination/common'
 
-import AbstractPagination from '../../super/pagination/component.tsx'
+import {
+  AbstractPagination
+} from '#pagination/super/pagination/component' // '../../super/pagination/component.tsx'
 
 const error = debug('react-router-pagination/pagination/component')
 

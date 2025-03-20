@@ -9,4 +9,12 @@ require('@babel/register')({
   ]
 })
 
-module.exports = require('./index.mts')
+const {
+  toInteger,
+  calculateTotalPages,
+  calculatePageNumber
+} = require('./index.mts')
+
+module.exports.toInteger = toInteger
+module.exports.calculateTotalPages = calculateTotalPages
+module.exports.calculatePageNumber = calculatePageNumber

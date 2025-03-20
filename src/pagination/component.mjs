@@ -1,2 +1,6 @@
-export { default } from './component.cjs'
-export * from './component.cjs'
+export {
+  toInteger,
+  calculateTotalPages,
+  calculatePageNumber,
+  Pagination
+} from './component.cjs'

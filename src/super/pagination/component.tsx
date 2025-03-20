@@ -29,7 +29,7 @@ export type AbstractPaginationProps = ReactRouterPaginationTypes.AbstractPaginat
 
 export type AbstractPaginationState = ReactRouterPaginationTypes.AbstractPaginationState
 
-export default abstract class AbstractPagination<P, S> extends Component<P & AbstractPaginationProps, S & AbstractPaginationState> { // eslint-disable-line @typescript-eslint/no-unnecessary-type-parameters -- Base
+export abstract class AbstractPagination<P, S> extends Component<P & AbstractPaginationProps, S & AbstractPaginationState> { // eslint-disable-line @typescript-eslint/no-unnecessary-type-parameters -- Base
   static defaultProps = {
     onClick () {},
     pageNumber: 0,

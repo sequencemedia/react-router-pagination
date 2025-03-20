@@ -9,4 +9,8 @@ require('@babel/register')({
   ]
 })
 
-module.exports = require('./index.tsx')
+const {
+  default: Pagination
+} = require('./index.tsx')
+
+module.exports = Pagination

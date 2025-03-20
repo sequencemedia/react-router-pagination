@@ -9,4 +9,14 @@ require('@babel/register')({
   ]
 })
 
-module.exports = require('./component.tsx')
+const {
+  toInteger,
+  calculateTotalPages,
+  calculatePageNumber,
+  Pagination
+} = require('./component.tsx')
+
+module.exports.toInteger = toInteger
+module.exports.calculateTotalPages = calculateTotalPages
+module.exports.calculatePageNumber = calculatePageNumber
+module.exports.Pagination = Pagination
