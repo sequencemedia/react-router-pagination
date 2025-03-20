@@ -59,11 +59,9 @@
     "@types/react-router": "^5.1.20",
     "@typescript-eslint/eslint-plugin": "^8.27.0",
     "@typescript-eslint/parser": "^8.27.0",
-    "babel-plugin-module-resolver": "^5.0.2",
     "core-js": "^3.41.0",
     "cross-env": "^7.0.3",
     "eslint": "^9.22.0",
-    "eslint-import-resolver-babel-module": "^5.3.2",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-storybook": "^0.11.6",
     "globals": "^16.0.0",
@@ -76,7 +74,6 @@
     "react-component-snapshot": "^0.0.7",
     "react-dom": "^19.0.0",
     "react-router": "^7.4.0",
-    "react-test-renderer": "^19.0.0",
     "storybook": "^8.6.7"
   },
   "imports": {

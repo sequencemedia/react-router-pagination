@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import {
   toSnapshot
@@ -21,75 +20,6 @@ import {
   calculatePageNumber,
   Standard
 } from '#pagination/pagination/standard'
-
-/**
- *  @param {{ to: string | { pathname: string }, children: React.ReactNode | React.ReactNode[] }} props
- *  @returns {React.JSX.Element}
- */
-function MockLink ({ to, children, onClick }) {
-  if (typeof to === 'string') {
-    return (
-      <a
-        href={to}
-        className='mock-link'
-        onClick={onClick}>
-        {children}
-      </a>
-    )
-  }
-
-  const {
-    pathname
-  } = to
-
-  return (
-    <a
-      href={pathname}
-      className='mock-link'
-      onClick={onClick}>
-      {children}
-    </a>
-  )
-}
-
-MockLink.propTypes = {
-  to: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.shape({})
-  ]),
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(
-      PropTypes.node
-    )
-  ]),
-  onClick: PropTypes.func
-}
-
-function MockMemoryRouter ({ children }) {
-  return children
-}
-
-MockMemoryRouter.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(
-      PropTypes.node
-    )
-  ])
-}
-
-/*
-jest.mock('react-router', () => {
-  return {
-    __esModule: true,
-    generatePath () {
-      return 'MOCK PATH'
-    },
-    Link: MockLink,
-    MemoryRouter: MockMemoryRouter
-  }
-}) */
 
 describe('react-router-pagination/pagination/standard', () => {
   describe('`toInteger`', () => {

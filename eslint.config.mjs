@@ -129,10 +129,7 @@ export default [
       ...reactRules
     },
     settings: {
-      ...reactSettings,
-      'import/resolver': {
-        'babel-module': {}
-      }
+      ...reactSettings
     }
   }),
   standard({
@@ -159,10 +156,7 @@ export default [
       ...reactRules
     },
     settings: {
-      ...reactSettings,
-      'import/resolver': {
-        'babel-module': {}
-      }
+      ...reactSettings
     }
   }),
   /**

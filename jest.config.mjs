@@ -9,7 +9,7 @@ export default {
   collectCoverage: true,
   coverageDirectory: './coverage',
   coverageProvider: 'v8',
-  testRegex: '(/__tests__/.*|(\\.|/))(test|spec)\\.(jsx?|mjs?)$',
+  testRegex: '(/__tests__/.*|(\\.|/))(test|spec)\\.(jsx|mjs|tsx|mts)$',
   transform: {
     '^.+\\.jsx$': 'babel-jest',
     '^.+\\.mjs$': 'babel-jest',
@@ -21,6 +21,9 @@ export default {
     '/node_modules\\/(?!react-component-snapshot)\\/',
     '/node_modules\\/(?!react-component-name)\\/'
   ],
-  moduleFileExtensions: ['js', 'jsx', 'mjs'],
-  testEnvironment: 'jest-fixed-jsdom'
+  moduleFileExtensions: ['js', 'ts', 'jsx', 'mjs', 'tsx', 'mts'],
+  testEnvironment: 'jest-environment-jsdom',
+  setupFilesAfterEnv: [
+    '<rootDir>/jest.setup.mjs'
+  ]
 }
