@@ -2,7 +2,7 @@
 
 ## React Router Pagination
 
-A *React Router 6* pagination component.
+A *React Router 7* pagination component.
 
 - You have lots of data?
 - You want users to page through that data?
