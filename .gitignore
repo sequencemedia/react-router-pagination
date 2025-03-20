@@ -10,7 +10,7 @@
 .nvmrc
 
 # Coverage
-.coverage
+coverage
 
 # Deps
 .depsrc

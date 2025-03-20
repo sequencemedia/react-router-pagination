@@ -9,4 +9,4 @@ require('@babel/register')({
   ]
 })
 
-module.exports = require('./index.tsx')
+module.exports = require('./component.tsx')

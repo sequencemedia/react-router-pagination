@@ -4,7 +4,7 @@
   "description": "A React Router Pagination component",
   "main": "./src/index.mjs",
   "type": "module",
-  "types": "./src/index.d.mts",
+  "types": "./index.d.mts",
   "author": {
     "name": "Jonathan Perry for Sequence Media Limited",
     "email": "sequencemedia@sequencemedia.net",
@@ -47,12 +47,16 @@
     "@storybook/manager-api": "^8.6.7",
     "@storybook/react": "^8.6.7",
     "@storybook/react-webpack5": "^8.6.7",
+    "@storybook/test": "^8.6.7",
     "@storybook/theming": "^8.6.7",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
     "@types/debug": "^4.1.12",
     "@types/jest": "^29.5.14",
+    "@types/prop-types": "^15.7.14",
     "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
     "@types/react-router": "^5.1.20",
-    "@types/react-test-renderer": "^19.0.0",
     "@typescript-eslint/eslint-plugin": "^8.27.0",
     "@typescript-eslint/parser": "^8.27.0",
     "babel-plugin-module-resolver": "^5.0.2",
@@ -65,19 +69,45 @@
     "globals": "^16.0.0",
     "husky": "^9.1.7",
     "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-fixed-jsdom": "^0.0.9",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
+    "react-component-snapshot": "^0.0.7",
     "react-dom": "^19.0.0",
     "react-router": "^7.4.0",
     "react-test-renderer": "^19.0.0",
     "storybook": "^8.6.7"
   },
   "imports": {
-    "#pagination": "./src/pagination/index.tsx",
-    "#pagination/centered": "./src/pagination/centered/index.tsx",
-    "#pagination/common": "./src/pagination/common/index.mts",
-    "#pagination/component": "./src/pagination/component.tsx",
-    "#pagination/standard": "./src/pagination/standard/index.tsx"
+    "#pagination": {
+      "require": "./src/index.cjs",
+      "import": "./src/index.mjs"
+    },
+    "#pagination/pagination": {
+      "require": "./src/pagination/index.cjs",
+      "import": "./src/pagination/index.mjs"
+    },
+    "#pagination/pagination/centered": {
+      "require": "./src/pagination/centered/index.cjs",
+      "import": "./src/pagination/centered/index.mjs"
+    },
+    "#pagination/pagination/common": {
+      "require": "./src/pagination/common/index.cjs",
+      "import": "./src/pagination/common/index.mjs"
+    },
+    "#pagination/pagination/component": {
+      "require": "./src/pagination/component.cjs",
+      "import": "./src/pagination/component.mjs"
+    },
+    "#pagination/pagination/standard": {
+      "require": "./src/pagination/standard/index.cjs",
+      "import": "./src/pagination/standard/index.mjs"
+    },
+    "#pagination/super/pagination/component": {
+      "require": "./src/super/pagination/component.cjs",
+      "import": "./src/super/pagination/component.mjs"
+    }
   },
   "exports": {
     ".": {

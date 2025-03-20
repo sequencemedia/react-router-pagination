@@ -2,7 +2,7 @@ import {
   toInteger,
   calculateTotalPages,
   calculatePageNumber
-} from '#pagination/common'
+} from '#pagination/pagination/common'
 
 describe('react-router-pagination/pagination/common', () => {
   describe('`toInteger()`', () => {

@@ -35,13 +35,34 @@ const presets = [
       useBuiltIns: 'usage',
       corejs: 3
     }
+  ],
+  '@babel/react',
+  '@babel/typescript'
+]
+
+const plugins = [
+  '@babel/syntax-jsx',
+  [
+    'module-resolver', {
+      alias: {
+        '#pagination/pagination/component': './src/pagination/component.tsx',
+        '#pagination/super/pagination/component': './src/super/pagination/component.tsx'
+      }
+    }
   ]
 ]
 
+// @ts-ignore
 module.exports = (api) => {
   if (api) api.cache.using(env)
 
   return {
-    presets
+    presets,
+    plugins,
+    ignore: [
+      /node_modules\/(?!react-component-instance)\//,
+      /node_modules\/(?!react-component-snapshot)\//,
+      /node_modules\/(?!react-component-name)\//
+    ]
   }
 }

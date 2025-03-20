@@ -1,12 +1,12 @@
 import debug from 'debug'
 
-import type ReactRouterPaginationTypes from 'react-router-pagination'
+import AbstractPagination from '#pagination/super/pagination/component' // '../../super/pagination/component.tsx'
 
-import AbstractPagination, {
+import {
   toInteger,
   calculateTotalPages,
   calculatePageNumber
-} from '#pagination/component'
+} from '#pagination/pagination/component'
 
 const error = debug('react-router-pagination/pagination/component')
 

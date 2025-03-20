@@ -1,5 +1,4 @@
 import type { JSX } from 'react'
-import type ReactRouterPaginationTypes from 'react-router-pagination'
 import React, { Component } from 'react'
 
 import {

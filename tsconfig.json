@@ -13,15 +13,20 @@
     "baseUrl": ".",
     "paths": {
       "#pagination": [
-        "src/pagination"
+        "src/pagination/index.tsx"
+      ],
+      "#pagination/pagination/component": [
+        "src/pagination/component.tsx"
+      ],
+      "#pagination/super/pagination/component": [
+        "src/super/pagination/component.tsx"
       ],
       "#pagination/*": [
-        "src/pagination/*"
+        "src/pagination/*.tsx"
       ]
     }
   },
   "include": [
-    "src/**/*",
-    ".storybook/**/*"
+    "."
   ]
 }

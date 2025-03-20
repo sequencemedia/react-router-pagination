@@ -1,12 +1,13 @@
 import React from 'react'
+
 import { action } from '@storybook/addon-actions'
 
-import Pagination from 'react-router-pagination'
+import Pagination from '#pagination'
 
 import withReactRouter from './with-react-router.jsx'
 
-const TOTALPAGES = Pagination.calculateTotalPages(120, 10)
 const PAGENUMBER = 1
+const TOTALPAGES = Pagination.calculateTotalPages(120, 10)
 const SPREAD = 5
 
 function Component (props) {
@@ -50,8 +51,8 @@ export default {
 
 export const ComponentStory = {
   args: {
-    totalPages: TOTALPAGES,
     pageNumber: PAGENUMBER,
+    totalPages: TOTALPAGES,
     spread: SPREAD
   }
 }

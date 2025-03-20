@@ -1,5 +1,15 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import PropTypes from 'prop-types'
+
+import {
+  toSnapshot
+} from 'react-component-snapshot'
+
+import '@testing-library/jest-dom'
+
+import {
+  render
+} from '@testing-library/react'
 
 import {
   MemoryRouter
@@ -11,7 +21,76 @@ import {
   Pagination,
   Centered,
   Standard
-} from '#pagination'
+} from '#pagination/pagination'
+
+/**
+ *  @param {{ to: string | { pathname: string }, children: React.ReactNode | React.ReactNode[] }} props
+ *  @returns {React.JSX.Element}
+ */
+function MockLink ({ to, children, onClick }) {
+  if (typeof to === 'string') {
+    return (
+      <a
+        href={to}
+        className='mock-link'
+        onClick={onClick}>
+        {children}
+      </a>
+    )
+  }
+
+  const {
+    pathname
+  } = to
+
+  return (
+    <a
+      href={pathname}
+      className='mock-link'
+      onClick={onClick}>
+      {children}
+    </a>
+  )
+}
+
+MockLink.propTypes = {
+  to: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.shape({})
+  ]),
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(
+      PropTypes.node
+    )
+  ]),
+  onClick: PropTypes.func
+}
+
+function MockMemoryRouter ({ children }) {
+  return children
+}
+
+MockMemoryRouter.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(
+      PropTypes.node
+    )
+  ])
+}
+
+/*
+jest.mock('react-router', () => {
+  return {
+    __esModule: true,
+    generatePath () {
+      return 'MOCK PATH'
+    },
+    Link: MockLink,
+    MemoryRouter: MockMemoryRouter
+  }
+}) */
 
 describe('react-router-pagination', () => {
   describe('calculateTotalPages()', () => {
@@ -66,28 +145,26 @@ describe('react-router-pagination', () => {
     })
   })
 
-  xdescribe('<Pagination />', () => {
+  describe('<Pagination />', () => {
     describe('With `pageNumber` and `totalPages`', () => {
       it('renders', () => {
-        const rendered = renderer.create(
+        expect(toSnapshot(render(
           <MemoryRouter>
             <Pagination
               pageNumber={1}
               totalPages={2}
             />
           </MemoryRouter>
-        )
-
-        expect(rendered.toJSON())
+        )))
           .toMatchSnapshot()
       })
     })
   })
 
-  xdescribe('<Centered />', () => {
+  describe('<Centered />', () => {
     describe('With `pageNumber` and `totalPages` and `spread`', () => {
       it('renders', () => {
-        const rendered = renderer.create(
+        expect(toSnapshot(render(
           <MemoryRouter>
             <Centered
               pageNumber={9}
@@ -95,18 +172,16 @@ describe('react-router-pagination', () => {
               spread={3}
             />
           </MemoryRouter>
-        )
-
-        expect(rendered.toJSON())
+        )))
           .toMatchSnapshot()
       })
     })
   })
 
-  xdescribe('<Standard />', () => {
+  describe('<Standard />', () => {
     describe('With `pageNumber` and `totalPages` and `spread`', () => {
       it('renders', () => {
-        const rendered = renderer.create(
+        expect(toSnapshot(render(
           <MemoryRouter>
             <Standard
               pageNumber={9}
@@ -114,9 +189,7 @@ describe('react-router-pagination', () => {
               spread={3}
             />
           </MemoryRouter>
-        )
-
-        expect(rendered.toJSON())
+        )))
           .toMatchSnapshot()
       })
     })

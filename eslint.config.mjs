@@ -137,7 +137,7 @@ export default [
   }),
   standard({
     files: [
-      'src/**/__tests__/**/*.{mts,tsx}',
+      'src/**/__tests__/**/*.{mjs,jsx}',
       'stories/**/__tests__/**/*.{mjs,jsx}'
     ],
     languageOptions: {
@@ -211,7 +211,8 @@ export default [
         project: 'tsconfig.json'
       },
       globals: {
-        ...globals.browser
+        ...globals.browser,
+        ReactRouterPaginationTypes: 'readonly'
       }
     },
     plugins: {
@@ -220,9 +221,16 @@ export default [
     rules: {
       ...reactRules,
       '@typescript-eslint/no-magic-numbers': 'off',
-      '@typescript-eslint/prefer-destructuring': 'off',
+      '@typescript-eslint/prefer-destructuring': 'warn',
       '@typescript-eslint/class-methods-use-this': 'off',
-      '@typescript-eslint/no-empty-function': 'off'
+      '@typescript-eslint/no-empty-function': 'warn',
+      '@typescript-eslint/no-unsafe-assignment': 'warn',
+      '@typescript-eslint/no-unsafe-member-access': 'warn',
+      '@typescript-eslint/no-unsafe-call': 'warn',
+      '@typescript-eslint/no-unsafe-return': 'warn',
+      '@typescript-eslint/strict-boolean-expressions': 'warn',
+      '@typescript-eslint/prefer-nullish-coalescing': 'warn',
+      '@typescript-eslint/no-unsafe-argument': 'warn'
     },
     settings: {
       ...reactSettings
