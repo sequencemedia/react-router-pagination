@@ -7,18 +7,17 @@ import {
   calculatePageNumber
 } from '#pagination/pagination/common'
 
-import AbstractPagination from '#pagination/super/pagination/component' // '../super/pagination/component.tsx'
-
-import type {
-  AbstractPaginationProps,
-  AbstractPaginationState
-} from '#pagination/super/pagination/component'
+import AbstractPagination from '../super/pagination/component.tsx'
 
 export {
   toInteger,
   calculateTotalPages,
   calculatePageNumber
 }
+
+type AbstractPaginationProps = ReactRouterPaginationTypes.AbstractPaginationProps
+
+type AbstractPaginationState = ReactRouterPaginationTypes.AbstractPaginationState
 
 export class Pagination extends AbstractPagination<AbstractPaginationProps, AbstractPaginationState> {
   state = {

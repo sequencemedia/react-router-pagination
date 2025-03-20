@@ -25,12 +25,6 @@ const getListItemKey = (key: string | number): string => `list-item-${key}`
 
 const getLinkTo = ({ path = '/:pageNumber', params = {} } = {}, pageNumber = 0): string => generatePath(path, { ...params, pageNumber })
 
-export {
-  toInteger,
-  calculateTotalPages,
-  calculatePageNumber
-}
-
 export type AbstractPaginationProps = ReactRouterPaginationTypes.AbstractPaginationProps
 
 export type AbstractPaginationState = ReactRouterPaginationTypes.AbstractPaginationState
