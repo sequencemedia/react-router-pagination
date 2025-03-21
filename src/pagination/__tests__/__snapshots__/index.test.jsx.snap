@@ -12,7 +12,6 @@ exports[`#pagination <Centered /> With \`pageNumber\` and \`totalPages\` and \`s
         data-discover="true"
         href="/1"
         onClick={[Function]}
-        ref={[Function]}
       >
         <span
           className="page-number"
@@ -30,7 +29,6 @@ exports[`#pagination <Centered /> With \`pageNumber\` and \`totalPages\` and \`s
         data-discover="true"
         href="/6"
         onClick={[Function]}
-        ref={[Function]}
       >
         <span
           className="reverse"
@@ -49,7 +47,6 @@ exports[`#pagination <Centered /> With \`pageNumber\` and \`totalPages\` and \`s
           data-discover="true"
           href="/7"
           onClick={[Function]}
-          ref={[Function]}
         >
           <span
             className="page-number"
@@ -67,7 +64,6 @@ exports[`#pagination <Centered /> With \`pageNumber\` and \`totalPages\` and \`s
           data-discover="true"
           href="/8"
           onClick={[Function]}
-          ref={[Function]}
         >
           <span
             className="page-number"
@@ -85,7 +81,6 @@ exports[`#pagination <Centered /> With \`pageNumber\` and \`totalPages\` and \`s
           data-discover="true"
           href="/9"
           onClick={[Function]}
-          ref={[Function]}
         >
           <span
             className="page-number"
@@ -112,7 +107,6 @@ exports[`#pagination <Pagination /> With \`pageNumber\` and \`totalPages\` rende
         data-discover="true"
         href="/1"
         onClick={[Function]}
-        ref={[Function]}
       >
         <span
           className="forward"
@@ -130,7 +124,6 @@ exports[`#pagination <Pagination /> With \`pageNumber\` and \`totalPages\` rende
         data-discover="true"
         href="/2"
         onClick={[Function]}
-        ref={[Function]}
       >
         <span
           className="page-number"
@@ -155,7 +148,6 @@ exports[`#pagination <Standard /> With \`pageNumber\` and \`totalPages\` and \`s
         data-discover="true"
         href="/1"
         onClick={[Function]}
-        ref={[Function]}
       >
         <span
           className="page-number"
@@ -173,7 +165,6 @@ exports[`#pagination <Standard /> With \`pageNumber\` and \`totalPages\` and \`s
         data-discover="true"
         href="/6"
         onClick={[Function]}
-        ref={[Function]}
       >
         <span
           className="reverse"
@@ -192,7 +183,6 @@ exports[`#pagination <Standard /> With \`pageNumber\` and \`totalPages\` and \`s
           data-discover="true"
           href="/7"
           onClick={[Function]}
-          ref={[Function]}
         >
           <span
             className="page-number"
@@ -210,7 +200,6 @@ exports[`#pagination <Standard /> With \`pageNumber\` and \`totalPages\` and \`s
           data-discover="true"
           href="/8"
           onClick={[Function]}
-          ref={[Function]}
         >
           <span
             className="page-number"
@@ -228,7 +217,6 @@ exports[`#pagination <Standard /> With \`pageNumber\` and \`totalPages\` and \`s
           data-discover="true"
           href="/9"
           onClick={[Function]}
-          ref={[Function]}
         >
           <span
             className="page-number"

@@ -13,7 +13,6 @@ exports[`#pagination/pagination/component <Pagination /> With \`pageNumber\` and
         data-discover="true"
         href="/1"
         onClick={[Function]}
-        ref={[Function]}
       >
         <span
           className="forward"
@@ -31,7 +30,6 @@ exports[`#pagination/pagination/component <Pagination /> With \`pageNumber\` and
         data-discover="true"
         href="/2"
         onClick={[Function]}
-        ref={[Function]}
       >
         <span
           className="page-number"

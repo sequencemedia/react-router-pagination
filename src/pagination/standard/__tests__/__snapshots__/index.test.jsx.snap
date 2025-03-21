@@ -12,7 +12,6 @@ exports[`#pagination/pagination/standard <Standard /> With \`pageNumber\` and \`
         data-discover="true"
         href="/1"
         onClick={[Function]}
-        ref={[Function]}
       >
         <span
           className="page-number"
@@ -30,7 +29,6 @@ exports[`#pagination/pagination/standard <Standard /> With \`pageNumber\` and \`
         data-discover="true"
         href="/3"
         onClick={[Function]}
-        ref={[Function]}
       >
         <span
           className="reverse"
@@ -49,7 +47,6 @@ exports[`#pagination/pagination/standard <Standard /> With \`pageNumber\` and \`
           data-discover="true"
           href="/4"
           onClick={[Function]}
-          ref={[Function]}
         >
           <span
             className="page-number"
@@ -67,7 +64,6 @@ exports[`#pagination/pagination/standard <Standard /> With \`pageNumber\` and \`
           data-discover="true"
           href="/5"
           onClick={[Function]}
-          ref={[Function]}
         >
           <span
             className="page-number"
@@ -85,7 +81,6 @@ exports[`#pagination/pagination/standard <Standard /> With \`pageNumber\` and \`
           data-discover="true"
           href="/6"
           onClick={[Function]}
-          ref={[Function]}
         >
           <span
             className="page-number"
@@ -104,7 +99,6 @@ exports[`#pagination/pagination/standard <Standard /> With \`pageNumber\` and \`
         data-discover="true"
         href="/7"
         onClick={[Function]}
-        ref={[Function]}
       >
         <span
           className="forward"
@@ -122,7 +116,6 @@ exports[`#pagination/pagination/standard <Standard /> With \`pageNumber\` and \`
         data-discover="true"
         href="/9"
         onClick={[Function]}
-        ref={[Function]}
       >
         <span
           className="page-number"
@@ -148,7 +141,6 @@ exports[`#pagination/pagination/standard <Standard /> With \`pageNumber\` and \`
           data-discover="true"
           href="/1"
           onClick={[Function]}
-          ref={[Function]}
         >
           <span
             className="page-number"
@@ -167,7 +159,6 @@ exports[`#pagination/pagination/standard <Standard /> With \`pageNumber\` and \`
         data-discover="true"
         href="/2"
         onClick={[Function]}
-        ref={[Function]}
       >
         <span
           className="page-number"
