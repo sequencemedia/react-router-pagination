@@ -22,7 +22,7 @@ export default {
     '/node_modules\\/(?!react-component-name)\\/'
   ],
   moduleFileExtensions: ['js', 'ts', 'jsx', 'mjs', 'tsx', 'mts'],
-  testEnvironment: 'jest-environment-jsdom',
+  testEnvironment: 'jsdom',
   setupFilesAfterEnv: [
     '<rootDir>/jest.setup.mjs'
   ]
