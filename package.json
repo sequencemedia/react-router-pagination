@@ -1,6 +1,6 @@
 {
   "name": "react-router-pagination",
-  "version": "3.3.7",
+  "version": "3.3.8",
   "description": "A React Router Pagination component",
   "main": "./src/index.mjs",
   "type": "module",
@@ -58,8 +58,8 @@
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
     "@types/react-router": "^5.1.20",
-    "@types/testing-library__jest-dom": "^5.14.9",
-    "@types/testing-library__react": "^10.0.1",
+    "@types/testing-library__jest-dom": "^6.0.0",
+    "@types/testing-library__react": "^10.2.0",
     "@typescript-eslint/eslint-plugin": "^8.27.0",
     "@typescript-eslint/parser": "^8.27.0",
     "core-js": "^3.41.0",
@@ -74,7 +74,7 @@
     "jest-fixed-jsdom": "^0.0.9",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
-    "react-component-snapshot": "^0.0.7",
+    "react-component-snapshot": "^0.0.8",
     "react-dom": "^19.0.0",
     "react-router": "^7.4.0",
     "storybook": "^8.6.7"
