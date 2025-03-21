@@ -104,13 +104,13 @@
       "require": "./src/pagination/standard/index.cjs",
       "import": "./src/pagination/standard/index.mjs"
     },
-    "#pagination/super/pagination/component": {
-      "require": "./src/super/pagination/component.cjs",
-      "import": "./src/super/pagination/component.mjs"
-    },
     "#pagination/super/pagination/common": {
       "require": "./src/super/pagination/common/index.cjs",
       "import": "./src/super/pagination/common/index.mjs"
+    },
+    "#pagination/super/pagination/component": {
+      "require": "./src/super/pagination/component.cjs",
+      "import": "./src/super/pagination/component.mjs"
     }
   },
   "exports": {

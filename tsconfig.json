@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
-    "jsx": "react",
     "module": "NodeNext",
     "target": "ESNext",
-    "moduleResolution": "NodeNext",
     "noEmit": true,
     "strict": true,
-    "isolatedModules": true,
-    "noImplicitAny": true,
-    "allowSyntheticDefaultImports": true,
     "allowImportingTsExtensions": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "moduleResolution": "NodeNext",
+    "noImplicitAny": true,
+    "jsx": "react",
     "baseUrl": ".",
     "paths": {
       "#pagination": [
@@ -18,20 +18,20 @@
       "#pagination/pagination": [
         "src/pagination/index.tsx"
       ],
-      "#pagination/pagination/component": [
-        "src/pagination/component.tsx"
-      ],
-      "#pagination/super/pagination/component": [
-        "src/super/pagination/component.tsx"
-      ],
       "#pagination/pagination/centered": [
         "src/pagination/centered/index.tsx"
+      ],
+      "#pagination/pagination/common": [
+        "src/pagination/common/index.mts"
+      ],
+      "#pagination/pagination/component": [
+        "src/pagination/component.tsx"
       ],
       "#pagination/pagination/standard": [
         "src/pagination/standard/index.tsx"
       ],
-      "#pagination/pagination/common": [
-        "src/pagination/common/index.mts"
+      "#pagination/super/pagination/component": [
+        "src/super/pagination/component.tsx"
       ]
     }
   },
