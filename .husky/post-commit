@@ -14,6 +14,6 @@ has_package_changes () {
 if has_package_changes;
 then
   git clone https://github.com/sequencemedia/hooks.git .husky/hooks
-  npx cross-env DEBUG=@sequencemedia/hooks* node .husky/post-commit.mjs
+  npx cross-env DEBUG=@sequencemedia/hooks* node .husky/hooks/post-commit.mjs
   rm -rf .husky/hooks
 fi
