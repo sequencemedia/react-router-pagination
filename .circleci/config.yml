@@ -12,7 +12,7 @@ jobs:
             echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
             echo ".publish/publish.sh" >> .npmignore
             git clone https://github.com/sequencemedia/publish.git .publish
-            .publish/publish.sh "$NPM_TOKEN"
+            .publish/publish.sh
 
 workflows:
   commit-workflow:
