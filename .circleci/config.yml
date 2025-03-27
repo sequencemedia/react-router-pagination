@@ -10,7 +10,7 @@ jobs:
           name: Publish to NPM
           command: |
             echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
-            echo ".publish/publish.sh" >> .npmignore
+            echo ".publish" >> .npmignore
             git clone https://github.com/sequencemedia/publish.git .publish
             .publish/publish.sh
 
