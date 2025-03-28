@@ -41,14 +41,14 @@
     "@chromatic-com/storybook": "^3.2.6",
     "@sequencemedia/eslint-config-standard": "^0.2.47",
     "@sequencemedia/eslint-config-typescript": "^0.1.69",
-    "@storybook/addon-essentials": "^8.6.10",
-    "@storybook/addon-links": "^8.6.10",
+    "@storybook/addon-essentials": "^8.6.11",
+    "@storybook/addon-links": "^8.6.11",
     "@storybook/addon-webpack5-compiler-babel": "^3.0.5",
-    "@storybook/manager-api": "^8.6.10",
-    "@storybook/react": "^8.6.10",
-    "@storybook/react-webpack5": "^8.6.10",
-    "@storybook/test": "^8.6.10",
-    "@storybook/theming": "^8.6.10",
+    "@storybook/manager-api": "^8.6.11",
+    "@storybook/react": "^8.6.11",
+    "@storybook/react-webpack5": "^8.6.11",
+    "@storybook/test": "^8.6.11",
+    "@storybook/theming": "^8.6.11",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@types/babel__register": "^7.17.3",
@@ -74,7 +74,7 @@
     "react-component-snapshot": "^0.0.17",
     "react-dom": "^19.0.0",
     "react-router": "^7.4.0",
-    "storybook": "^8.6.10"
+    "storybook": "^8.6.11"
   },
   "imports": {
     "#pagination": {
