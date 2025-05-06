@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/sequencemedia/react-router-pagination.git"
+    "url": "git+https://github.com/sequencemedia/react-router-pagination.git"
   },
   "scripts": {
     "build-storybook": "storybook build",
