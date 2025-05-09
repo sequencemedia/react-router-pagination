@@ -1,5 +1,5 @@
 /**
- * Pagination component
+ *  Pagination component
  */
 import type { JSX } from 'react'
 import React, { Component } from 'react'

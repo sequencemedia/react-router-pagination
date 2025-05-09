@@ -1,5 +1,5 @@
 /**
- * Pagination component
+ *  Pagination component
  */
 import {
   toInteger,
