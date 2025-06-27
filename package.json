@@ -30,7 +30,7 @@
     "debug": "^4.4.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.27.4",
+    "@babel/core": "^7.27.7",
     "@babel/eslint-parser": "^7.27.5",
     "@babel/plugin-syntax-jsx": "^7.27.1",
     "@babel/plugin-transform-typescript": "^7.27.1",
