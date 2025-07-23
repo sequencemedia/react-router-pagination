@@ -40,11 +40,11 @@
     "@babel/register": "^7.27.1",
     "@chromatic-com/storybook": "^4.0.1",
     "@sequencemedia/eslint-config-standard": "^0.2.72",
-    "@sequencemedia/eslint-config-typescript": "^0.1.123",
-    "@storybook/addon-docs": "^9.0.17",
-    "@storybook/addon-links": "^9.0.17",
+    "@sequencemedia/eslint-config-typescript": "^0.1.124",
+    "@storybook/addon-docs": "^9.0.18",
+    "@storybook/addon-links": "^9.0.18",
     "@storybook/addon-webpack5-compiler-babel": "^3.0.6",
-    "@storybook/react-webpack5": "^9.0.17",
+    "@storybook/react-webpack5": "^9.0.18",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@types/babel__register": "^7.17.3",
@@ -60,7 +60,7 @@
     "cross-env": "^7.0.3",
     "eslint": "^9.31.0",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-storybook": "^9.0.17",
+    "eslint-plugin-storybook": "^9.0.18",
     "globals": "^16.3.0",
     "husky": "^9.1.7",
     "jest": "^30.0.5",
@@ -70,7 +70,7 @@
     "react-component-snapshot": "^0.0.95",
     "react-dom": "^19.1.0",
     "react-router": "^7.7.0",
-    "storybook": "^9.0.17"
+    "storybook": "^9.0.18"
   },
   "overrides": {
     "storybook": "$storybook"
