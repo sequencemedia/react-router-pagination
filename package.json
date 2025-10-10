@@ -56,7 +56,7 @@
     "@types/react-router": "^5.1.20",
     "@typescript-eslint/eslint-plugin": "^8.46.0",
     "@typescript-eslint/parser": "^8.46.0",
-    "core-js": "^3.45.1",
+    "core-js": "^3.46.0",
     "cross-env": "^10.1.0",
     "eslint": "^9.37.0",
     "eslint-plugin-react": "^7.37.5",
@@ -67,7 +67,7 @@
     "jest-environment-jsdom": "^30.2.0",
     "prop-types": "^15.8.1",
     "react": "^19.2.0",
-    "react-component-snapshot": "^0.0.141",
+    "react-component-snapshot": "^0.0.143",
     "react-dom": "^19.2.0",
     "react-router": "^7.9.4",
     "storybook": "^9.1.10"
