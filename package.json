@@ -40,7 +40,7 @@
     "@babel/register": "^7.28.3",
     "@chromatic-com/storybook": "^4.1.2",
     "@sequencemedia/eslint-config-standard": "^0.2.100",
-    "@sequencemedia/eslint-config-typescript": "^0.1.172",
+    "@sequencemedia/eslint-config-typescript": "^0.1.173",
     "@storybook/addon-docs": "^10.0.2",
     "@storybook/addon-links": "^10.0.2",
     "@storybook/addon-webpack5-compiler-babel": "^3.0.6",
@@ -67,7 +67,7 @@
     "jest-environment-jsdom": "^30.2.0",
     "prop-types": "^15.8.1",
     "react": "^19.2.0",
-    "react-component-snapshot": "^0.0.163",
+    "react-component-snapshot": "^0.0.164",
     "react-dom": "^19.2.0",
     "react-router": "^7.9.5",
     "storybook": "^10.0.2"
