@@ -38,7 +38,7 @@
     "@babel/preset-react": "^7.28.5",
     "@babel/preset-typescript": "^7.28.5",
     "@babel/register": "^7.28.6",
-    "@chromatic-com/storybook": "^5.1.1",
+    "@chromatic-com/storybook": "^5.1.2",
     "@sequencemedia/eslint-config-standard": "^0.2.107",
     "@sequencemedia/eslint-config-typescript": "^0.1.182",
     "@storybook/addon-docs": "^10.3.5",
@@ -54,8 +54,8 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@types/react-router": "^5.1.20",
-    "@typescript-eslint/eslint-plugin": "^8.58.1",
-    "@typescript-eslint/parser": "^8.58.1",
+    "@typescript-eslint/eslint-plugin": "^8.58.2",
+    "@typescript-eslint/parser": "^8.58.2",
     "core-js": "^3.49.0",
     "cross-env": "^10.1.0",
     "eslint": "9.38.0",
@@ -69,7 +69,7 @@
     "react": "^19.2.5",
     "react-component-snapshot": "^0.0.168",
     "react-dom": "^19.2.5",
-    "react-router": "^7.14.0",
+    "react-router": "^7.14.1",
     "storybook": "^10.3.5"
   },
   "overrides": {
