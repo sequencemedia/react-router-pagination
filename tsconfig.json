@@ -10,7 +10,6 @@
     "moduleResolution": "NodeNext",
     "noImplicitAny": true,
     "jsx": "react",
-    "baseUrl": ".",
     "paths": {
       "#pagination": [
         "src/index.tsx"
