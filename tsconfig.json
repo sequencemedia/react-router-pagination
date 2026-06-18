@@ -12,25 +12,25 @@
     "jsx": "react",
     "paths": {
       "#pagination": [
-        "src/index.tsx"
+        "./src/index.tsx"
       ],
       "#pagination/pagination": [
-        "src/pagination/index.tsx"
+        "./src/pagination/index.tsx"
       ],
       "#pagination/pagination/centered": [
-        "src/pagination/centered/index.tsx"
+        "./src/pagination/centered/index.tsx"
       ],
       "#pagination/pagination/common": [
-        "src/pagination/common/index.mts"
+        "./src/pagination/common/index.mts"
       ],
       "#pagination/pagination/component": [
-        "src/pagination/component.tsx"
+        "./src/pagination/component.tsx"
       ],
       "#pagination/pagination/standard": [
-        "src/pagination/standard/index.tsx"
+        "./src/pagination/standard/index.tsx"
       ],
       "#pagination/super/pagination/component": [
-        "src/super/pagination/component.tsx"
+        "./src/super/pagination/component.tsx"
       ]
     }
   },

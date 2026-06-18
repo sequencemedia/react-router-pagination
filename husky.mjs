@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // @ts-ignore
 Promise.resolve(import('husky'))
   .then(({ default: husky }) => husky())
