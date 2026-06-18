@@ -22,7 +22,7 @@
     "build-storybook": "storybook build",
     "lint": "eslint",
     "lint:fix": "npm run lint -- --fix",
-    "prepare": "husky",
+    "prepare": "node husky.mjs",
     "storybook": "storybook dev -p 6006",
     "test": "cross-env NODE_ENV=test jest --verbose"
   },
