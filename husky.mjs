@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+if (process.env.CI === 'true') process.exit(0)
+
 // @ts-ignore
 Promise.resolve(import('husky'))
   .then(({ default: husky }) => { husky() })
