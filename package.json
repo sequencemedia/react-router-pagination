@@ -134,5 +134,10 @@
       "require": "./src/pagination/standard/index.cjs",
       "import": "./src/pagination/standard/index.mjs"
     }
+  },
+  "allowScripts": {
+    "@parcel/watcher@2.6.0": true,
+    "core-js@3.51.0": true,
+    "esbuild@0.28.2": true
   }
 }
