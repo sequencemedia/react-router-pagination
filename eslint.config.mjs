@@ -114,10 +114,6 @@ export default [
       'stories/**/__tests__/**/*.{mjs,jsx}'
     ],
     languageOptions: {
-      parserOptions: {
-        ...reactParserOptions,
-        project: null
-      },
       globals: {
         ...globals.browser
       }
