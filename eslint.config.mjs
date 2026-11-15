@@ -1,9 +1,11 @@
+/**
+ * @typedef {import('eslint').Linter.RulesRecord} RulesRecord
+ */
+
 import globals from 'globals'
 import standard from '@sequencemedia/eslint-config-standard/configs/recommended/merge'
 import typescript from '@sequencemedia/eslint-config-typescript/configs/recommended/merge'
-import babelParser from '@babel/eslint-parser'
-import typescriptParser from '@typescript-eslint/parser'
-import reactPlugin from 'eslint-plugin-react'
+import reactPlugin from '@eslint-react/eslint-plugin'
 import storybookPlugin from 'eslint-plugin-storybook'
 
 const reactParserOptions = {
@@ -20,6 +22,9 @@ const storybookPlugins = {
   storybook: storybookPlugin
 }
 
+/**
+ * @type {RulesRecord}
+ */
 const reactRules = {
   'no-unused-vars': [
     'error',
@@ -27,28 +32,25 @@ const reactRules = {
       varsIgnorePattern: 'React'
     }
   ],
-  quotes: [
+  '@stylistic/quotes': [
     'error',
     'single'
   ],
-  'jsx-quotes': [
+  '@stylistic/jsx-quotes': [
     'error',
     'prefer-single'
   ],
-  'react/jsx-indent': [
+  '@stylistic/indent': [
     'error',
     2,
     {
-      checkAttributes: true,
-      indentLogicalExpressions: true
+      SwitchCase: 1,
+      ignoredNodes: [
+        'TemplateLiteral *'
+      ],
+      offsetTernaryExpressions: true
     }
   ]
-}
-
-const reactSettings = {
-  react: {
-    version: 'detect'
-  }
 }
 
 export default [
@@ -61,11 +63,11 @@ export default [
    *  React config for all `jsx` and `tsx` files
    */
   {
-    ...reactPlugin.configs.flat.recommended,
-    settings: {
-      ...reactPlugin.configs.flat.recommended.settings,
-      ...reactSettings
-    }
+    ...reactPlugin.configs.recommended,
+    files: [
+      '**/*.jsx',
+      '**/*.tsx'
+    ]
   },
   /**
    *  Storybook config
@@ -112,7 +114,6 @@ export default [
       'stories/**/__tests__/**/*.{mjs,jsx}'
     ],
     languageOptions: {
-      parser: babelParser,
       parserOptions: {
         ...reactParserOptions,
         project: null
@@ -127,9 +128,6 @@ export default [
     },
     rules: {
       ...reactRules
-    },
-    settings: {
-      ...reactSettings
     }
   }),
   standard({
@@ -138,10 +136,8 @@ export default [
       'stories/**/__tests__/**/*.{mjs,jsx}'
     ],
     languageOptions: {
-      parser: babelParser,
       parserOptions: {
-        ...reactParserOptions,
-        project: null
+        ...reactParserOptions
       },
       globals: {
         ...globals.browser,
@@ -154,9 +150,6 @@ export default [
     },
     rules: {
       ...reactRules
-    },
-    settings: {
-      ...reactSettings
     }
   }),
   /**
@@ -172,8 +165,7 @@ export default [
     ],
     languageOptions: {
       globals: {
-        ...globals.node,
-        CogsTypes: 'readonly'
+        ...globals.node
       }
     }
   }),
@@ -198,7 +190,6 @@ export default [
       'src/**/__tests__/**/*.{mts,tsx}'
     ],
     languageOptions: {
-      parser: typescriptParser,
       parserOptions: {
         ...reactParserOptions,
         projectService: true
@@ -224,9 +215,6 @@ export default [
       '@typescript-eslint/strict-boolean-expressions': 'warn',
       '@typescript-eslint/prefer-nullish-coalescing': 'warn',
       '@typescript-eslint/no-unsafe-argument': 'warn'
-    },
-    settings: {
-      ...reactSettings
     }
   }),
   typescript({
@@ -234,7 +222,6 @@ export default [
       'src/**/__tests__/**/*.{mts,tsx}'
     ],
     languageOptions: {
-      parser: typescriptParser,
       parserOptions: {
         ...reactParserOptions,
         projectService: true
@@ -253,9 +240,6 @@ export default [
       '@typescript-eslint/prefer-destructuring': 'off',
       '@typescript-eslint/class-methods-use-this': 'off',
       '@typescript-eslint/no-empty-function': 'off'
-    },
-    settings: {
-      ...reactSettings
     }
   })
 ]

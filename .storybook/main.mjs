@@ -42,7 +42,7 @@ const config = {
   },
 
   typescript: {
-    reactDocgen: 'react-docgen-typescript'
+    reactDocgen: false
   }
 }
 
