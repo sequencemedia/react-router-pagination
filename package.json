@@ -45,7 +45,7 @@
     "@chromatic-com/storybook": "^5.6.0",
     "@eslint-react/eslint-plugin": "^5.30.3",
     "@sequencemedia/eslint-config-standard": "0.4.1",
-    "@sequencemedia/eslint-config-typescript": "0.2.11",
+    "@sequencemedia/eslint-config-typescript": "0.2.12",
     "@storybook/addon-docs": "^10.6.7",
     "@storybook/addon-links": "^10.6.7",
     "@storybook/addon-webpack5-compiler-babel": "^4.0.1",
