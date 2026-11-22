@@ -43,7 +43,7 @@
     "@babel/preset-typescript": "7.29.7",
     "@babel/register": "7.29.7",
     "@chromatic-com/storybook": "^5.6.0",
-    "@eslint-react/eslint-plugin": "^5.30.5",
+    "@eslint-react/eslint-plugin": "^5.30.6",
     "@sequencemedia/eslint-config-standard": "0.4.3",
     "@sequencemedia/eslint-config-typescript": "0.2.15",
     "@storybook/addon-docs": "^10.6.8",
